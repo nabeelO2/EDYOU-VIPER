@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PinCodeTextField" customModule="EDYOU" customModuleProvider="target">
+            <connections>
+                <outlet property="stackView" destination="pg6-V2-zwh" id="zZo-4a-dGH"/>
+                <outlet property="txtPin1" destination="CZ9-nd-XNG" id="2Db-j5-rhQ"/>
+                <outlet property="txtPin2" destination="kXF-hj-q74" id="PLG-pi-T2D"/>
+                <outlet property="txtPin3" destination="0aO-cc-bqT" id="5Pm-sC-YC5"/>
+                <outlet property="txtPin4" destination="LIT-lj-ARX" id="Tan-l8-otx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pg6-V2-zwh">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZ9-nd-XNG" customClass="MyTextField" customModule="EDYOU" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="94" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                    <color key="value" red="0.29411764709999999" green="0.30196078430000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="textDidChange:" destination="-1" eventType="editingChanged" id="KVa-al-R67"/>
+                                <outlet property="delegate" destination="-1" id="gf2-Hx-Tn3"/>
+                            </connections>
+                        </textField>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4S-sO-Tp4">
+                            <rect key="frame" x="94" y="0.0" width="1" height="60"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HzE-UA-b7D">
+                                    <rect key="frame" x="0.0" y="10" width="1" height="40"/>
+                                    <color key="backgroundColor" red="0.29411764709999999" green="0.30196078430000001" blue="0.32549019610000002" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="1" id="gsD-0m-uYu"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="HzE-UA-b7D" firstAttribute="leading" secondItem="G4S-sO-Tp4" secondAttribute="leading" id="6Hw-MJ-5Dd"/>
+                                <constraint firstAttribute="bottom" secondItem="HzE-UA-b7D" secondAttribute="bottom" constant="10" id="Fbd-ea-zFj"/>
+                                <constraint firstItem="HzE-UA-b7D" firstAttribute="top" secondItem="G4S-sO-Tp4" secondAttribute="top" constant="10" id="QKy-82-g2t"/>
+                                <constraint firstAttribute="trailing" secondItem="HzE-UA-b7D" secondAttribute="trailing" id="t5c-X1-Gpk"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kXF-hj-q74" customClass="MyTextField" customModule="EDYOU" customModuleProvider="target">
+                            <rect key="frame" x="94" y="0.0" width="93.5" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                    <color key="value" red="0.29411764709999999" green="0.30196078430000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="textDidChange:" destination="-1" eventType="editingChanged" id="vGI-Ni-wjL"/>
+                                <outlet property="delegate" destination="-1" id="8a1-zS-u7g"/>
+                            </connections>
+                        </textField>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zux-oU-t17">
+                            <rect key="frame" x="187.5" y="0.0" width="1" height="60"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gkh-DG-Cjh">
+                                    <rect key="frame" x="0.0" y="10" width="1" height="40"/>
+                                    <color key="backgroundColor" red="0.29411764709999999" green="0.30196078430000001" blue="0.32549019610000002" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="1" id="qk5-Dw-6Uy"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="gkh-DG-Cjh" firstAttribute="leading" secondItem="Zux-oU-t17" secondAttribute="leading" id="8WH-vn-NWo"/>
+                                <constraint firstAttribute="trailing" secondItem="gkh-DG-Cjh" secondAttribute="trailing" id="M4z-Mj-wsq"/>
+                                <constraint firstAttribute="bottom" secondItem="gkh-DG-Cjh" secondAttribute="bottom" constant="10" id="Tc8-3t-eOg"/>
+                                <constraint firstItem="gkh-DG-Cjh" firstAttribute="top" secondItem="Zux-oU-t17" secondAttribute="top" constant="10" id="jo4-Zk-1fA"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0aO-cc-bqT" customClass="MyTextField" customModule="EDYOU" customModuleProvider="target">
+                            <rect key="frame" x="187.5" y="0.0" width="94" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                    <color key="value" red="0.29411764709999999" green="0.30196078430000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="textDidChange:" destination="-1" eventType="editingChanged" id="KZO-zg-LZG"/>
+                                <outlet property="delegate" destination="-1" id="JIe-XP-4p1"/>
+                            </connections>
+                        </textField>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnX-U7-nXN">
+                            <rect key="frame" x="281.5" y="0.0" width="1" height="60"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNq-be-rUH">
+                                    <rect key="frame" x="0.0" y="10" width="1" height="40"/>
+                                    <color key="backgroundColor" red="0.29411764709999999" green="0.30196078430000001" blue="0.32549019610000002" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="1" id="y9f-YB-ocO"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="VNq-be-rUH" secondAttribute="bottom" constant="10" id="KJd-2v-5cZ"/>
+                                <constraint firstItem="VNq-be-rUH" firstAttribute="top" secondItem="jnX-U7-nXN" secondAttribute="top" constant="10" id="YFn-Rj-i0f"/>
+                                <constraint firstItem="VNq-be-rUH" firstAttribute="leading" secondItem="jnX-U7-nXN" secondAttribute="leading" id="h9f-1A-0o2"/>
+                                <constraint firstAttribute="trailing" secondItem="VNq-be-rUH" secondAttribute="trailing" id="t3z-uk-Fzd"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LIT-lj-ARX" customClass="MyTextField" customModule="EDYOU" customModuleProvider="target">
+                            <rect key="frame" x="281.5" y="0.0" width="93.5" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                    <color key="value" red="0.29411764709999999" green="0.30196078430000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="textDidChange:" destination="-1" eventType="editingChanged" id="kqc-9p-QLq"/>
+                                <outlet property="delegate" destination="-1" id="lhL-r4-zSt"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="0aO-cc-bqT" firstAttribute="width" secondItem="CZ9-nd-XNG" secondAttribute="width" id="Jga-oI-rAB"/>
+                        <constraint firstItem="LIT-lj-ARX" firstAttribute="width" secondItem="CZ9-nd-XNG" secondAttribute="width" id="UNJ-cl-NtK"/>
+                        <constraint firstItem="kXF-hj-q74" firstAttribute="width" secondItem="CZ9-nd-XNG" secondAttribute="width" id="bVw-g2-YgK"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="pg6-V2-zwh" secondAttribute="bottom" id="2FT-Rm-6al"/>
+                <constraint firstItem="pg6-V2-zwh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="56Z-qA-vPR"/>
+                <constraint firstItem="pg6-V2-zwh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bTy-w3-Be4"/>
+                <constraint firstAttribute="trailing" secondItem="pg6-V2-zwh" secondAttribute="trailing" id="zLh-vM-NW1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                    <color key="value" red="0.29411764709999999" green="0.30196078430000001" blue="0.32549019610000002" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                    <real key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="12"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="119.2" y="235.68215892053973"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,308 @@
+PODS:
+  - ActiveLabel (1.1.0)
+  - appendAttributedString (1.2.1)
+  - Bugsnag (6.21.0)
+  - DPTagTextView (2.5.1)
+  - EmptyDataSet-Swift (5.0.0)
+  - EZCustomNavigation (1.2.0)
+  - FirebaseAnalytics (10.21.0):
+    - FirebaseAnalytics/AdIdSupport (= 10.21.0)
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - FirebaseAnalytics/AdIdSupport (10.21.0):
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleAppMeasurement (= 10.21.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - FirebaseCore (10.21.0):
+    - FirebaseCoreInternal (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.12)
+    - GoogleUtilities/Logger (~> 7.12)
+  - FirebaseCoreExtension (10.21.0):
+    - FirebaseCore (~> 10.0)
+  - FirebaseCoreInternal (10.21.0):
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - FirebaseCrashlytics (10.21.0):
+    - FirebaseCore (~> 10.5)
+    - FirebaseInstallations (~> 10.0)
+    - FirebaseSessions (~> 10.5)
+    - GoogleDataTransport (~> 9.2)
+    - GoogleUtilities/Environment (~> 7.8)
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+    - PromisesObjC (~> 2.1)
+  - FirebaseInstallations (10.21.0):
+    - FirebaseCore (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/UserDefaults (~> 7.8)
+    - PromisesObjC (~> 2.1)
+  - FirebaseSessions (10.21.0):
+    - FirebaseCore (~> 10.5)
+    - FirebaseCoreExtension (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleDataTransport (~> 9.2)
+    - GoogleUtilities/Environment (~> 7.10)
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+    - PromisesSwift (~> 2.1)
+  - FSCalendar (2.8.4)
+  - GoogleAppMeasurement (10.21.0):
+    - GoogleAppMeasurement/AdIdSupport (= 10.21.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleAppMeasurement/AdIdSupport (10.21.0):
+    - GoogleAppMeasurement/WithoutAdIdSupport (= 10.21.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleAppMeasurement/WithoutAdIdSupport (10.21.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleDataTransport (9.3.0):
+    - GoogleUtilities/Environment (~> 7.7)
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleMaps (8.4.0):
+    - GoogleMaps/Maps (= 8.4.0)
+  - GoogleMaps/Base (8.4.0)
+  - GoogleMaps/Maps (8.4.0):
+    - GoogleMaps/Base
+  - GoogleUtilities/AppDelegateSwizzler (7.12.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (7.12.0):
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/Logger (7.12.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (7.12.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (7.12.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (7.12.0)"
+  - GoogleUtilities/Reachability (7.12.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (7.12.0):
+    - GoogleUtilities/Logger
+  - GPVideoPlayer (1.0.4)
+  - HXPHPicker (2.0.0):
+    - HXPHPicker/Full (= 2.0.0)
+  - HXPHPicker/Camera (2.0.0):
+    - HXPHPicker/Camera/Lite (= 2.0.0)
+    - HXPHPicker/Camera/Location (= 2.0.0)
+  - HXPHPicker/Camera/Lite (2.0.0):
+    - HXPHPicker/Core
+  - HXPHPicker/Camera/Location (2.0.0):
+    - HXPHPicker/Camera/Lite
+  - HXPHPicker/Core (2.0.0)
+  - HXPHPicker/Editor (2.0.0):
+    - HXPHPicker/Editor/KF (= 2.0.0)
+    - HXPHPicker/Editor/Lite (= 2.0.0)
+  - HXPHPicker/Editor/KF (2.0.0):
+    - HXPHPicker/Editor/Lite
+    - HXPHPicker/EditorView/KF
+    - Kingfisher (~> 7.0)
+  - HXPHPicker/Editor/Lite (2.0.0):
+    - HXPHPicker/EditorView/Lite
+  - HXPHPicker/EditorView/KF (2.0.0):
+    - HXPHPicker/EditorView/Lite
+    - Kingfisher (~> 7.0)
+  - HXPHPicker/EditorView/Lite (2.0.0):
+    - HXPHPicker/Core
+  - HXPHPicker/Full (2.0.0):
+    - HXPHPicker/Camera
+    - HXPHPicker/Editor
+    - HXPHPicker/Picker
+  - HXPHPicker/Picker (2.0.0):
+    - HXPHPicker/Picker/KF (= 2.0.0)
+    - HXPHPicker/Picker/Lite (= 2.0.0)
+  - HXPHPicker/Picker/KF (2.0.0):
+    - HXPHPicker/Picker/Lite
+    - Kingfisher (~> 7.0)
+  - HXPHPicker/Picker/Lite (2.0.0):
+    - HXPHPicker/Core
+  - ImageSlideshow (1.9.2):
+    - ImageSlideshow/Core (= 1.9.2)
+  - ImageSlideshow/Core (1.9.2)
+  - IQKeyboardManagerSwift (6.5.0)
+  - JWTDecode (2.6.3)
+  - KeychainSwift (21.0.0)
+  - Kingfisher (7.11.0)
+  - lottie-ios (4.4.1)
+  - nanopb (2.30909.1):
+    - nanopb/decode (= 2.30909.1)
+    - nanopb/encode (= 2.30909.1)
+  - nanopb/decode (2.30909.1)
+  - nanopb/encode (2.30909.1)
+  - PanModal (1.2.7)
+  - PromisesObjC (2.4.0)
+  - PromisesSwift (2.4.0):
+    - PromisesObjC (= 2.4.0)
+  - PryntTrimmerView (4.0.2)
+  - Realm (10.47.0):
+    - Realm/Headers (= 10.47.0)
+  - Realm/Headers (10.47.0)
+  - RealmSwift (10.47.0):
+    - Realm (= 10.47.0)
+  - SDWebImage (5.19.0):
+    - SDWebImage/Core (= 5.19.0)
+  - SDWebImage/Core (5.19.0)
+  - SkeletonView (1.29.2)
+  - SteviaLayout (5.1.2)
+  - SwiftMessages (10.0.0):
+    - SwiftMessages/App (= 10.0.0)
+  - SwiftMessages/App (10.0.0)
+  - SwiftyJSON (4.3.0)
+  - SwiftyXMLParser (5.6.0)
+  - TagListView (1.4.1)
+  - TransitionButton (0.5.3)
+  - UXCam (3.6.9)
+
+DEPENDENCIES:
+  - ActiveLabel
+  - appendAttributedString
+  - Bugsnag (~> 6.21.0)
+  - DPTagTextView (from `https://github.com/applebyte1992/DPTagTextView.git`)
+  - EmptyDataSet-Swift (~> 5.0.0)
+  - EZCustomNavigation
+  - FirebaseAnalytics
+  - FirebaseCrashlytics
+  - FSCalendar
+  - GoogleMaps
+  - GPVideoPlayer
+  - HXPHPicker
+  - ImageSlideshow (~> 1.9.2)
+  - IQKeyboardManagerSwift (= 6.5.0)
+  - JWTDecode (~> 2.3)
+  - KeychainSwift
+  - lottie-ios
+  - PanModal
+  - PryntTrimmerView
+  - RealmSwift
+  - SDWebImage
+  - SkeletonView (~> 1.29.2)
+  - SteviaLayout
+  - SwiftMessages
+  - SwiftyJSON (~> 4.0)
+  - SwiftyXMLParser
+  - TagListView
+  - TransitionButton
+  - UXCam
+
+SPEC REPOS:
+  trunk:
+    - ActiveLabel
+    - appendAttributedString
+    - Bugsnag
+    - EmptyDataSet-Swift
+    - EZCustomNavigation
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseCoreExtension
+    - FirebaseCoreInternal
+    - FirebaseCrashlytics
+    - FirebaseInstallations
+    - FirebaseSessions
+    - FSCalendar
+    - GoogleAppMeasurement
+    - GoogleDataTransport
+    - GoogleMaps
+    - GoogleUtilities
+    - GPVideoPlayer
+    - HXPHPicker
+    - ImageSlideshow
+    - IQKeyboardManagerSwift
+    - JWTDecode
+    - KeychainSwift
+    - Kingfisher
+    - lottie-ios
+    - nanopb
+    - PanModal
+    - PromisesObjC
+    - PromisesSwift
+    - PryntTrimmerView
+    - Realm
+    - RealmSwift
+    - SDWebImage
+    - SkeletonView
+    - SteviaLayout
+    - SwiftMessages
+    - SwiftyJSON
+    - SwiftyXMLParser
+    - TagListView
+    - TransitionButton
+    - UXCam
+
+EXTERNAL SOURCES:
+  DPTagTextView:
+    :git: https://github.com/applebyte1992/DPTagTextView.git
+
+CHECKOUT OPTIONS:
+  DPTagTextView:
+    :commit: 060e78d04f777a1d095bc69dc46a97e461f29c6f
+    :git: https://github.com/applebyte1992/DPTagTextView.git
+
+SPEC CHECKSUMS:
+  ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
+  appendAttributedString: 6a31726c4933cee0c0078e9508224335e4b7092c
+  Bugsnag: 900773b8c81038094b7c4078448ef8c3c18f6c10
+  DPTagTextView: b7eb435e9193c8bc8b56d93bd22331191abd5e3f
+  EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
+  EZCustomNavigation: cab41d647d1e2abfec9e3d4dfb2a7b4cb6e1295c
+  FirebaseAnalytics: d275f288881d4417f780115dd52c05fa9752d530
+  FirebaseCore: 74f647ad9739ea75112ce6c3b3b91f5488ce1122
+  FirebaseCoreExtension: 1c044fd46e95036cccb29134757c499613f3f564
+  FirebaseCoreInternal: 43c1788eaeee9d1b97caaa751af567ce11010d00
+  FirebaseCrashlytics: 063b883186d7ccb1db1837c19113ca6294880c1b
+  FirebaseInstallations: 390ea1d10a4d02b20c965cbfd527ee9b3b412acb
+  FirebaseSessions: 80c2bbdd28166267b3d132debe5f7531efdb00bc
+  FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
+  GoogleAppMeasurement: a65314d316443969ed3d3709b3a187448ed6418f
+  GoogleDataTransport: 57c22343ab29bc686febbf7cbb13bad167c2d8fe
+  GoogleMaps: 8939898920281c649150e0af74aa291c60f2e77d
+  GoogleUtilities: 0759d1a57ebb953965c2dfe0ba4c82e95ccc2e34
+  GPVideoPlayer: fcb68bdba2522f3edd3145b0f1de17423e0b30e1
+  HXPHPicker: 4fdbc2c27e0ca43a8f2c0060e128dfead5255594
+  ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
+  IQKeyboardManagerSwift: 6cd19976c6e871907c4ed9127c2d3affdd4defc2
+  JWTDecode: 33e5e26e5ddbd21b2065820894c08fef0cad9509
+  KeychainSwift: 4a71a45c802fd9e73906457c2dcbdbdc06c9419d
+  Kingfisher: b9c985d864d43515f404f1ef4a8ce7d802ace3ac
+  lottie-ios: e047b1d2e6239b787cc5e9755b988869cf190494
+  nanopb: d4d75c12cd1316f4a64e3c6963f879ecd4b5e0d5
+  PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
+  PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
+  PromisesSwift: 9d77319bbe72ebf6d872900551f7eeba9bce2851
+  PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
+  Realm: e43fb540ae947497e3ea8a662443256920602060
+  RealmSwift: 8b06ed06b5d16749ae0c4d91c0cba414a9e28189
+  SDWebImage: 981fd7e860af070920f249fd092420006014c3eb
+  SkeletonView: 915a80ecc2b6421ab7ac0f0212321c0cc1406472
+  SteviaLayout: 05424e528d643657d39ce72c786e4adf13cfc5f2
+  SwiftMessages: d3540f0f981dfbac25bd2ae9a662effa48f76f92
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  SwiftyXMLParser: 9b98995235961881322015ebe38d1f3d7c953bd7
+  TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
+  TransitionButton: 36283346e17c64775a1b3bc3a7a72940a367de1f
+  UXCam: bc7af0044c888c00b4785b4198efdb0238dccf65
+
+PODFILE CHECKSUM: eef41fd2f2208e29d52e26edbe7aa17cb268393c
+
+COCOAPODS: 1.15.2
