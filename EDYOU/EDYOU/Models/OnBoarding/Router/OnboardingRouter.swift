@@ -8,13 +8,19 @@
 import Foundation
 import UIKit
 
+protocol OnboardingRouterProtocol{
+    func navigateToSignIn()
+    func navigateToSignUp()
+    func navigateToPrivacy()
+}
 
-class OnboardingRouter {
+class OnboardingRouter : OnboardingRouterProtocol{
     
-    var navigationController: UINavigationController?
+    var navigationController1: UINavigationController?
     
     init(navigationController: UINavigationController?) {
-        self.navigationController = navigationController
+        self.navigationController1 = navigationController
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     
@@ -23,19 +29,20 @@ class OnboardingRouter {
         
         let view = OnboardingViewController(nibName: "OnboardingViewController", bundle: nil)
         let interactor = onBoardingInteractor()
-        let router = OnboardingRouter(navigationController: nil)
-        let presenter = onBoardingPresenter.init(view: view,router: router)
+        let router = OnboardingRouter(navigationController: navigationController)
+        let presenter = onBoardingPresenter.init(view: view,router: router, interactor: interactor)
 //        interactor.output = presenter
         view.presenter = presenter
         
-        view.title = ""
+        view.title = "OnBoarding"
         
         return view
     }
     
     func navigateToSignIn() {
-        let login = LoginRouter.createModule()
-        self.navigationController?.pushViewController(login, animated: true)
+        let login = LoginRouter.createModule(navigationController: self.navigationController1 ?? UINavigationController())
+        self.navigationController1?.pushViewController(login, animated: true)
+//        self.pushViewController(login, animated: true)
     }
     func navigateToSignUp() {
 //        let repoDetailVC = HomeRouter.createModule()

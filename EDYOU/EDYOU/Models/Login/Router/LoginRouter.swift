@@ -8,24 +8,27 @@ import Foundation
 import UIKit
 
 
-//protocol HomeRouterInterface: AnyObject {
-//    func navigateToHome(to home: String)
-//}
+protocol LoginRouterProtocol {
+    func navigateToHome()
+}
 
-class LoginRouter {
+class LoginRouter : LoginRouterProtocol {
     
-    
-//    var navigationController: UINavigationController?
-    
-    init() {
+    func navigateToHome() {
         
     }
     
-    static func createModule() -> LoginController {
+    var navigationController: UINavigationController?
+    
+    init(navigationController: UINavigationController?) {
+        self.navigationController = navigationController
+    }
+    
+    static func createModule(navigationController: UINavigationController) -> LoginController {
         
         let view = LoginController(nibName: "LoginController", bundle: nil)
         let interactor = LoginInteractor()
-        let router = LoginRouter()
+        let router = LoginRouter(navigationController: navigationController)
         let presenter = LoginPresenter.init(view: view,router: router)
 //        interactor.output = presenter
         view.presenter = presenter

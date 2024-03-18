@@ -7,19 +7,22 @@
 
 import Foundation
 
-protocol LoginPresenterInterface: AnyObject {
+protocol LoginPresenterProtocol: AnyObject {
     func viewDidLoad()
     func navigateToHome()
-    func login(email : String, password : String)
+    func navigateToForgetPassword()
+    func showHidePassword()
+    func login(email : String?, password : String?,isValidation : Bool)
+    func textFieldDidChange(text: String)
 }
 
 class LoginPresenter {
-    weak var view: LoginViewInterface?
+    weak var view: LoginViewProtocol?
 //    private let interactor: LoginInteractorInterface
     private let router: LoginRouter
 //    private(set) var loginResult: [LoginResultData] = []
     
-    init(view: LoginViewInterface, router: LoginRouter) {
+    init(view: LoginViewProtocol, router: LoginRouter) {
         self.view = view
 //        self.interactor = interactor
         self.router = router
@@ -28,15 +31,34 @@ class LoginPresenter {
 }
 
 
-extension LoginPresenter: LoginPresenterInterface {
-    func navigateToHome() {
-//        self.router.navigateToHome()
+extension LoginPresenter: LoginPresenterProtocol {
+    func textFieldDidChange(text: String) {
+        let isHidden = text.count == 0
+        view?.passwordBtnVisibility(isHidden)
+    }
+    
+    func navigateToForgetPassword() {
+        
+    }
+    
+    func showHidePassword() {
+        view?.showHidePassword()
     }
     
     
     
-    func login(email: String, password: String) {
-//        interactor.login(with: email, password: password)
+    func login(email: String?, password: String?, isValidation: Bool) {
+        if isValidation{
+            //hit api
+            
+        }else{
+            view?.shakeLoginButton()
+        }
+    }
+    
+    
+    func navigateToHome() {
+//        self.router.navigateToHome()
     }
     
     func viewDidLoad() {

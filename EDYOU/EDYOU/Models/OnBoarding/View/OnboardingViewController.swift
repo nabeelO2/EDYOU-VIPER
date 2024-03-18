@@ -42,12 +42,12 @@ class OnboardingViewController: BaseController {
 
 }
 
-protocol OnBoardingViewInterface: AnyObject {
+protocol OnBoardingViewProtocol: AnyObject {
     func prepareUI()
     
 }
 
-extension OnboardingViewController : OnBoardingViewInterface{
+extension OnboardingViewController : OnBoardingViewProtocol{
     func prepareUI() {
         signupButton.layer.borderColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 1).cgColor
         signupButton.layer.borderWidth = 1

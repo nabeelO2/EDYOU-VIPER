@@ -12,30 +12,18 @@ class LoginController: BaseController {
     
     // MARK: - Outlets
     @IBOutlet weak var txtEmail: BorderedTextField!
-    {
-        didSet{
-            txtEmail.leftSeparatorView.isHidden = true
-            txtEmail.placeHolderLeadingConstraint.constant = 0
-        }
-    }
+    
     @IBOutlet weak var txtPassword: BorderedTextField!
-    {
-        didSet{
-            txtPassword.leftSeparatorView.isHidden = true
-            txtPassword.placeHolderLeadingConstraint.constant = 0
-        }
-    }
+    
     @IBOutlet weak var btnLogin: TransitionButton!
     @IBOutlet weak var btnShow: UIButton!
     
-    var presenter: LoginPresenterInterface!
+    var presenter: LoginPresenterProtocol!
    
     // MARK: - ViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
-        
-
+        presenter.viewDidLoad()
     }
 
 }
@@ -44,23 +32,18 @@ class LoginController: BaseController {
 // MARK: - Actions
 extension LoginController {
     @IBAction func didTapLoginButton(_ sender: Any) {
-        let validated  = validate()
-        if validated {
-            
-            view.endEditing(true)
-            login()
-            
-        } else {
-            btnLogin.shake()
-        }
+        let emailValidated = txtEmail.validate()
+        let passwordValidated = txtPassword.validate()
+        let res = emailValidated && passwordValidated
+        
+        presenter.login(email: txtEmail.text, password: txtPassword.text, isValidation: res)
+        
     }
     @IBAction func didTapShowButton(_ sender: Any) {
-        txtPassword.textField.isSecureTextEntry = !txtPassword.textField.isSecureTextEntry
-        btnShow.setTitle(txtPassword.textField.isSecureTextEntry ? "Show" : "Hide", for: .normal)
+        presenter.showHidePassword()
     }
     @IBAction func didTapForgotPasswordButton(_ sender: Any) {
-//        let controller = ForgotPasswordController()
-//        navigationController?.pushViewController(controller, animated: true)
+        presenter.navigateToForgetPassword()
     }
     @IBAction func didTapCreateAccountButton(_ sender: Any) {
         
@@ -115,7 +98,7 @@ extension LoginController: UITextFieldDelegate {
         
         if textField == txtPassword.textField {
             let expectedText = NSString(string: textField.text ?? "").replacingCharacters(in: range, with: string)
-            btnShow.isHidden = expectedText.count == 0
+            presenter.textFieldDidChange(text: expectedText)
         }
         
         return true
@@ -186,31 +169,37 @@ extension LoginController {
     func connectSocket() {
 //        ChatManager.shared.connect()
     }
-    func changeInvitationStatus(){
-        if UserDefaults.standard.string(forKey: "invitationCode") != nil{
-            
-        }
-        else{
-            
-            
-            inviteCodeScreen()
-        }
-        
-    }
-    func inviteCodeScreen(){
-//        let vc = InviteCodeController()
-//        present(vc, presentationStyle: .fullScreen)
-    }
+ 
 }
 
-protocol LoginViewInterface: AnyObject {
+protocol LoginViewProtocol: AnyObject {
     func prepareUI()
-    
+    func shakeLoginButton()
+    func showHidePassword()
+    func passwordBtnVisibility(_ isHidden : Bool)
 }
 
-extension LoginController : LoginViewInterface{
+extension LoginController : LoginViewProtocol{
+    func showHidePassword() {
+        txtPassword.textField.isSecureTextEntry = !txtPassword.textField.isSecureTextEntry
+        btnShow.setTitle(txtPassword.textField.isSecureTextEntry ? "Show" : "Hide", for: .normal)
+    }
+    
+    func shakeLoginButton() {
+        btnLogin.shake()
+    }
+    
     func prepareUI() {
+        txtEmail.leftSeparatorView.isHidden = true
+        txtEmail.placeHolderLeadingConstraint.constant = 0
         
+        txtPassword.leftSeparatorView.isHidden = true
+        txtPassword.placeHolderLeadingConstraint.constant = 0
+        
+        setupUI()
+    }
+    func passwordBtnVisibility(_ isHidden : Bool){
+        btnShow.isHidden = isHidden
     }
     
     

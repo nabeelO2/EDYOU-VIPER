@@ -8,9 +8,11 @@
 import Foundation
 
 
+class onBoardingInteractorProtocol {
+//    weak var output: LoginInteractorOutput?
+}
 
-
-class onBoardingInteractor {
+class onBoardingInteractor : onBoardingInteractorProtocol {
 //    weak var output: LoginInteractorOutput?
 }
 

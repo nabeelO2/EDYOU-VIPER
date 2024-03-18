@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol onBoardingPresenterInterface: AnyObject {
+protocol onBoardingPresenterProtocol: AnyObject {
     func viewDidLoad()
     func navigateToSignIn()
     func navigateToSignup()
@@ -15,21 +15,21 @@ protocol onBoardingPresenterInterface: AnyObject {
 }
 
 class onBoardingPresenter {
-    weak var view: OnBoardingViewInterface?
-//    private let interactor: LoginInteractorInterface
-    private let router: OnboardingRouter
+    weak var view: OnBoardingViewProtocol?
+    private let interactor: onBoardingInteractorProtocol
+    private let router: OnboardingRouterProtocol
 //    private(set) var loginResult: [LoginResultData] = []
     
-    init(view: OnBoardingViewInterface, router: OnboardingRouter) {
+    init(view: OnBoardingViewProtocol, router: OnboardingRouterProtocol, interactor : onBoardingInteractorProtocol) {
         self.view = view
-//        self.interactor = interactor
+        self.interactor = interactor
         self.router = router
     }
     
 }
 
 
-extension onBoardingPresenter: onBoardingPresenterInterface {
+extension onBoardingPresenter: onBoardingPresenterProtocol {
     func navigateToSignIn() {
         self.router.navigateToSignIn()
     }
