@@ -8,7 +8,7 @@
 import Foundation
 
 
-
+//Handle Api integration
 class LoginInteractor {
 //    weak var output: LoginInteractorOutput?
 }

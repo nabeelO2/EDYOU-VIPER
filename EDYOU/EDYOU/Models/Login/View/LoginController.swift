@@ -106,71 +106,71 @@ extension LoginController: UITextFieldDelegate {
 }
 
 
-// MARK: - Web APIs
-extension LoginController {
-    func login() {
-        btnLogin.startAnimation()
-//        APIManager.auth.login(email: txtEmail.text!, password: txtPassword.text!) { [weak self] response, error in
-//            guard let self = self else { return }
-//            if error == nil {
-////                if let id = response?.dictionary["id"] as? String, (id == "1" || id == "2" || id == "3"){
-////                    UserDefaults.standard.set(true, forKey: "isEmailVerified")
-////                    UserDefaults.standard.set(nil, forKey: "invitationCode")
-////                    self.changeInvitationStatus()
+//// MARK: - Web APIs
+//extension LoginController {
+//    func login() {
+//        btnLogin.startAnimation()
+////        APIManager.auth.login(email: txtEmail.text!, password: txtPassword.text!) { [weak self] response, error in
+////            guard let self = self else { return }
+////            if error == nil {
+//////                if let id = response?.dictionary["id"] as? String, (id == "1" || id == "2" || id == "3"){
+//////                    UserDefaults.standard.set(true, forKey: "isEmailVerified")
+//////                    UserDefaults.standard.set(nil, forKey: "invitationCode")
+//////                    self.changeInvitationStatus()
+//////                }
+//////                else{
+////                    UserDefaults.standard.set(true, forKey: "loggedIn")
+//////                        UserDefaults.standard.set("", forKey: "invitationCode")
+////                    self.getUserDetails()
+//////                    UserDefaults.standard.setValue(false, forKey: "isUserAddedMajor")
+//////                    UserDefaults.standard.synchronize()
+//////                    Application.shared.switchToHome()
+//////                }
+//////                self.getUserDetails()
+////                
+////            } else {
+////                self.btnLogin.stopAnimation()
+////                self.showErrorWith(message: error!.message)
+////            }
+////        }
+//    }
+//    func getUserDetails() {
+//        self.connectSocket()
+////        Constants.baseURL = "https://sanitas.serveo.net"
+////        APIManager.social.getUserInfo { [weak self] user, error in
+//////            Constants.baseURL = "https://8172-182-180-126-38.ngrok-free.app"
+////            guard let self = self else { return }
+////            self.btnLogin.stopAnimation()
+////            if let user = user {
+////                if let id = user.userID, let pass  = Keychain.shared.accessToken {
+////                    XMPPAppDelegateManager.shared.loginToExistingAccount(id: "\(id)@ejabberd.edyou.io" , pass: pass)
 ////                }
-////                else{
-//                    UserDefaults.standard.set(true, forKey: "loggedIn")
-////                        UserDefaults.standard.set("", forKey: "invitationCode")
-//                    self.getUserDetails()
+////                if user.major_start_year?.isEmpty == true || user.major_end_year?.isEmpty == true{
 ////                    UserDefaults.standard.setValue(false, forKey: "isUserAddedMajor")
 ////                    UserDefaults.standard.synchronize()
-////                    Application.shared.switchToHome()
+////                    let controller = AddMajorViewController(nibName: "AddMajorViewController", bundle: nil)
+////                    self.navigationController?.pushViewController(controller, animated: true)
+////                    return
 ////                }
-////                self.getUserDetails()
-//                
-//            } else {
-//                self.btnLogin.stopAnimation()
-//                self.showErrorWith(message: error!.message)
-//            }
-//        }
-    }
-    func getUserDetails() {
-        self.connectSocket()
-//        Constants.baseURL = "https://sanitas.serveo.net"
-//        APIManager.social.getUserInfo { [weak self] user, error in
-////            Constants.baseURL = "https://8172-182-180-126-38.ngrok-free.app"
-//            guard let self = self else { return }
-//            self.btnLogin.stopAnimation()
-//            if let user = user {
-//                if let id = user.userID, let pass  = Keychain.shared.accessToken {
-//                    XMPPAppDelegateManager.shared.loginToExistingAccount(id: "\(id)@ejabberd.edyou.io" , pass: pass)
-//                }
-//                if user.major_start_year?.isEmpty == true || user.major_end_year?.isEmpty == true{
-//                    UserDefaults.standard.setValue(false, forKey: "isUserAddedMajor")
-//                    UserDefaults.standard.synchronize()
-//                    let controller = AddMajorViewController(nibName: "AddMajorViewController", bundle: nil)
-//                    self.navigationController?.pushViewController(controller, animated: true)
-//                    return
-//                }
-//                    
-//                let university = user.education.first ?? Education.nilProperties
-//                if user.name?.firstName?.isEmpty == false || user.name?.lastName?.isEmpty == false {
-//                    Application.shared.switchToHome()
-//                } else {
-//                    let controller = AddNameController(university: university)
-//                    self.navigationController?.pushViewController(controller, animated: true)
-//                }
-//            } else {
-//                self.showErrorWith(message: error?.message ?? "Unexpected error")
-//            }
-//        }
-    }
-    
-    func connectSocket() {
-//        ChatManager.shared.connect()
-    }
- 
-}
+////                    
+////                let university = user.education.first ?? Education.nilProperties
+////                if user.name?.firstName?.isEmpty == false || user.name?.lastName?.isEmpty == false {
+////                    Application.shared.switchToHome()
+////                } else {
+////                    let controller = AddNameController(university: university)
+////                    self.navigationController?.pushViewController(controller, animated: true)
+////                }
+////            } else {
+////                self.showErrorWith(message: error?.message ?? "Unexpected error")
+////            }
+////        }
+//    }
+//    
+//    func connectSocket() {
+////        ChatManager.shared.connect()
+//    }
+// 
+//}
 
 protocol LoginViewProtocol: AnyObject {
     func prepareUI()
