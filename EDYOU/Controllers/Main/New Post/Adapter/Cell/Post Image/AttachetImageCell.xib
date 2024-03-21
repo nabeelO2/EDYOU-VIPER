@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AttachetImageCell" customModule="EDYOU" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSO-Ph-hVX">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="post_image_dummy" translatesAutoresizingMaskIntoConstraints="NO" id="jyB-hf-kBC">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSs-Dp-BZ6" userLabel="View Container Show All">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rM-hB-GAO">
+                                        <rect key="frame" x="29.5" y="28" width="21" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcg-qc-Fwc">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.79889641608391604" alpha="0.35913584183673469" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="pcg-qc-Fwc" secondAttribute="trailing" id="2vR-gc-Isw"/>
+                                    <constraint firstItem="pcg-qc-Fwc" firstAttribute="top" secondItem="XSs-Dp-BZ6" secondAttribute="top" id="7Cv-ji-LIL"/>
+                                    <constraint firstAttribute="bottom" secondItem="pcg-qc-Fwc" secondAttribute="bottom" id="950-JA-LDZ"/>
+                                    <constraint firstItem="pcg-qc-Fwc" firstAttribute="leading" secondItem="XSs-Dp-BZ6" secondAttribute="leading" id="PTB-bo-vuV"/>
+                                    <constraint firstItem="8rM-hB-GAO" firstAttribute="centerY" secondItem="XSs-Dp-BZ6" secondAttribute="centerY" id="Qbi-oZ-bCb"/>
+                                    <constraint firstItem="8rM-hB-GAO" firstAttribute="centerX" secondItem="XSs-Dp-BZ6" secondAttribute="centerX" id="kyc-n1-1xt"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIQ-Pb-9uv">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBh-Qy-VZZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="multiply.circle" catalog="system"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.50770620749999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="CBh-Qy-VZZ" secondAttribute="bottom" id="4DX-qI-2Iu"/>
+                                    <constraint firstItem="CBh-Qy-VZZ" firstAttribute="top" secondItem="cIQ-Pb-9uv" secondAttribute="top" id="8Ni-LQ-yn2"/>
+                                    <constraint firstItem="CBh-Qy-VZZ" firstAttribute="centerY" secondItem="cIQ-Pb-9uv" secondAttribute="centerY" id="XyU-rf-MuQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="CBh-Qy-VZZ" secondAttribute="trailing" id="v5d-H5-amY"/>
+                                    <constraint firstItem="CBh-Qy-VZZ" firstAttribute="centerX" secondItem="cIQ-Pb-9uv" secondAttribute="centerX" id="wqb-VU-Gy2"/>
+                                    <constraint firstItem="CBh-Qy-VZZ" firstAttribute="leading" secondItem="cIQ-Pb-9uv" secondAttribute="leading" id="xDe-dV-hy4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jyB-hf-kBC" firstAttribute="leading" secondItem="vSO-Ph-hVX" secondAttribute="leading" id="8Zo-Qw-wHz"/>
+                            <constraint firstItem="XSs-Dp-BZ6" firstAttribute="top" secondItem="vSO-Ph-hVX" secondAttribute="top" id="EHQ-5Z-kwC"/>
+                            <constraint firstAttribute="bottom" secondItem="XSs-Dp-BZ6" secondAttribute="bottom" id="Jzj-fP-34p"/>
+                            <constraint firstItem="cIQ-Pb-9uv" firstAttribute="top" secondItem="vSO-Ph-hVX" secondAttribute="top" id="WoR-jN-Oyb"/>
+                            <constraint firstItem="XSs-Dp-BZ6" firstAttribute="leading" secondItem="vSO-Ph-hVX" secondAttribute="leading" id="YRH-Rf-0wC"/>
+                            <constraint firstAttribute="trailing" secondItem="cIQ-Pb-9uv" secondAttribute="trailing" id="aFg-QE-fgo"/>
+                            <constraint firstAttribute="bottom" secondItem="cIQ-Pb-9uv" secondAttribute="bottom" id="fbA-eI-vyi"/>
+                            <constraint firstItem="jyB-hf-kBC" firstAttribute="top" secondItem="vSO-Ph-hVX" secondAttribute="top" id="hCS-Km-OFQ"/>
+                            <constraint firstAttribute="trailing" secondItem="jyB-hf-kBC" secondAttribute="trailing" id="kSE-hR-BPo"/>
+                            <constraint firstAttribute="bottom" secondItem="jyB-hf-kBC" secondAttribute="bottom" id="oEA-46-2X2"/>
+                            <constraint firstItem="cIQ-Pb-9uv" firstAttribute="leading" secondItem="vSO-Ph-hVX" secondAttribute="leading" id="vGA-F4-Ebj"/>
+                            <constraint firstAttribute="trailing" secondItem="XSs-Dp-BZ6" secondAttribute="trailing" id="ysb-IT-QHP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="vSO-Ph-hVX" secondAttribute="bottom" id="5um-Ru-XkA"/>
+                <constraint firstItem="vSO-Ph-hVX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="AeL-cG-SN2"/>
+                <constraint firstAttribute="trailing" secondItem="vSO-Ph-hVX" secondAttribute="trailing" id="lEu-0k-bzr"/>
+                <constraint firstItem="vSO-Ph-hVX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vQa-n4-Cae"/>
+            </constraints>
+            <connections>
+                <outlet property="btnRemove" destination="CBh-Qy-VZZ" id="AdZ-oY-0bZ"/>
+                <outlet property="btnShowAll" destination="pcg-qc-Fwc" id="ByQ-Cj-VMN"/>
+                <outlet property="imgAttachment" destination="jyB-hf-kBC" id="v3J-dp-MtK"/>
+                <outlet property="lblOtherAttachmentsCount" destination="8rM-hB-GAO" id="uyk-TX-Oee"/>
+                <outlet property="viewContainerBtnRemove" destination="cIQ-Pb-9uv" id="cxu-2m-JCv"/>
+                <outlet property="viewContainerShowAll" destination="XSs-Dp-BZ6" id="4jz-Tq-yET"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="multiply.circle" catalog="system" width="128" height="123"/>
+        <image name="post_image_dummy" width="600" height="450"/>
+    </resources>
+</document>

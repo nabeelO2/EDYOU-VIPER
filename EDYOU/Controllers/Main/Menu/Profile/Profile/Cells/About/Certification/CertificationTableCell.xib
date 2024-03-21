@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CertificationTableCell" customModule="EDYOU" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="141"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="141"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OPU-tC-8vz">
+                        <rect key="frame" x="15" y="15" width="370" height="114"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etZ-lI-NXX">
+                                <rect key="frame" x="10" y="65" width="350" height="0.5"/>
+                                <color key="backgroundColor" red="0.7843137255" green="0.78823529410000004" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="pTX-jo-6Tv"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Issued No 2014" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oO-NA-anR">
+                                <rect key="frame" x="10" y="71.5" width="100.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.29411764709999999" green="0.30196078430000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Expired No 2016" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6XA-w6-ud5">
+                                <rect key="frame" x="253.5" y="71.5" width="106.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.29411764709999999" green="0.30196078430000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Credential ID: 110720162" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljc-FA-oNs">
+                                <rect key="frame" x="10" y="96" width="350" height="11"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.29411764709999999" green="0.30196078430000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sD7-d0-MT2">
+                                <rect key="frame" x="10" y="15" width="350" height="45"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGu-Au-OAc">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Certified Security analys" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fi-tP-gpd">
+                                                <rect key="frame" x="0.0" y="28" width="290" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.29411764709999999" green="0.30196078430000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AlienVault AlienVault" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9w-YZ-dXb">
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="9Fi-tP-gpd" secondAttribute="bottom" id="2yG-jJ-He5"/>
+                                            <constraint firstItem="9Fi-tP-gpd" firstAttribute="top" secondItem="d9w-YZ-dXb" secondAttribute="bottom" constant="8.5" id="66E-wk-fv2"/>
+                                            <constraint firstItem="d9w-YZ-dXb" firstAttribute="leading" secondItem="GGu-Au-OAc" secondAttribute="leading" id="7kx-2s-eI2"/>
+                                            <constraint firstAttribute="trailing" secondItem="9Fi-tP-gpd" secondAttribute="trailing" id="JcB-dd-daN"/>
+                                            <constraint firstItem="9Fi-tP-gpd" firstAttribute="leading" secondItem="d9w-YZ-dXb" secondAttribute="leading" id="QIV-q4-8TI"/>
+                                            <constraint firstAttribute="trailing" secondItem="d9w-YZ-dXb" secondAttribute="trailing" id="aUt-Dj-gob"/>
+                                            <constraint firstItem="d9w-YZ-dXb" firstAttribute="top" secondItem="GGu-Au-OAc" secondAttribute="top" id="fdy-xT-iIU"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsi-Qs-x7E" customClass="TransitionButton" customModule="TransitionButton">
+                                        <rect key="frame" x="290" y="0.0" width="30" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="VZL-CX-tCu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="tintColor" name="buttons_green"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="editPencil">
+                                            <color key="titleColor" name="buttons_green"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7O-7I-hVP" customClass="TransitionButton" customModule="TransitionButton">
+                                        <rect key="frame" x="320" y="0.0" width="30" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="tne-KJ-GBz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="tintColor" name="buttons_green"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="delete icon">
+                                            <color key="titleColor" name="buttons_green"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="etZ-lI-NXX" firstAttribute="leading" secondItem="sD7-d0-MT2" secondAttribute="leading" id="Di0-JD-fcc"/>
+                            <constraint firstItem="6XA-w6-ud5" firstAttribute="top" secondItem="6oO-NA-anR" secondAttribute="top" id="F5m-fz-EbM"/>
+                            <constraint firstItem="6oO-NA-anR" firstAttribute="leading" secondItem="etZ-lI-NXX" secondAttribute="leading" id="KJt-Bb-lHN"/>
+                            <constraint firstItem="sD7-d0-MT2" firstAttribute="top" secondItem="OPU-tC-8vz" secondAttribute="top" constant="15" id="KWG-Da-BvQ"/>
+                            <constraint firstItem="6XA-w6-ud5" firstAttribute="trailing" secondItem="etZ-lI-NXX" secondAttribute="trailing" id="NEE-1v-XW2"/>
+                            <constraint firstItem="6XA-w6-ud5" firstAttribute="trailing" secondItem="Ljc-FA-oNs" secondAttribute="trailing" id="Q1l-Wm-GzJ"/>
+                            <constraint firstItem="Ljc-FA-oNs" firstAttribute="leading" secondItem="6oO-NA-anR" secondAttribute="leading" id="WeM-cN-pmP"/>
+                            <constraint firstItem="6XA-w6-ud5" firstAttribute="bottom" secondItem="6oO-NA-anR" secondAttribute="bottom" id="YIc-2f-Tes"/>
+                            <constraint firstItem="6oO-NA-anR" firstAttribute="leading" secondItem="etZ-lI-NXX" secondAttribute="leading" id="YPl-iV-Ibk"/>
+                            <constraint firstAttribute="trailing" secondItem="sD7-d0-MT2" secondAttribute="trailing" constant="10" id="cG0-P5-QEC"/>
+                            <constraint firstItem="etZ-lI-NXX" firstAttribute="top" secondItem="sD7-d0-MT2" secondAttribute="bottom" constant="5" id="eG7-Ba-xma"/>
+                            <constraint firstAttribute="bottom" secondItem="Ljc-FA-oNs" secondAttribute="bottom" constant="7" id="f8a-kQ-CVK"/>
+                            <constraint firstItem="sD7-d0-MT2" firstAttribute="leading" secondItem="OPU-tC-8vz" secondAttribute="leading" constant="10" id="jPi-Ey-Edn"/>
+                            <constraint firstAttribute="trailing" secondItem="etZ-lI-NXX" secondAttribute="trailing" constant="10" id="o0G-Qt-mVY"/>
+                            <constraint firstItem="6oO-NA-anR" firstAttribute="top" secondItem="etZ-lI-NXX" secondAttribute="bottom" constant="6" id="u68-6s-8FN"/>
+                            <constraint firstItem="Ljc-FA-oNs" firstAttribute="top" secondItem="6oO-NA-anR" secondAttribute="bottom" constant="7.5" id="y2Q-NT-4xa"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.7843137255" green="0.78823529410000004" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="OPU-tC-8vz" secondAttribute="bottom" constant="12" id="TmN-pz-LZD"/>
+                    <constraint firstItem="OPU-tC-8vz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="YY1-VC-qc8"/>
+                    <constraint firstAttribute="trailing" secondItem="OPU-tC-8vz" secondAttribute="trailing" constant="15" id="erC-mr-oMu"/>
+                    <constraint firstItem="OPU-tC-8vz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="lSy-5Z-H6g"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnDelete" destination="X7O-7I-hVP" id="Vbm-sT-j2V"/>
+                <outlet property="btnEdit" destination="Xsi-Qs-x7E" id="xtE-8X-kzk"/>
+                <outlet property="lblCertificateDescription" destination="Ljc-FA-oNs" id="GIX-ha-Yla"/>
+                <outlet property="lblExpireDate" destination="6XA-w6-ud5" id="yyO-5Z-O78"/>
+                <outlet property="lblIssueDate" destination="6oO-NA-anR" id="3Jk-z4-1wu"/>
+                <outlet property="lblIssuingOrganization" destination="9Fi-tP-gpd" id="ILm-dA-FYQ"/>
+                <outlet property="lblTitle" destination="d9w-YZ-dXb" id="iw2-uE-gmc"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="72.65625"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="X7O-7I-hVP">
+            <size key="intrinsicContentSize" width="18" height="19"/>
+        </designable>
+        <designable name="Xsi-Qs-x7E">
+            <size key="intrinsicContentSize" width="15.5" height="15.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="delete icon" width="18" height="19"/>
+        <image name="editPencil" width="15.5" height="15.5"/>
+        <namedColor name="buttons_green">
+            <color red="0.32156862745098042" green="0.70196078431372544" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

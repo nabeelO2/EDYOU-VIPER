@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="PPImagePostCell" customModule="EDYOU" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="428" height="558"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="428" height="558"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VaD-df-VAA">
+                        <rect key="frame" x="0.0" y="10" width="428" height="548"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PqV-pc-RoA">
+                                <rect key="frame" x="20" y="15" width="388" height="35"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="profile_image_dummy" translatesAutoresizingMaskIntoConstraints="NO" id="Vhc-H3-xGb">
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="ara-cc-XRz"/>
+                                            <constraint firstAttribute="width" secondItem="Vhc-H3-xGb" secondAttribute="height" multiplier="1:1" id="tmu-9W-GZY"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="17.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="dUn-Pd-UuH">
+                                        <rect key="frame" x="45" y="-1" width="148.5" height="37.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Erik Fields" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBM-sx-zMa">
+                                                <rect key="frame" x="0.0" y="0.0" width="68" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="University of Pennsylvania" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqJ-tJ-xMn">
+                                                <rect key="frame" x="0.0" y="23" width="148.5" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" name="sub_title"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WyN-Ua-Atv">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="35"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Vhc-H3-xGb" firstAttribute="top" secondItem="PqV-pc-RoA" secondAttribute="top" id="062-lY-Hc3"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vhc-H3-xGb" secondAttribute="bottom" id="Fp7-v3-FN7"/>
+                                    <constraint firstItem="dUn-Pd-UuH" firstAttribute="centerY" secondItem="PqV-pc-RoA" secondAttribute="centerY" id="GAv-sa-zsQ"/>
+                                    <constraint firstItem="dUn-Pd-UuH" firstAttribute="leading" secondItem="Vhc-H3-xGb" secondAttribute="trailing" constant="10" id="OUg-xk-edr"/>
+                                    <constraint firstItem="WyN-Ua-Atv" firstAttribute="top" secondItem="PqV-pc-RoA" secondAttribute="top" id="Ovn-zm-n8j"/>
+                                    <constraint firstItem="WyN-Ua-Atv" firstAttribute="leading" secondItem="PqV-pc-RoA" secondAttribute="leading" id="PV7-Iu-hcU"/>
+                                    <constraint firstItem="Vhc-H3-xGb" firstAttribute="leading" secondItem="PqV-pc-RoA" secondAttribute="leading" id="frc-GH-aN1"/>
+                                    <constraint firstAttribute="bottom" secondItem="WyN-Ua-Atv" secondAttribute="bottom" id="q4F-4u-AQB"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="800" verticalCompressionResistancePriority="800" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcu-dh-wTO" customClass="ActiveLabel" customModule="ActiveLabel">
+                                <rect key="frame" x="20" y="62" width="388" height="140.5"/>
+                                <string key="text">Hello! I was able to update #thephone iPhone 12 Pro Max from iOS 13.0 to 14.0 after I downloaded the public beta profile from the beta program because I kept getting an error in finder on macOS … saying I don’t have enough
+space to backup my iPhone.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" name="sub_title"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="mentionColor">
+                                        <color key="value" name="AccentColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="mentionSelectedColor">
+                                        <color key="value" name="AccentColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="hashtagColor">
+                                        <color key="value" name="buttons_green"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="hashtagSelectedColor">
+                                        <color key="value" name="buttons_green"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="URLColor">
+                                        <color key="value" name="AccentColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="URLSelectedColor">
+                                        <color key="value" name="AccentColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Hwm-Yd-hAO">
+                                <rect key="frame" x="20" y="218.5" width="388" height="263.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Hwm-Yd-hAO" secondAttribute="height" multiplier="184:125" id="l06-GQ-jer"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="1ss-cI-zZD">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </collectionView>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="7jU-cX-0DA">
+                                <rect key="frame" x="273" y="226.5" width="150" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="be3-0H-PAi"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWQ-yo-Or7" customClass="TransitionButton" customModule="TransitionButton">
+                                <rect key="frame" x="20" y="498" width="189" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WeV-HG-7p6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Approve">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3G0-8a-NWq">
+                                <rect key="frame" x="20" y="542.5" width="388" height="0.5"/>
+                                <color key="backgroundColor" red="0.7843137255" green="0.78823529410000004" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="MCt-hm-0Ah"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giV-Zp-YnD" customClass="TransitionButton" customModule="TransitionButton">
+                                <rect key="frame" x="219" y="498" width="189" height="30"/>
+                                <color key="backgroundColor" name="messageBG"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nr9-D7-ecv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Decline">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PqV-pc-RoA" firstAttribute="leading" secondItem="VaD-df-VAA" secondAttribute="leading" constant="20" id="3kn-pg-RBl"/>
+                            <constraint firstItem="cWQ-yo-Or7" firstAttribute="leading" secondItem="Hwm-Yd-hAO" secondAttribute="leading" id="5JO-8Y-r2A"/>
+                            <constraint firstItem="giV-Zp-YnD" firstAttribute="width" secondItem="cWQ-yo-Or7" secondAttribute="width" id="6Uz-yd-hdj"/>
+                            <constraint firstAttribute="trailing" secondItem="jcu-dh-wTO" secondAttribute="trailing" constant="20" id="810-ba-ZWn"/>
+                            <constraint firstAttribute="bottom" secondItem="3G0-8a-NWq" secondAttribute="bottom" constant="5" id="9NZ-4h-ZxH"/>
+                            <constraint firstAttribute="trailing" secondItem="3G0-8a-NWq" secondAttribute="trailing" constant="20" id="9yn-1S-pmU"/>
+                            <constraint firstItem="Hwm-Yd-hAO" firstAttribute="top" secondItem="jcu-dh-wTO" secondAttribute="bottom" constant="16" id="ABQ-7l-dUs"/>
+                            <constraint firstItem="giV-Zp-YnD" firstAttribute="trailing" secondItem="Hwm-Yd-hAO" secondAttribute="trailing" id="ATq-lK-plL"/>
+                            <constraint firstAttribute="trailing" secondItem="Hwm-Yd-hAO" secondAttribute="trailing" constant="20" id="CA3-Qv-4uc"/>
+                            <constraint firstItem="7jU-cX-0DA" firstAttribute="top" secondItem="Hwm-Yd-hAO" secondAttribute="top" constant="8" id="IHF-P1-5ht"/>
+                            <constraint firstItem="jcu-dh-wTO" firstAttribute="leading" secondItem="VaD-df-VAA" secondAttribute="leading" constant="20" id="KZP-fQ-eg8"/>
+                            <constraint firstItem="giV-Zp-YnD" firstAttribute="centerY" secondItem="cWQ-yo-Or7" secondAttribute="centerY" id="Wyz-2X-4by"/>
+                            <constraint firstItem="7jU-cX-0DA" firstAttribute="trailing" secondItem="Hwm-Yd-hAO" secondAttribute="trailing" constant="15" id="X8w-Tl-qIs"/>
+                            <constraint firstItem="3G0-8a-NWq" firstAttribute="leading" secondItem="VaD-df-VAA" secondAttribute="leading" constant="20" id="aeh-fw-AlX"/>
+                            <constraint firstItem="PqV-pc-RoA" firstAttribute="top" secondItem="VaD-df-VAA" secondAttribute="top" constant="15" id="cgl-8o-IeS"/>
+                            <constraint firstItem="jcu-dh-wTO" firstAttribute="top" secondItem="PqV-pc-RoA" secondAttribute="bottom" constant="12" id="dWJ-As-72h"/>
+                            <constraint firstItem="giV-Zp-YnD" firstAttribute="leading" secondItem="cWQ-yo-Or7" secondAttribute="trailing" constant="10" id="nAC-O5-PZh"/>
+                            <constraint firstAttribute="trailing" secondItem="PqV-pc-RoA" secondAttribute="trailing" constant="20" id="sQn-4X-9yh"/>
+                            <constraint firstAttribute="bottom" secondItem="cWQ-yo-Or7" secondAttribute="bottom" constant="20" id="wMF-R5-XH6"/>
+                            <constraint firstItem="Hwm-Yd-hAO" firstAttribute="leading" secondItem="VaD-df-VAA" secondAttribute="leading" constant="20" id="wZX-Qb-irw"/>
+                            <constraint firstItem="cWQ-yo-Or7" firstAttribute="top" secondItem="Hwm-Yd-hAO" secondAttribute="bottom" constant="16" id="yT1-84-Q7I"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="VaD-df-VAA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Lv6-YJ-OxV"/>
+                    <constraint firstItem="VaD-df-VAA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="PqP-NW-QRj"/>
+                    <constraint firstAttribute="trailing" secondItem="VaD-df-VAA" secondAttribute="trailing" id="qdq-qv-uK3"/>
+                    <constraint firstAttribute="bottom" secondItem="VaD-df-VAA" secondAttribute="bottom" id="vmD-zT-dMA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="btnApprove" destination="cWQ-yo-Or7" id="jTk-Xx-uD3"/>
+                <outlet property="btnDecline" destination="giV-Zp-YnD" id="hxg-5z-GAm"/>
+                <outlet property="btnProfile" destination="WyN-Ua-Atv" id="a0N-fe-f5K"/>
+                <outlet property="collectionView" destination="Hwm-Yd-hAO" id="YuG-NR-x0d"/>
+                <outlet property="imgProfile" destination="Vhc-H3-xGb" id="qVN-Sw-pKx"/>
+                <outlet property="lblInstituteName" destination="sqJ-tJ-xMn" id="Yc7-iD-AwZ"/>
+                <outlet property="lblName" destination="iBM-sx-zMa" id="Fbn-5l-epu"/>
+                <outlet property="lblPost" destination="jcu-dh-wTO" id="KIe-ra-Lw0"/>
+                <outlet property="pageControl" destination="7jU-cX-0DA" id="eLR-zd-IND"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="cWQ-yo-Or7">
+            <size key="intrinsicContentSize" width="63" height="32"/>
+        </designable>
+        <designable name="giV-Zp-YnD">
+            <size key="intrinsicContentSize" width="56" height="32"/>
+        </designable>
+        <designable name="jcu-dh-wTO">
+            <size key="intrinsicContentSize" width="1531" height="36"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="profile_image_dummy" width="84" height="84"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="buttons_green">
+            <color red="0.32156862745098042" green="0.70196078431372544" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="messageBG">
+            <color red="0.95294117647058818" green="0.96078431372549022" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="sub_title">
+            <color red="0.29019607843137257" green="0.30196078431372547" blue="0.32156862745098042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

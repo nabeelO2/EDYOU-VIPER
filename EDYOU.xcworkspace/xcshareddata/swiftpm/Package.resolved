@@ -1,0 +1,131 @@
+{
+  "pins" : [
+    {
+      "identity" : "client-sdk-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/livekit/client-sdk-swift",
+      "state" : {
+        "revision" : "7e7decf3a09de4a169dfc0445a14d9fd2d8db58d",
+        "version" : "1.0.4"
+      }
+    },
+    {
+      "identity" : "giphy-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Giphy/giphy-ios-sdk",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ba4a17d60352bc8bfaeed2a9cd39990295408fd8"
+      }
+    },
+    {
+      "identity" : "libsignal",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tigase/libsignal",
+      "state" : {
+        "revision" : "d23d5af0d729cf66b93cea607f3f84a34b9fddfd",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "libwebp-xcode",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/libwebp-Xcode",
+      "state" : {
+        "revision" : "4f52fc9b29600a03de6e05af16df0d694cb44301",
+        "version" : "1.2.4"
+      }
+    },
+    {
+      "identity" : "martin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nabeelO2/Martin",
+      "state" : {
+        "branch" : "main",
+        "revision" : "cedf684061fee590f1dd9784d7eaefba8588ce89"
+      }
+    },
+    {
+      "identity" : "openssl",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/OuterCorner/OpenSSL",
+      "state" : {
+        "revision" : "331ee7092308d5a22163c176e682201b6e0eb9b4",
+        "version" : "1.2.1"
+      }
+    },
+    {
+      "identity" : "promises",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/promises.git",
+      "state" : {
+        "revision" : "ec957ccddbcc710ccc64c9dcbd4c7006fcf8b73a",
+        "version" : "2.2.0"
+      }
+    },
+    {
+      "identity" : "specs",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/webrtc-sdk/Specs.git",
+      "state" : {
+        "revision" : "5225f2de4b6d0098803b3a0e55b255a41f293dad",
+        "version" : "104.5112.2"
+      }
+    },
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-collections.git",
+      "state" : {
+        "revision" : "937e904258d22af6e447a0b72c0bc67583ef64a2",
+        "version" : "1.0.4"
+      }
+    },
+    {
+      "identity" : "swift-log",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-log.git",
+      "state" : {
+        "revision" : "32e8d724467f8fe623624570367e3d50c5638e46",
+        "version" : "1.5.2"
+      }
+    },
+    {
+      "identity" : "swift-protobuf",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-protobuf.git",
+      "state" : {
+        "revision" : "f25867a208f459d3c5a06935dceb9083b11cd539",
+        "version" : "1.22.0"
+      }
+    },
+    {
+      "identity" : "tigase-logging.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tigase/tigase-logging.swift.git",
+      "state" : {
+        "revision" : "382e2e85e64f8b1e3fcb71a996a030bf1b62ecb3",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "tigase-sqlite3.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tigase/tigase-sqlite3.swift.git",
+      "state" : {
+        "revision" : "da4974f537333e48aeb6b8191cfd1903f2846d40",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "uxmpp",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nabeelO2/uxmpp.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "022589b53acf3f0c15a5b788806ceee18d20ad78"
+      }
+    }
+  ],
+  "version" : 2
+}

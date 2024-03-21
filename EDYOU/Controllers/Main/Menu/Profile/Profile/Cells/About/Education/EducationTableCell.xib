@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="KGk-i7-Jjw" customClass="EducationTableCell" customModule="EDYOU" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5SA-BJ-RZF">
+                        <rect key="frame" x="16" y="11" width="368" height="93"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxD-TB-tJT">
+                                <rect key="frame" x="10" y="54" width="348" height="0.5"/>
+                                <color key="backgroundColor" red="0.7843137255" green="0.78823529410000004" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="Ibd-f2-oqq"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="University of London" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bg-Za-gAl">
+                                <rect key="frame" x="10" y="10" width="125" height="14.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Master in graphic design - MPhil, graphic design" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZG-P5-Lpp">
+                                <rect key="frame" x="10" y="64.5" width="348" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.29411764709999999" green="0.30196078430000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017 - 2019" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgt-A1-UFb">
+                                <rect key="frame" x="290" y="29.5" width="68" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.29411764709999999" green="0.30196078430000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_location_marker" translatesAutoresizingMaskIntoConstraints="NO" id="0tI-zn-udo">
+                                <rect key="frame" x="10" y="31" width="12" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="1F4-Rj-qO5"/>
+                                    <constraint firstAttribute="width" constant="12" id="CGw-53-buk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Islamabad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sc1-cf-VUs">
+                                <rect key="frame" x="27" y="29.5" width="58" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.29411764709999999" green="0.30196078430000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calender" translatesAutoresizingMaskIntoConstraints="NO" id="haB-bl-6cv">
+                                <rect key="frame" x="273" y="31" width="12" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="tJK-y8-XFa"/>
+                                    <constraint firstAttribute="width" constant="12" id="zH2-Xa-75Z"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKM-lj-lVN" customClass="TransitionButton" customModule="TransitionButton">
+                                <rect key="frame" x="310" y="3" width="20" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="0iA-Bo-W25"/>
+                                    <constraint firstAttribute="width" constant="20" id="jvQ-fs-LLB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="tintColor" name="buttons_green"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="editPencil">
+                                    <color key="titleColor" name="buttons_green"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxQ-of-Fcj" customClass="TransitionButton" customModule="TransitionButton">
+                                <rect key="frame" x="338" y="3" width="20" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Zma-om-W7d"/>
+                                    <constraint firstAttribute="width" constant="20" id="ayc-8u-zFw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="tintColor" name="buttons_green"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="delete icon">
+                                    <color key="titleColor" name="buttons_green"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bgt-A1-UFb" firstAttribute="top" secondItem="sc1-cf-VUs" secondAttribute="top" id="31o-UN-qq9"/>
+                            <constraint firstItem="4bg-Za-gAl" firstAttribute="leading" secondItem="5SA-BJ-RZF" secondAttribute="leading" constant="10" id="4hV-pa-VSW"/>
+                            <constraint firstAttribute="height" constant="93" id="53q-S1-dgh"/>
+                            <constraint firstAttribute="trailing" secondItem="bgt-A1-UFb" secondAttribute="trailing" constant="10" id="57I-V8-5a0"/>
+                            <constraint firstItem="gxD-TB-tJT" firstAttribute="leading" secondItem="0tI-zn-udo" secondAttribute="leading" id="6cb-zQ-grm"/>
+                            <constraint firstItem="sc1-cf-VUs" firstAttribute="leading" secondItem="0tI-zn-udo" secondAttribute="trailing" constant="5" id="7dh-52-eR2"/>
+                            <constraint firstItem="0tI-zn-udo" firstAttribute="leading" secondItem="4bg-Za-gAl" secondAttribute="leading" id="BYJ-Xg-Y1D"/>
+                            <constraint firstItem="YxQ-of-Fcj" firstAttribute="leading" secondItem="bKM-lj-lVN" secondAttribute="trailing" constant="8" symbolic="YES" id="Eb0-XP-JH7"/>
+                            <constraint firstItem="bKM-lj-lVN" firstAttribute="top" secondItem="5SA-BJ-RZF" secondAttribute="top" constant="3" id="KId-rG-0J9"/>
+                            <constraint firstItem="sc1-cf-VUs" firstAttribute="top" secondItem="4bg-Za-gAl" secondAttribute="bottom" constant="5" id="TUe-3J-gRQ"/>
+                            <constraint firstAttribute="trailing" secondItem="YxQ-of-Fcj" secondAttribute="trailing" constant="10" id="TsI-Ge-9cJ"/>
+                            <constraint firstItem="YxQ-of-Fcj" firstAttribute="top" secondItem="5SA-BJ-RZF" secondAttribute="top" constant="3" id="VUa-9K-zHF"/>
+                            <constraint firstItem="4bg-Za-gAl" firstAttribute="top" secondItem="5SA-BJ-RZF" secondAttribute="top" constant="10" id="WLT-w1-oyv"/>
+                            <constraint firstItem="AZG-P5-Lpp" firstAttribute="trailing" secondItem="gxD-TB-tJT" secondAttribute="trailing" id="Y0O-4J-bC1"/>
+                            <constraint firstItem="AZG-P5-Lpp" firstAttribute="leading" secondItem="gxD-TB-tJT" secondAttribute="leading" id="dgm-FI-1az"/>
+                            <constraint firstItem="gxD-TB-tJT" firstAttribute="top" secondItem="sc1-cf-VUs" secondAttribute="bottom" constant="10" id="htA-Oz-DWv"/>
+                            <constraint firstItem="AZG-P5-Lpp" firstAttribute="top" secondItem="gxD-TB-tJT" secondAttribute="bottom" constant="10" id="jdp-cM-eHM"/>
+                            <constraint firstItem="bgt-A1-UFb" firstAttribute="leading" secondItem="haB-bl-6cv" secondAttribute="trailing" constant="5" id="jm4-nj-Uny"/>
+                            <constraint firstItem="bgt-A1-UFb" firstAttribute="bottom" secondItem="sc1-cf-VUs" secondAttribute="bottom" id="kuN-Bc-mdM"/>
+                            <constraint firstAttribute="trailing" secondItem="gxD-TB-tJT" secondAttribute="trailing" constant="10" id="lgO-OQ-qlH"/>
+                            <constraint firstItem="0tI-zn-udo" firstAttribute="centerY" secondItem="sc1-cf-VUs" secondAttribute="centerY" id="pzZ-gu-f3o"/>
+                            <constraint firstItem="haB-bl-6cv" firstAttribute="centerY" secondItem="bgt-A1-UFb" secondAttribute="centerY" id="yBy-ry-swm"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.7843137255" green="0.78823529410000004" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5SA-BJ-RZF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="OMV-Wq-7tg"/>
+                    <constraint firstItem="5SA-BJ-RZF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="amu-Dr-Z71"/>
+                    <constraint firstAttribute="bottom" secondItem="5SA-BJ-RZF" secondAttribute="bottom" constant="11" id="kGA-Vh-ecH"/>
+                    <constraint firstAttribute="trailing" secondItem="5SA-BJ-RZF" secondAttribute="trailing" constant="16" id="y72-ec-b1C"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnDelete" destination="YxQ-of-Fcj" id="uqB-BU-UlP"/>
+                <outlet property="btnEdit" destination="bKM-lj-lVN" id="xjn-qJ-Qdw"/>
+                <outlet property="lblDegree" destination="AZG-P5-Lpp" id="ikb-4R-7Q6"/>
+                <outlet property="lblDuration" destination="bgt-A1-UFb" id="VtM-Sd-m8m"/>
+                <outlet property="lblInstituteName" destination="4bg-Za-gAl" id="dsu-fl-Zkg"/>
+                <outlet property="lblLocation" destination="sc1-cf-VUs" id="Vm9-4W-fDX"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="69.642857142857139"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="YxQ-of-Fcj">
+            <size key="intrinsicContentSize" width="18" height="19"/>
+        </designable>
+        <designable name="bKM-lj-lVN">
+            <size key="intrinsicContentSize" width="15.5" height="15.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="delete icon" width="18" height="19"/>
+        <image name="editPencil" width="15.5" height="15.5"/>
+        <image name="ic_calender" width="12" height="12"/>
+        <image name="ic_location_marker" width="12" height="12"/>
+        <namedColor name="buttons_green">
+            <color red="0.32156862745098042" green="0.70196078431372544" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,6 @@
+framework module EZCustomNavigation {
+  umbrella header "EZCustomNavigation-umbrella.h"
+
+  export *
+  module * { export * }
+}

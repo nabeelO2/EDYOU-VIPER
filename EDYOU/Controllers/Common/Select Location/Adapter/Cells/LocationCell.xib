@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Light.ttf">
+            <string>Poppins-Light</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="LocationCell" customModule="EDYOU" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location_picker_pin" translatesAutoresizingMaskIntoConstraints="NO" id="pXb-HP-N7i">
+                        <rect key="frame" x="12" y="15" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="pXb-HP-N7i" secondAttribute="height" multiplier="1:1" id="O3q-I9-ZQ1"/>
+                            <constraint firstAttribute="height" constant="36" id="ehy-j4-1fS"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HwN-g7-MrI">
+                        <rect key="frame" x="60" y="19" width="307" height="28.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dubai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lh0-cp-vxm">
+                                <rect key="frame" x="0.0" y="0.0" width="307" height="14"/>
+                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="12"/>
+                                <color key="textColor" red="0.52941176469999995" green="0.52941176469999995" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burj e Khalifa, Dubai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGL-Go-ZCd">
+                                <rect key="frame" x="0.0" y="12" width="307" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gGL-Go-ZCd" secondAttribute="trailing" id="0EF-Oq-gb5"/>
+                            <constraint firstItem="lh0-cp-vxm" firstAttribute="top" secondItem="HwN-g7-MrI" secondAttribute="top" id="8tA-BC-QX0"/>
+                            <constraint firstItem="lh0-cp-vxm" firstAttribute="leading" secondItem="HwN-g7-MrI" secondAttribute="leading" id="FzF-5O-nzY"/>
+                            <constraint firstItem="gGL-Go-ZCd" firstAttribute="leading" secondItem="HwN-g7-MrI" secondAttribute="leading" id="Git-kQ-Fwb"/>
+                            <constraint firstItem="gGL-Go-ZCd" firstAttribute="top" secondItem="lh0-cp-vxm" secondAttribute="bottom" constant="-2" id="iIo-cI-ggd"/>
+                            <constraint firstAttribute="bottom" secondItem="gGL-Go-ZCd" secondAttribute="bottom" id="jMz-ua-K3V"/>
+                            <constraint firstAttribute="trailing" secondItem="lh0-cp-vxm" secondAttribute="trailing" id="kqT-5q-udp"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0GP-xf-Bre">
+                        <rect key="frame" x="0.0" y="65.5" width="375" height="0.5"/>
+                        <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="bHS-SN-hHg"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="HwN-g7-MrI" secondAttribute="trailing" constant="8" id="7KR-U5-4Ug"/>
+                    <constraint firstItem="pXb-HP-N7i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="8LH-T0-zT4"/>
+                    <constraint firstItem="HwN-g7-MrI" firstAttribute="leading" secondItem="pXb-HP-N7i" secondAttribute="trailing" constant="12" id="GE0-k7-R5X"/>
+                    <constraint firstItem="pXb-HP-N7i" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="O94-Vi-bb4"/>
+                    <constraint firstAttribute="bottom" secondItem="0GP-xf-Bre" secondAttribute="bottom" id="hxu-M0-a3K"/>
+                    <constraint firstItem="0GP-xf-Bre" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="koV-dt-gYu"/>
+                    <constraint firstAttribute="trailing" secondItem="0GP-xf-Bre" secondAttribute="trailing" id="s2x-CE-qHn"/>
+                    <constraint firstItem="HwN-g7-MrI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yeL-c6-v98"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblCompleteAddress" destination="gGL-Go-ZCd" id="HqI-dw-qwK"/>
+                <outlet property="lblTitle" destination="lh0-cp-vxm" id="FXm-Qf-rf2"/>
+            </connections>
+            <point key="canvasLocation" x="140" y="102"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="location_picker_pin" width="26" height="52"/>
+    </resources>
+</document>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TopHeaderV" customModule="EDYOU" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jei-NT-csB" userLabel="Top Bar View">
+                    <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="notification_bell_icon" translatesAutoresizingMaskIntoConstraints="NO" id="faf-jl-0Hg">
+                            <rect key="frame" x="0.0" y="3" width="31" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="7Vt-1J-H5K"/>
+                            </constraints>
+                        </imageView>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kgh-DW-Ck9">
+                            <rect key="frame" x="23" y="1" width="16" height="16"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qg4-Tx-jbE">
+                                    <rect key="frame" x="4" y="0.0" width="8" height="16"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemRedColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="1Kk-gC-1eD"/>
+                                <constraint firstAttribute="trailing" secondItem="qg4-Tx-jbE" secondAttribute="trailing" constant="4" id="BiG-sw-yLj"/>
+                                <constraint firstItem="qg4-Tx-jbE" firstAttribute="leading" secondItem="Kgh-DW-Ck9" secondAttribute="leading" constant="4" id="T5X-4K-hul"/>
+                                <constraint firstItem="qg4-Tx-jbE" firstAttribute="top" secondItem="Kgh-DW-Ck9" secondAttribute="top" id="ZZl-eg-Lr5"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="16" id="hrb-7N-eHH"/>
+                                <constraint firstAttribute="bottom" secondItem="qg4-Tx-jbE" secondAttribute="bottom" id="wya-DV-DVR"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgY-YE-UEW">
+                            <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title=" "/>
+                            <connections>
+                                <action selector="didTapNotification:" destination="iN0-l3-epB" eventType="touchUpInside" id="fjC-6z-Ryc"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="NavigationColor"/>
+                    <constraints>
+                        <constraint firstItem="NgY-YE-UEW" firstAttribute="leading" secondItem="jei-NT-csB" secondAttribute="leading" id="5AC-Fh-p7R"/>
+                        <constraint firstItem="faf-jl-0Hg" firstAttribute="leading" secondItem="jei-NT-csB" secondAttribute="leading" id="6AC-Vw-ZkA"/>
+                        <constraint firstAttribute="height" constant="30" id="EOL-iF-E8t"/>
+                        <constraint firstItem="Kgh-DW-Ck9" firstAttribute="centerX" secondItem="faf-jl-0Hg" secondAttribute="trailing" id="SYu-ou-ccV"/>
+                        <constraint firstItem="Kgh-DW-Ck9" firstAttribute="top" secondItem="faf-jl-0Hg" secondAttribute="top" constant="-2" id="VHT-a5-Nxc"/>
+                        <constraint firstAttribute="trailing" secondItem="faf-jl-0Hg" secondAttribute="trailing" id="Xk7-2i-KsX"/>
+                        <constraint firstAttribute="bottom" secondItem="NgY-YE-UEW" secondAttribute="bottom" id="aQo-M5-srr"/>
+                        <constraint firstItem="faf-jl-0Hg" firstAttribute="centerY" secondItem="jei-NT-csB" secondAttribute="centerY" id="gMa-NF-OjP"/>
+                        <constraint firstAttribute="trailing" secondItem="NgY-YE-UEW" secondAttribute="trailing" id="m76-Hl-mua"/>
+                        <constraint firstItem="NgY-YE-UEW" firstAttribute="top" secondItem="jei-NT-csB" secondAttribute="top" id="t7Q-X1-cWZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" name="like_enable"/>
+            <constraints>
+                <constraint firstItem="jei-NT-csB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="30U-ga-G4G"/>
+                <constraint firstAttribute="trailing" secondItem="jei-NT-csB" secondAttribute="trailing" id="FwR-YK-uKy"/>
+                <constraint firstAttribute="bottom" secondItem="jei-NT-csB" secondAttribute="bottom" id="LDf-pi-ehZ"/>
+                <constraint firstItem="jei-NT-csB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Lwa-G3-6cI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lblBadgeNotifications" destination="qg4-Tx-jbE" id="gh6-rE-irt"/>
+                <outlet property="viewBadgeNotifications" destination="Kgh-DW-Ck9" id="ITu-fG-3S1"/>
+                <outlet property="viewNavBar" destination="jei-NT-csB" id="hWn-T8-YCb"/>
+            </connections>
+            <point key="canvasLocation" x="307.63358778625951" y="-290.84507042253523"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="notification_bell_icon" width="21" height="25.333333969116211"/>
+        <namedColor name="NavigationColor">
+            <color red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="like_enable">
+            <color red="0.92500001192092896" green="0.39599999785423279" blue="0.3919999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

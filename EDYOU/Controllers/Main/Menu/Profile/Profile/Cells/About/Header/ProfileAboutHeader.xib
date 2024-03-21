@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="KGk-i7-Jjw" customClass="ProfileAboutHeader" customModule="EDYOU" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUG-0X-eVt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6h-Sx-vy1">
+                                <rect key="frame" x="16" y="21.5" width="31" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6H8-NR-mR6">
+                                <rect key="frame" x="215" y="12.5" width="89" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckm-Bm-gVG">
+                                        <rect key="frame" x="0.0" y="0.0" width="44.5" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Add" title=" "/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z02-GC-gCe">
+                                        <rect key="frame" x="44.5" y="0.0" width="44.5" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="editPencil" title=" "/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="7xn-ni-svD"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RMU-ga-5rc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="0.5"/>
+                                <color key="backgroundColor" red="0.78431372549019607" green="0.78823529411764703" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="nb5-ax-UI9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RMU-ga-5rc" firstAttribute="top" secondItem="aUG-0X-eVt" secondAttribute="top" id="6AE-co-RY7"/>
+                            <constraint firstItem="RMU-ga-5rc" firstAttribute="leading" secondItem="aUG-0X-eVt" secondAttribute="leading" id="CAQ-Zq-Alu"/>
+                            <constraint firstItem="6H8-NR-mR6" firstAttribute="centerY" secondItem="B6h-Sx-vy1" secondAttribute="centerY" id="IX5-pw-FXO"/>
+                            <constraint firstItem="B6h-Sx-vy1" firstAttribute="centerY" secondItem="aUG-0X-eVt" secondAttribute="centerY" id="JNl-mB-I9Z"/>
+                            <constraint firstItem="B6h-Sx-vy1" firstAttribute="leading" secondItem="aUG-0X-eVt" secondAttribute="leading" constant="16" id="MMP-To-icr"/>
+                            <constraint firstAttribute="trailing" secondItem="RMU-ga-5rc" secondAttribute="trailing" id="Rsz-ew-H6c"/>
+                            <constraint firstAttribute="trailing" secondItem="6H8-NR-mR6" secondAttribute="trailing" constant="16" id="Xdr-8g-aX1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="aUG-0X-eVt" secondAttribute="bottom" id="ELl-Wo-DMY"/>
+                    <constraint firstItem="aUG-0X-eVt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kw1-PW-oo5"/>
+                    <constraint firstItem="aUG-0X-eVt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sC0-BP-TAj"/>
+                    <constraint firstAttribute="trailing" secondItem="aUG-0X-eVt" secondAttribute="trailing" id="sFq-5i-Xgg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnAdd" destination="ckm-Bm-gVG" id="DUc-lM-hYs"/>
+                <outlet property="btnEdit" destination="z02-GC-gCe" id="TdG-aY-zgF"/>
+                <outlet property="lblTittle" destination="B6h-Sx-vy1" id="mHY-8g-f8D"/>
+                <outlet property="vSeperator" destination="RMU-ga-5rc" id="Ycl-M0-nzc"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="76.339285714285708"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Add" width="16" height="16"/>
+        <image name="editPencil" width="15.5" height="15.5"/>
+    </resources>
+</document>

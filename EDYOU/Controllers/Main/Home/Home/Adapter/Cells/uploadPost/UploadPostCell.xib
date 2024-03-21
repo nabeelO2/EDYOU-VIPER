@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="88" id="KGk-i7-Jjw" customClass="UploadPostCell" customModule="EDYOU" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" " translatesAutoresizingMaskIntoConstraints="NO" id="FwJ-qi-GCH">
+                        <rect key="frame" x="16" y="0.0" width="72" height="72"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="FwJ-qi-GCH" secondAttribute="height" multiplier="1:1" id="e2z-Tq-wVP"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posting..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKd-DE-62o">
+                        <rect key="frame" x="104" y="0.0" width="64.333333333333314" height="72"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C88-XK-R2l">
+                        <rect key="frame" x="186" y="4" width="78.666666666666686" height="64"/>
+                        <color key="tintColor" red="0.95294117649999999" green="0.92941176469999998" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="rotateRight" title=" "/>
+                    </button>
+                    <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZB-xD-nSm">
+                        <rect key="frame" x="272.66666666666669" y="18.666666666666671" width="47.333333333333314" height="35"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="ic_cross" title=" "/>
+                    </button>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1fY-tv-dtC">
+                        <rect key="frame" x="0.0" y="84" width="320" height="4"/>
+                        <color key="progressTintColor" name="buttons_green"/>
+                    </progressView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="JZB-xD-nSm" secondAttribute="trailing" id="00v-qA-jbl"/>
+                    <constraint firstItem="qKd-DE-62o" firstAttribute="centerY" secondItem="FwJ-qi-GCH" secondAttribute="centerY" id="9Jf-DO-Ido"/>
+                    <constraint firstItem="FwJ-qi-GCH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="9zd-hu-Euf"/>
+                    <constraint firstAttribute="bottom" secondItem="1fY-tv-dtC" secondAttribute="bottom" id="AD8-Vu-cdS"/>
+                    <constraint firstItem="JZB-xD-nSm" firstAttribute="leading" secondItem="C88-XK-R2l" secondAttribute="trailing" constant="8" id="E2r-pt-54x"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FwJ-qi-GCH" secondAttribute="bottom" id="Ea9-0e-v5U"/>
+                    <constraint firstItem="C88-XK-R2l" firstAttribute="centerY" secondItem="qKd-DE-62o" secondAttribute="centerY" id="Iz0-BC-o14"/>
+                    <constraint firstItem="qKd-DE-62o" firstAttribute="leading" secondItem="FwJ-qi-GCH" secondAttribute="trailing" constant="16" id="Qz0-ow-BgG"/>
+                    <constraint firstItem="qKd-DE-62o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Xnv-fK-pmQ"/>
+                    <constraint firstAttribute="trailing" secondItem="1fY-tv-dtC" secondAttribute="trailing" id="iDE-vL-msU"/>
+                    <constraint firstItem="JZB-xD-nSm" firstAttribute="centerY" secondItem="qKd-DE-62o" secondAttribute="centerY" id="kIx-2x-cIT"/>
+                    <constraint firstItem="1fY-tv-dtC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="klx-kH-Qq3"/>
+                    <constraint firstAttribute="bottom" secondItem="qKd-DE-62o" secondAttribute="bottom" constant="16" id="mPK-WZ-61m"/>
+                    <constraint firstItem="FwJ-qi-GCH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" id="pFL-O4-7kN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="crossBtn" destination="JZB-xD-nSm" id="Zds-Q9-Deg"/>
+                <outlet property="progressLbl" destination="qKd-DE-62o" id="k14-2A-TeE"/>
+                <outlet property="progressV" destination="1fY-tv-dtC" id="lgc-f4-IoQ"/>
+                <outlet property="reloadBtn" destination="C88-XK-R2l" id="UzL-GX-ZgY"/>
+                <outlet property="thumbnailImgV" destination="FwJ-qi-GCH" id="InE-lC-16b"/>
+            </connections>
+            <point key="canvasLocation" x="48.854961832061065" y="14.084507042253522"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name=" " width="128" height="128"/>
+        <image name="ic_cross" width="18.666666030883789" height="18.666666030883789"/>
+        <image name="rotateRight" width="50" height="50"/>
+        <namedColor name="buttons_green">
+            <color red="0.32156862745098042" green="0.70196078431372544" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

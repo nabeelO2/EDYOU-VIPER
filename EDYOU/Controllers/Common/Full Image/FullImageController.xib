@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FullImageController" customModule="EDYOU" customModuleProvider="target">
+            <connections>
+                <outlet property="slideshow" destination="Ug2-0t-CF5" id="Xaz-4V-evi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ug2-0t-CF5" customClass="ImageSlideshow" customModule="ImageSlideshow">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="multiply" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Fzl-tM-ujt">
+                    <rect key="frame" x="375.5" y="87" width="18.5" height="23.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="7Pc-fa-rDw"/>
+                        <constraint firstAttribute="width" secondItem="Fzl-tM-ujt" secondAttribute="height" multiplier="8:13" id="Tw5-NZ-vVx"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWK-mH-ymO">
+                    <rect key="frame" x="280" y="0.0" width="134" height="134"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ZWK-mH-ymO" secondAttribute="height" multiplier="1:1" id="goD-Xe-WMY"/>
+                    </constraints>
+                    <connections>
+                        <action selector="goBack" destination="-1" eventType="touchUpInside" id="mgI-fQ-cFi"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Ug2-0t-CF5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9NJ-eY-kOV"/>
+                <constraint firstItem="Ug2-0t-CF5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="E4k-zU-EiY"/>
+                <constraint firstItem="ZWK-mH-ymO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cEA-HP-fFG"/>
+                <constraint firstAttribute="trailing" secondItem="ZWK-mH-ymO" secondAttribute="trailing" id="cFS-8z-aEv"/>
+                <constraint firstItem="Fzl-tM-ujt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="eRl-3g-pBn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ug2-0t-CF5" secondAttribute="trailing" id="gBJ-ZK-8Mf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fzl-tM-ujt" secondAttribute="trailing" constant="20" id="j6a-OB-Fs3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ug2-0t-CF5" secondAttribute="bottom" id="vg7-6H-8qP"/>
+                <constraint firstItem="ZWK-mH-ymO" firstAttribute="bottom" secondItem="Fzl-tM-ujt" secondAttribute="bottom" constant="20" id="wA4-ux-Zhv"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="70"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="multiply" catalog="system" width="128" height="111"/>
+    </resources>
+</document>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationsSettingsController" customModule="EDYOU" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="fGw-Wf-5CR" id="sIf-JR-caP"/>
+                <outlet property="view" destination="8Ox-g4-1WQ" id="WV9-qt-FGM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8Ox-g4-1WQ">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="saC-Fa-z2w">
+                    <rect key="frame" x="0.0" y="48" width="414" height="55"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="back_arrow_icon" translatesAutoresizingMaskIntoConstraints="NO" id="TWQ-tY-Xv2">
+                            <rect key="frame" x="20" y="20.5" width="14" height="14"/>
+                            <color key="tintColor" red="0.29411764709999999" green="0.30196078430000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="14" id="0xn-aF-RqH"/>
+                                <constraint firstAttribute="width" constant="14" id="xRg-NW-Sc2"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Notifications Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJT-ds-WHA">
+                            <rect key="frame" x="125" y="18" width="164" height="19"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <color key="textColor" name="title"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4LE-Od-OXU">
+                            <rect key="frame" x="0.0" y="54.5" width="414" height="0.5"/>
+                            <color key="backgroundColor" name="separator"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="cQU-Up-P3m"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="rJT-ds-WHA" firstAttribute="centerX" secondItem="saC-Fa-z2w" secondAttribute="centerX" id="1zz-98-CVo"/>
+                        <constraint firstItem="TWQ-tY-Xv2" firstAttribute="centerY" secondItem="saC-Fa-z2w" secondAttribute="centerY" id="38k-a1-aiI"/>
+                        <constraint firstAttribute="bottom" secondItem="4LE-Od-OXU" secondAttribute="bottom" id="FBc-N4-8pj"/>
+                        <constraint firstItem="4LE-Od-OXU" firstAttribute="leading" secondItem="saC-Fa-z2w" secondAttribute="leading" id="Hcc-5L-cVQ"/>
+                        <constraint firstItem="TWQ-tY-Xv2" firstAttribute="leading" secondItem="saC-Fa-z2w" secondAttribute="leading" constant="20" id="O02-ZS-Z0T"/>
+                        <constraint firstAttribute="trailing" secondItem="4LE-Od-OXU" secondAttribute="trailing" id="W5q-zM-JZ5"/>
+                        <constraint firstItem="rJT-ds-WHA" firstAttribute="centerY" secondItem="saC-Fa-z2w" secondAttribute="centerY" id="oXL-J0-0QU"/>
+                        <constraint firstAttribute="height" constant="55" id="qE4-he-9VO"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fGw-Wf-5CR">
+                    <rect key="frame" x="0.0" y="103" width="414" height="690"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oi-rJ-gVJ">
+                    <rect key="frame" x="0.0" y="0.0" width="103" height="103"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="2oi-rJ-gVJ" secondAttribute="height" multiplier="1:1" id="yyd-NA-vzB"/>
+                    </constraints>
+                    <connections>
+                        <action selector="didTapBackButton:" destination="-1" eventType="touchUpInside" id="wpX-zd-BWm"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="700" verticalHuggingPriority="700" horizontalCompressionResistancePriority="700" verticalCompressionResistancePriority="700" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZ6-Gw-moN">
+                    <rect key="frame" x="16" y="813" width="270" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="270" id="wVX-1P-jSM"/>
+                    </constraints>
+                    <string key="text">You can manage your app notification permissions in
+your Phone settings.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" name="sub_title"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="nmy-Sx-0Il"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="2oi-rJ-gVJ" firstAttribute="bottom" secondItem="saC-Fa-z2w" secondAttribute="bottom" id="3A6-6e-xD1"/>
+                <constraint firstItem="saC-Fa-z2w" firstAttribute="trailing" secondItem="nmy-Sx-0Il" secondAttribute="trailing" id="BSb-Z6-4Up"/>
+                <constraint firstItem="fGw-Wf-5CR" firstAttribute="leading" secondItem="nmy-Sx-0Il" secondAttribute="leading" id="ENK-gm-a9a"/>
+                <constraint firstItem="nmy-Sx-0Il" firstAttribute="leading" secondItem="mZ6-Gw-moN" secondAttribute="leading" constant="-16" id="JN6-z9-IS0"/>
+                <constraint firstItem="fGw-Wf-5CR" firstAttribute="top" secondItem="saC-Fa-z2w" secondAttribute="bottom" id="Jcb-sD-VDw"/>
+                <constraint firstItem="saC-Fa-z2w" firstAttribute="top" secondItem="nmy-Sx-0Il" secondAttribute="top" id="Myy-y5-srA"/>
+                <constraint firstItem="saC-Fa-z2w" firstAttribute="leading" secondItem="nmy-Sx-0Il" secondAttribute="leading" id="NSj-0h-8SV"/>
+                <constraint firstItem="nmy-Sx-0Il" firstAttribute="trailing" secondItem="fGw-Wf-5CR" secondAttribute="trailing" id="SRF-Fx-l1g"/>
+                <constraint firstItem="mZ6-Gw-moN" firstAttribute="top" secondItem="fGw-Wf-5CR" secondAttribute="bottom" constant="20" id="X5b-ak-a8R"/>
+                <constraint firstItem="nmy-Sx-0Il" firstAttribute="bottom" secondItem="mZ6-Gw-moN" secondAttribute="bottom" constant="20" id="Y7F-bX-2Uh"/>
+                <constraint firstItem="2oi-rJ-gVJ" firstAttribute="top" secondItem="8Ox-g4-1WQ" secondAttribute="top" id="gqD-VD-5pG"/>
+                <constraint firstItem="2oi-rJ-gVJ" firstAttribute="leading" secondItem="8Ox-g4-1WQ" secondAttribute="leading" id="nu7-WW-SXs"/>
+            </constraints>
+            <point key="canvasLocation" x="869.56521739130437" y="95.758928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back_arrow_icon" width="8" height="14"/>
+        <namedColor name="separator">
+            <color red="0.4779999852180481" green="0.48199999332427979" blue="0.50999999046325684" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="sub_title">
+            <color red="0.29019607843137257" green="0.30196078431372547" blue="0.32156862745098042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="title">
+            <color red="0.0" green="0.16862745098039217" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

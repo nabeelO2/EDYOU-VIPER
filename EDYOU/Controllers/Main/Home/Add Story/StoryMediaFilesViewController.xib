@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StoryMediaFilesViewController" customModule="EDYOU" customModuleProvider="target">
+            <connections>
+                <outlet property="btnShare" destination="BVJ-xK-HUe" id="6yK-p1-TSu"/>
+                <outlet property="collectionView" destination="f7C-dQ-Zxq" id="j1q-K2-5h0"/>
+                <outlet property="mainImageView" destination="WaC-Xg-cRY" id="JJE-8k-MMG"/>
+                <outlet property="playButton" destination="Rql-5V-Q3P" id="ggV-0l-COs"/>
+                <outlet property="progressBar" destination="9Wx-ob-VMV" id="vf6-de-yqw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WaC-Xg-cRY">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9Wx-ob-VMV">
+                    <rect key="frame" x="0.0" y="798" width="414" height="4"/>
+                    <color key="tintColor" name="buttons_green"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="mWR-g8-AZF"/>
+                    </constraints>
+                </progressView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ho-So-enb">
+                    <rect key="frame" x="0.0" y="53" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="cE8-X7-1T4"/>
+                        <constraint firstAttribute="height" constant="60" id="fz4-gZ-a5g"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="Story-Back" title=" "/>
+                    <connections>
+                        <action selector="backButtonTapped:" destination="-1" eventType="touchUpInside" id="G9A-PK-8Cv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2k-1U-gux">
+                    <rect key="frame" x="354" y="53" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="GZj-jG-6mR"/>
+                        <constraint firstAttribute="width" constant="60" id="HO8-Fl-T5j"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="Story-menu" title=" "/>
+                    <connections>
+                        <action selector="moreOptionsTapped:" destination="-1" eventType="touchUpInside" id="7bQ-W4-l10"/>
+                    </connections>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="f7C-dQ-Zxq">
+                    <rect key="frame" x="20" y="812" width="194" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="2" minimumInteritemSpacing="2" id="xJ8-cm-pI2">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVJ-xK-HUe" customClass="TransitionButton" customModule="TransitionButton">
+                    <rect key="frame" x="264" y="812" width="130" height="40"/>
+                    <color key="backgroundColor" red="0.32549019607843138" green="0.70196078431372544" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="KDh-Qs-3B8"/>
+                        <constraint firstAttribute="width" constant="130" id="ew7-Bt-bgU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <state key="normal" title="Share to Story">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="shareToStoryTapped:" destination="-1" eventType="touchUpInside" id="n0M-tI-KiE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rql-5V-Q3P">
+                    <rect key="frame" x="169.5" y="410.5" width="75" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="75" id="afP-VV-Wwq"/>
+                        <constraint firstAttribute="height" constant="75" id="bXG-J3-cH9"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="Story-Play" title=" "/>
+                    <connections>
+                        <action selector="playTapped:" destination="-1" eventType="touchUpInside" id="jmZ-LC-O9c"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9Wx-ob-VMV" secondAttribute="trailing" id="6S6-vM-IwT"/>
+                <constraint firstItem="Rql-5V-Q3P" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="6j2-ie-gJ9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WaC-Xg-cRY" secondAttribute="trailing" id="8qJ-TZ-58G"/>
+                <constraint firstAttribute="bottom" secondItem="WaC-Xg-cRY" secondAttribute="bottom" id="AHq-lM-0GC"/>
+                <constraint firstItem="5ho-So-enb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="CWx-Qz-Gat"/>
+                <constraint firstItem="9Wx-ob-VMV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Fjn-dj-2fu"/>
+                <constraint firstItem="f7C-dQ-Zxq" firstAttribute="top" secondItem="9Wx-ob-VMV" secondAttribute="bottom" constant="10" id="JcN-bn-9PJ"/>
+                <constraint firstItem="P2k-1U-gux" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="L4S-4x-p2i"/>
+                <constraint firstItem="f7C-dQ-Zxq" firstAttribute="bottom" secondItem="BVJ-xK-HUe" secondAttribute="bottom" id="QSR-bt-uIA"/>
+                <constraint firstItem="5ho-So-enb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="Ql5-uR-lsw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BVJ-xK-HUe" secondAttribute="bottom" constant="10" id="WW1-Ro-Vmw"/>
+                <constraint firstItem="WaC-Xg-cRY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aLb-XJ-WFu"/>
+                <constraint firstItem="f7C-dQ-Zxq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="adB-fe-R9b"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="P2k-1U-gux" secondAttribute="trailing" id="aeQ-jZ-jtX"/>
+                <constraint firstItem="f7C-dQ-Zxq" firstAttribute="top" secondItem="BVJ-xK-HUe" secondAttribute="top" id="ehF-t8-eXQ"/>
+                <constraint firstItem="BVJ-xK-HUe" firstAttribute="leading" secondItem="f7C-dQ-Zxq" secondAttribute="trailing" constant="50" id="lYA-AL-SSc"/>
+                <constraint firstAttribute="trailing" secondItem="BVJ-xK-HUe" secondAttribute="trailing" constant="20" id="m3J-0L-FYv"/>
+                <constraint firstItem="Rql-5V-Q3P" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sEI-TO-BKe"/>
+                <constraint firstItem="WaC-Xg-cRY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tlD-GP-gZy"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="71"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="BVJ-xK-HUe">
+            <size key="intrinsicContentSize" width="95" height="29"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Story-Back" width="32" height="32"/>
+        <image name="Story-Play" width="75" height="75"/>
+        <image name="Story-menu" width="32" height="32"/>
+        <namedColor name="buttons_green">
+            <color red="0.32156862745098042" green="0.70196078431372544" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

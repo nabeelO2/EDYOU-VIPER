@@ -1,0 +1,131 @@
+//
+// DBChatHistorySyncStore.swift
+//
+// EdYou
+// Copyright (C) 2016 "O2Geeks." <admin@o2geeks.com>
+//
+ 
+//
+
+import Foundation
+import Martin
+import os
+import TigaseSQLite3
+import Combine
+
+extension Query {
+    static let mamSyncInsertPeriod = Query("INSERT INTO chat_history_sync (id, account, component, from_timestamp, from_id, to_timestamp) VALUES (:id, :account, :component, :from_timestamp, :from_id, :to_timestamp)");
+    static let mamSyncFindPeriodsForAccount = Query("SELECT id, account, component, from_timestamp, from_id, to_timestamp FROM chat_history_sync WHERE account = :account AND component IS NULL ORDER BY from_timestamp ASC");
+    static let mamSyncFindPeriodsForAccountWith = Query("SELECT id, account, component, from_timestamp, from_id, to_timestamp FROM chat_history_sync WHERE account = :account AND component = :component ORDER BY from_timestamp ASC");
+    static let mamSyncDeletePeriod = Query("DELETE FROM chat_history_sync WHERE id = :id");
+    static let mamSyncDeletePeriodsForAccount = Query("DELETE FROM chat_history_sync WHERE account = :account");
+    static let mamSyncDeletePeriodsForAccountWith = Query("DELETE FROM chat_history_sync WHERE account = :account AND component = :component");
+    static let mamSyncUpdatePeriodAfter = Query("UPDATE chat_history_sync SET from_id = :after WHERE id = :id");
+    static let mamSyncUpdatePeriodTo = Query("UPDATE chat_history_sync SET to_timestamp = :to_timestamp WHERE id = :id");
+}
+
+class DBChatHistorySyncStore {
+    
+    static let instance = DBChatHistorySyncStore()
+        
+    private var cancellables: Set<AnyCancellable> = [];
+    
+    init() {
+        AccountManager.accountEventsPublisher.sink(receiveValue: { [weak self] event in
+            self?.accountChanged(event);
+        }).store(in: &cancellables)
+    }
+    
+    func accountChanged(_ event: AccountManager.Event) {
+        switch event {
+        case .removed(let account):
+            removeSyncPeriods(forAccount: account.name);
+        default:
+            break;
+        }
+    }
+
+    func addSyncPeriod(_ period: Period) {
+        if let last = loadSyncPeriods(forAccount: period.account, component: period.component).last, last.from <= period.from {
+            if let lastTo = last.to {
+                // we only need to update `to` value
+                if lastTo >= period.from {
+                    os_log("updating sync period to for account %s and component %s", log: .chatHistorySync, type: .debug, period.account.stringValue, period.component?.stringValue ?? "nil");
+                    let newTo = period.to == nil ? nil : max(lastTo, period.to!);
+                    try! Database.main.writer({ database in
+                        try database.update(query: .mamSyncUpdatePeriodTo, cached: false, params: ["id": last.id.uuidString, "to_timestamp": newTo]);
+                    })
+                    return;
+                } else {
+                    // we need a new record..
+                }
+            } else {
+                // lastTo is nil, so sync up to newest..
+                return;
+            }
+        }
+        os_log("adding sync period %s for account %s and component %s from %{time_t}d to %{time_t}d", log: .chatHistorySync, type: .debug, period.id.uuidString, period.account.stringValue, period.component?.stringValue ?? "nil", time_t(period.from.timeIntervalSince1970), time_t(period.to?.timeIntervalSince1970 ?? 0));
+        try! Database.main.writer({ database in
+            try database.insert(query: .mamSyncInsertPeriod, cached: false, params: ["id": period.id.uuidString, "account": period.account, "component": period.component, "from_timestamp": period.from, "to_timestamp": period.to]);
+        })
+    }
+    
+    func loadSyncPeriods(forAccount account: BareJID, component: BareJID?) -> [Period] {
+        var params = ["account": account];
+        if let component = component {
+            params["component"] = component;
+        }
+        
+        // how about periods with less than a few minutes/seconds apart? should we merge them?
+        let query: Query = component == nil ? .mamSyncFindPeriodsForAccount : .mamSyncFindPeriodsForAccountWith;
+        let periods = try! Database.main.reader({ database in
+            try database.select(query: query, cached: false, params: params).mapAll({ cursor -> Period? in
+                return Period(id: UUID(uuidString: cursor["id"]!)!, account: cursor["account"]!, component: cursor["component"], from: cursor["from_timestamp"]!, after: cursor["from_id"], to: cursor["to_timestamp"]);
+            })
+        })
+        os_log("loaded %d sync periods for account %s and component %s", log: .chatHistorySync, type: .debug, periods.count, account.stringValue, component?.stringValue ?? "nil");
+        return periods;
+    }
+    
+    func removeSyncPerod(_ period: Period) {
+        os_log("removing sync period %s for account %s and component %s", log: .chatHistorySync, type: .debug, period.id.uuidString, period.account.stringValue, period.component?.stringValue ?? "nil");
+        try! Database.main.writer({ database in
+            try database.delete(query: .mamSyncDeletePeriod, cached: false, params: ["id": period.id.uuidString])
+        })
+    }
+    
+    func removeSyncPeriods(forAccount account: BareJID, component: BareJID? = nil) {
+        try! Database.main.writer({ database in
+            if let component = component {
+                try database.delete(query: .mamSyncDeletePeriodsForAccountWith, cached: false, params: ["account": account, "component": component]);
+            } else {
+                try database.delete(query: .mamSyncDeletePeriodsForAccount, cached: false, params: ["account": account]);
+            }
+        })
+    }
+    
+    func updatePeriod(_ period: Period, after: String) {
+        os_log("updating sync period %s for account %s and component %s to after %s", log: .chatHistorySync, type: .debug, period.id.uuidString, period.account.stringValue, period.component?.stringValue ?? "nil", after);
+        try! Database.main.writer({ database in
+            try database.update(query: .mamSyncUpdatePeriodAfter, cached: false, params: ["id": period.id.uuidString, "after": after]);
+        })
+    }
+    
+    class Period {
+        let id: UUID;
+        let account: BareJID;
+        let component: BareJID?;
+        let from: Date;
+        var after: String?;
+        let to: Date?;
+        
+        init(id: UUID = UUID(), account: BareJID, component: BareJID? = nil, from: Date, after: String?, to: Date?) {
+            self.id = id;
+            self.account = account;
+            self.component = component;
+            self.from = from;
+            self.after = after;
+            self.to = to;
+        }
+    }
+}

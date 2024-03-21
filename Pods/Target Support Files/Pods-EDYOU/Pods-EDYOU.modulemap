@@ -1,0 +1,6 @@
+framework module Pods_EDYOU {
+  umbrella header "Pods-EDYOU-umbrella.h"
+
+  export *
+  module * { export * }
+}

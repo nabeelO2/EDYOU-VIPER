@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.8</string>
+	<key>CFBundlePackageType</key>
+	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>comgooglemaps</string>
+		<string>comgooglemaps-x-callback</string>
+	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Allow this app to save events to calendar</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow app to access camera to add profile photo and create new post</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Grant access to contacts for sending invites to friends from your contact list.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>EDYOU seeks access to the location you wish to add in post or event creation. This enables accurate location tagging for your content</string>
+	<key>NSLocationUsageDescription</key>
+	<string>EDYOU seeks access to the location you wish to add in post or event creation. This enables accurate location tagging for your content</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>EDYOU seeks access to the location you wish to add in post or event creation. This enables accurate location tagging for your content</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>EdYou wants to access Mircrophone to send voice notes in Chat Message and Audio Video Call</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Allow app to save edited photos and video to library</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow app to access camera to add profile photo and create new post</string>
+	<key>PHPhotoLibraryPreventAutomaticLimitedAccessAlert</key>
+	<string>Allow app to get limited access to photos and videos from library</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SFProDisplaySemibold.ttf</string>
+		<string>SFPRODISPLAYMEDIUM.OTF</string>
+		<string>SFPRODISPLAYBOLD.OTF</string>
+		<string>SFPRODISPLAYTHINITALIC.OTF</string>
+		<string>SFPRODISPLAYREGULAR.OTF</string>
+		<string>SFPRODISPLAYBLACKITALIC.OTF</string>
+		<string>SFPRODISPLAYLIGHTITALIC.OTF</string>
+		<string>SFPRODISPLAYHEAVYITALIC.OTF</string>
+		<string>SFPRODISPLAYSEMIBOLDITALIC.OTF</string>
+	</array>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>fetch</string>
+		<string>remote-notification</string>
+		<string>voip</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>LaunchScreen</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
+	<key>bugsnag</key>
+	<dict>
+		<key>apiKey</key>
+		<string>f4566987d944ecf51d9e2cb368f7135e</string>
+	</dict>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>com.edyou.edyou.mobile.refresh</string>
+	</array>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>INSendMessageIntent</string>
+		<string>INStartCallIntent</string>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SettingsLogoCell" customModule="EDYOU" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tP6-2f-zjR">
+                        <rect key="frame" x="106.5" y="19" width="107" height="75.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="edyou_logo_2" translatesAutoresizingMaskIntoConstraints="NO" id="mKp-4a-rf4">
+                                <rect key="frame" x="28.5" y="0.0" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mKp-4a-rf4" secondAttribute="height" multiplier="1:1" id="Uwh-Ra-YE7"/>
+                                    <constraint firstAttribute="height" constant="50" id="nqO-fm-57w"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4v-jw-rMi">
+                                <rect key="frame" x="0.0" y="56" width="107" height="19.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="107" id="naq-Ry-J6G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="L4v-jw-rMi" firstAttribute="top" secondItem="mKp-4a-rf4" secondAttribute="bottom" constant="6" id="WpD-IZ-P50"/>
+                            <constraint firstAttribute="trailing" secondItem="L4v-jw-rMi" secondAttribute="trailing" id="gDq-c5-wB5"/>
+                            <constraint firstAttribute="bottom" secondItem="L4v-jw-rMi" secondAttribute="bottom" id="gRE-qc-9cc"/>
+                            <constraint firstItem="mKp-4a-rf4" firstAttribute="top" secondItem="tP6-2f-zjR" secondAttribute="top" id="k42-Yx-6Mo"/>
+                            <constraint firstItem="mKp-4a-rf4" firstAttribute="centerX" secondItem="tP6-2f-zjR" secondAttribute="centerX" id="m9T-52-sBR"/>
+                            <constraint firstItem="L4v-jw-rMi" firstAttribute="leading" secondItem="tP6-2f-zjR" secondAttribute="leading" id="oVj-va-GFe"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="tP6-2f-zjR" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tHR-3b-69v"/>
+                    <constraint firstItem="tP6-2f-zjR" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="zYS-W6-rra"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <point key="canvasLocation" x="139" y="70"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="edyou_logo_2" width="228.5" height="227"/>
+    </resources>
+</document>

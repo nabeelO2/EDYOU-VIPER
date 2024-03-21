@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PrivacyPolicyController" customModule="EDYOU" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Qnt-pB-DJc" id="7mm-76-qya"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Qnt-pB-DJc">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C07-tM-Twj">
+                    <rect key="frame" x="0.0" y="48" width="414" height="55"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="back_arrow_icon" translatesAutoresizingMaskIntoConstraints="NO" id="yv8-J3-Xdd">
+                            <rect key="frame" x="20" y="20.5" width="11" height="14"/>
+                            <color key="tintColor" red="0.29411764709999999" green="0.30196078430000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="yv8-J3-Xdd" secondAttribute="height" multiplier="4:5" id="ZOb-y4-h2c"/>
+                                <constraint firstAttribute="height" constant="14" id="hOT-Ok-7XM"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWg-hB-pVC">
+                            <rect key="frame" x="0.0" y="54.5" width="414" height="0.5"/>
+                            <color key="backgroundColor" name="separator"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="fqs-NJ-dp7"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="1hC-N6-3ZN"/>
+                        <constraint firstItem="yv8-J3-Xdd" firstAttribute="leading" secondItem="C07-tM-Twj" secondAttribute="leading" constant="20" id="54s-li-Fds"/>
+                        <constraint firstAttribute="trailing" secondItem="dWg-hB-pVC" secondAttribute="trailing" id="DBd-Z2-T40"/>
+                        <constraint firstAttribute="bottom" secondItem="dWg-hB-pVC" secondAttribute="bottom" id="Raf-F4-Uxq"/>
+                        <constraint firstItem="yv8-J3-Xdd" firstAttribute="centerY" secondItem="C07-tM-Twj" secondAttribute="centerY" id="d5c-nN-89D"/>
+                        <constraint firstItem="dWg-hB-pVC" firstAttribute="leading" secondItem="C07-tM-Twj" secondAttribute="leading" id="d7l-ne-93K"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yBL-n7-ms7">
+                    <rect key="frame" x="0.0" y="103" width="414" height="759"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dV1-9c-J3e">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zs-29-p8F">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="4605.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIN-Jz-nst">
+                                            <rect key="frame" x="20" y="20" width="103.5" height="19.5"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                            <color key="textColor" name="title"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epU-dm-f8i">
+                                            <rect key="frame" x="20" y="54.5" width="374" height="4411"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <mutableString key="text">BEFORE USING THIS APPLICATION AND/OR ASSOCIATED INTERNET SITE PLEASE READ TERMS BELOW CAREFULLY
+
+You agree that your use of this application and/or associated Internet site is expressly conditioned on your
+acceptance of the following terms of use. By using this application and/or associated Internet site you
+memorialize your assent to these TERMS OF USE and the PRIVACY POLICY. If you do not agree, you
+must not use this application and/or associated Internet site.
+
+You may not use this Internet site if: You’re under 13 years old; or are a convicted sex offender; or if any
+of your previous accounts for this Internet site have been disabled resulting from your prior violation of the
+terms of use associated with this Internet site; or you are prohibited by law from receiving any goods or
+services offered by this Internet site.
+
+You confirm that you are at least 13 years of age and that you are currently authorized to use an .edu
+sponsored top-level domain e-mail address of a post-secondary education institution accredited by the
+United States Department of Education or foreign equivalent.
+
+This application and/or associated Internet site may gather certain information, including e-mail address,
+college or university major course of study and other personal information on an as-need basis using both
+this application and/or associated Internet site, both use push token technology. For example, Android
+users will receive a token as soon as a user downloads and opens an application, automatically
+registering users for push notifications. A push notification is a message that pops up on a mobile device. Push notifications have the look and feel of SMS text messages.  To use this application and/or
+associated Internet site, you must have the following: certifiable “.edu” e-mail address, smartphone or
+other Internet access device and Internet access, as well as Android and/or iOS software.
+
+You acknowledge this application and/or associated Internet site may not function on your hardware.
+ 
+You grant the owners and operators of this Internet site permission (known as a license) to use any
+content which you share or upload, such as photos or videos. While you retain the ownership of any
+content which you share or upload, the owners and operators of this Internet site may use your content as
+they chose. For example, if you upload a photo on this Internet Site, then you give a license to the owners
+and operators of this Internet to site store, copy, and share it with others.  This license will end when you
+delete your content from this Internet site and the hardware and software enabling this internet site.
+
+You agree to obtain written permission from the owners and operators of this Internet site prior to selling,
+copying, distributing, modifying, creating derivative works, reverse engineering any content of this Internet
+site (other than your content) except in the ordinary course of using this Internet site. 
+
+This Agreement, for all purposes, shall be construed in accordance with the laws of the State of New
+Jersey without regard to conflicts of law principles.  Any action or proceeding by either of the parties to
+enforce this Agreement shall be brought only in a state or federal court located in Hudson County, New
+Jersey. The parties hereby irrevocably submit to the exclusive jurisdiction of such courts and waive the
+defense of inconvenient forum to the maintenance of any such action or proceeding in such venue.
+  
+You agree to allow the owners and operators of this Internet site to disable or delete your account if after
+registration your account is not confirmed, your account is inactive for an extended period of time, or if the
+owners and operators of this Internet site detect someone may have used it without your permission and
+we are unable to confirm your ownership of the account.
+
+You understand and agree to the verification of your .edu email address (or functionally equivalent email
+address). Additionally, you agree that when the owners and operators of this Internet site send you a
+secret code on email on your .edu email address and ask you to verify email with the code, that you will do so. You further agree that when you do so, you confirm and acknowledge that said .edu email address
+belongs to you and that you agree not to allow others to use said .edu email address.
+
+You agree to regularly check the terms of use for this Internet site and be bound by changes if you
+continue to use this Internet site.
+
+The Americans with Disabilities Act 
+
+This application and/or associated Internet site has been tested and is compatible with screen reader
+software. Additionally, other actions have been to be compliant with the Americans with Disabilities Act (2
+U.S.C. 12101 et seq. (1994)) including but not limited to associating the content with HTML landmarks,
+tab-able content and image read roll-over.
+
+In the event a user is not able to use this application and/or the associated Internet site, then the user
+agrees to contact Brach Eichler (Phone: 973-228-5700) or Brach Eichler LLC, 101 Eisenhower Parkway, Roseland, NJ 07068 and request that reasonable efforts will be made to accommodate said user.
+
+Digital Millennium Copyright Act Compliance
+
+If you are a copyright owner or agent thereof and believe that content posted on this Application and/or
+associated Internet site infringes upon your copyright, please submit notice, pursuant to the Digital
+Millennium Copyright Act (17 U.S.C. § 512(c)) to our Copyright Agent with the following information: (a)
+an electronic or physical signature of the person authorized to act on behalf of the owner of the copyright;
+(b) a description of the copyrighted work that you claim has been infringed; (c) the URL of the location this
+Application and/or associated Internet site containing the material that you claim is infringing; (d) your
+address, telephone number, and email address; (e) a statement by you that you have a good faith belief
+that the disputed use is not authorized by the copyright owner, its agent, or the law; and (f) a statement by
+you, made under penalty of perjury, that the above information in your notice is accurate and that you are
+the copyright owner or authorized to act on the copyright owner&amp;#39;s behalf. Our Copyright Agent can be reached by mail at: Jonathan Bick at copyrightagent@bracheichler.com (Phone: 973.228.5700), Brach
+Eichler L.L.C., 101 Eisenhower Parkway, Roseland, NJ 07068.
+
+EXCLUSION OF WARRANTY THE OWNERS AND OPERATORS OF THIS INTERNET SITE MAKES
+NO WARRANTY OF ANY KIND REGARDING THIS APPLICATION AND/OR ASSOCIATED INTERNET
+SITE AND/OR ANY PRODUCT, SERVICE OR CONTENT PROVIDED ON THIS APPLICATION AND/OR ASSOCIATED INTERNET SITE, ALL OF WHICH ARE PROVIDED ON AN &amp;quot;AS IS&amp;quot; &amp;quot;AS AVAILABLE&amp;quot;
+BASIS.  THE OWNERS AND OPERATORS OF THIS INTERNET SITE DO NOT WARRANT THE
+ACCURACY, COMPLETENESS, CURRENTNESS OR RELIABILITY OF ANY OF THE CONTENT
+FOUND ON THIS APPLICATION OR ASSOCIATED INTERNET SITE AND SUCH PARTIES
+EXPRESSLY DISCLAIM ALL WARRANTIES AND CONDITIONS, INCLUDING IMPLIED WARRANTIES
+AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-
+INFRINGEMENT, AND THOSE ARISING BY STATUTE OR OTHERWISE IN LAW OR FROM A COURSE OF DEALING OR USAGE OF TRADE.
+
+LIMITATION OF LIABILITY 
+
+THE OWNERS AND OPERATORS OF THIS INTERNET SITE ASSUMES NO RESPONSIBILITY AND
+SHALL NOT BE LIABLE FOR ANY DAMAGES TO OR VIRUSES THAT MAY INFECT YOUR HARDWARE OR OTHER PROPERTY ON ACCOUNT OF YOUR ACCESS TO, USE OF, OR BROWSING IN THIS APPLICATION OR ASSOCIATED INTERNET SITE OR YOUR DOWNLOADING
+OF ANY MATERIAL FROM THIS APPLICATION OR ASSOCIATED INTERNET SITE.  IN NO EVENT
+SHALL THE OWNERS AND OPERATORS OF THIS INTERNET SITE BE LIABLE FOR ANY INJURY,
+LOSS, CLAIM, DAMAGE, OR ANY SPECIAL, EXEMPLARY, PUNITIVE, INDIRECT, INCIDENTAL OR
+CONSEQUENTIAL DAMAGES OF ANY KIND WHETHER BASED IN CONTRACT, TORT, STRICTLIABILITY, OR OTHERWISE, WHICH ARISES OUT OF OR IS IN ANY WAY CONNECTED WITH ANY
+USE OF THIS APPLICATION OR ASSOCIATED INTERNET SITE OR CONTENT FOUND HEREIN, ANY
+FAILURE OR DELAY OR THE PERFORMANCE OR NON PERFORMANCE BY THE OWNERS AND
+OPERATORS OF THIS INTERNET SITE, EVEN IF THE OWNERS AND OPERATORS OF THIS
+INTERNET SITE HAS BEEN ADVISED OF THE POSSIBILITY OF DAMAGES TO SUCH PARTIES OR
+ANY OTHER PARTY.  THE OWNERS AND OPERATORS OF THIS INTERNET SITE SHALL NOT BE
+RESPONSIBLE FOR ANY INJURIES, DAMAGES, OR LOSSES CAUSED TO ANY USER IN
+CONNECTION WITH OMISSIONS, OR CONDITIONS OUTSIDE THE OWNERS AND OPERATORS OF
+THIS INTERNET SITE COMMERICALLY REASONABLECONTROL.
+
+Cookie Policy
+
+The owners and operators of this Internet site uses cookies. In particular: the owners and operators of
+this Internet site stores cookies on your device and receives information from these cookies. The
+information is used for the following purposes: authentication, advertising security, performance, analytics,
+research, and accommodation to third-party Internet sites and applications.
+
+PRIVACY AND SECURITY POLICY 
+
+The owners and operators of this Internet site and related applications uses an encryption protocol to
+encrypt communications. The protocol is called Transport layer Security (TLS), although formerly it was
+known as Secure Socket layer. This protocol secures communications by using what’s known as an
+asymmetric public key infrastructure. This type of security system uses two different keys to encrypt
+communications between two parties: The private key - this key is controlled by the owner of a website,
+and it’s kept, as the reader may have speculated, private. This key lives on a web server and is used to
+decrypt information encrypted by the public key. The public key - this key is available to everyone who
+wants to interact with the server in a way that’s secure. Information that’s encrypted by the public key can
+only be decrypted by the private key.
+
+The owners and operators of this Internet site and related application, agree to make a commercially
+reasonable effort to only give IP based access which can called only by our system and to prevent
+database query from outside our system.
+
+The owners and operators of this Internet site and related application, agree to make a commercially
+reasonable effort to uses SSL pinning, meaning that the owners and operators of this Internet site and
+related application will make a commercially reasonable effort to verify the server&amp;#39;s SSL certificate against
+a predefined or &amp;quot;pinned&amp;quot; certificate or public key. Instead of relying solely on the default trust store
+provided by the operating system, the app explicitly specifies the trusted certificate or public key it
+expects the server to present during the SSL handshake.
+
+WE DO NOT SHARE YOUR INFORMATION WITH OTHER PARTIES UNLESS THERE IS A
+CONTRACTUAL OR STATUTORY REQUIREMENT TO DO SO.  PURSUANT TO SAID CONTRACTUAL
+OR STATUTORY REQUIREMENT THE OWNERS AND OPERATORS OF THIS INTERNET SITE MAY
+SELL, RENT OR TRADE YOUR PERSONAL DATA.  WE MAY DISCLOSE YOUR DATA TO SERVICE
+PROVIDERS WHO RENDER SERVICES TO US OR TO YOU ON OUR BEHALF, FOR EXAMPLE:
+MAILING HOUSES.  WE MAY DISCLOSE YOUR INFORMATION IF REQUIRED BY LAW OR TO
+ENFORCE OUR LEGAL RIGHTS.  WE MAY ENGAGE WITH THIRD PARTIES WHICH MAY RESULT IN
+THE TRANSFER OF YOUR PERSONAL DATA TO THIRD PARTIES AND WE WILL MAKE A
+COMMERCIALLY REASONABLE ATTEMPT TO PROHIBIT THIRD PARTIES FROM SELLING YOUR
+PERSONAL DATA WE HAVE SHARED WITH THEM, UNLESS PROPER CONSENT IS ABTAINED.
+
+THE DATA WE HOLD ABOUT YOU IS STORED IN SECURE SERVERS WITH APPROPRIATE
+COMMERCIALLY REASONABLE FIREWALLS AND WE USE DATA PROTECTION SOFTWARE
+APPLIED ON CLOUD LEVEL TO PROTECT YOUR PERSONAL DATA.</mutableString>
+                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="epU-dm-f8i" firstAttribute="leading" secondItem="1zs-29-p8F" secondAttribute="leading" constant="20" id="1wE-h2-yw4"/>
+                                        <constraint firstAttribute="trailing" secondItem="epU-dm-f8i" secondAttribute="trailing" constant="20" id="LyJ-ar-NRn"/>
+                                        <constraint firstItem="MIN-Jz-nst" firstAttribute="top" secondItem="1zs-29-p8F" secondAttribute="top" constant="20" id="UCZ-27-PU1"/>
+                                        <constraint firstItem="epU-dm-f8i" firstAttribute="top" secondItem="MIN-Jz-nst" secondAttribute="bottom" constant="15" id="iyP-df-kx6"/>
+                                        <constraint firstAttribute="bottom" secondItem="epU-dm-f8i" secondAttribute="bottom" constant="140" id="lQW-fx-95d"/>
+                                        <constraint firstItem="MIN-Jz-nst" firstAttribute="leading" secondItem="epU-dm-f8i" secondAttribute="leading" id="x5D-rp-U1e"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="1zs-29-p8F" firstAttribute="top" secondItem="dV1-9c-J3e" secondAttribute="top" id="0s4-Je-z79"/>
+                                <constraint firstAttribute="bottom" secondItem="1zs-29-p8F" secondAttribute="bottom" id="LDx-I3-AA2"/>
+                                <constraint firstItem="1zs-29-p8F" firstAttribute="width" secondItem="dV1-9c-J3e" secondAttribute="width" id="sl0-nF-g4F"/>
+                                <constraint firstAttribute="trailing" secondItem="1zs-29-p8F" secondAttribute="trailing" id="x2P-tJ-hto"/>
+                                <constraint firstItem="1zs-29-p8F" firstAttribute="leading" secondItem="dV1-9c-J3e" secondAttribute="leading" id="yBD-tI-gxN"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blurBg" translatesAutoresizingMaskIntoConstraints="NO" id="UL5-em-LSO">
+                    <rect key="frame" x="0.0" y="706" width="414" height="156"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="156" id="F5B-zE-Jke"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGF-HG-sry">
+                    <rect key="frame" x="0.0" y="788" width="414" height="74"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pyn-i7-IfH">
+                            <rect key="frame" x="20" y="0.0" width="374" height="54"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2O-xq-lTg">
+                                    <rect key="frame" x="0.0" y="0.0" width="182" height="54"/>
+                                    <color key="backgroundColor" name="buttons_green"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="54" id="LpZ-Ez-pwo"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                    <state key="normal" title="I accept">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <integer key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapAcceptButton:" destination="-1" eventType="touchUpInside" id="cdj-xw-15o"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKN-h3-b5W">
+                                    <rect key="frame" x="192" y="0.0" width="182" height="54"/>
+                                    <color key="backgroundColor" name="buttons_blue"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="54" id="c9O-GI-xao"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                    <state key="normal" title="I decline">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <integer key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapRejectButton:" destination="-1" eventType="touchUpInside" id="71B-Z9-Tmg"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="pyn-i7-IfH" secondAttribute="bottom" constant="20" id="1VW-Y0-IiL"/>
+                        <constraint firstItem="pyn-i7-IfH" firstAttribute="leading" secondItem="sGF-HG-sry" secondAttribute="leading" constant="20" id="2Jt-AS-cSy"/>
+                        <constraint firstAttribute="trailing" secondItem="pyn-i7-IfH" secondAttribute="trailing" constant="20" id="2vc-Xu-jeB"/>
+                        <constraint firstItem="pyn-i7-IfH" firstAttribute="top" secondItem="sGF-HG-sry" secondAttribute="top" id="Lzk-oX-VHe"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jk6-8m-LX3">
+                    <rect key="frame" x="0.0" y="0.0" width="103" height="103"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="jk6-8m-LX3" secondAttribute="height" multiplier="1:1" id="Aeg-73-qVR"/>
+                    </constraints>
+                    <connections>
+                        <action selector="didTapBackButton:" destination="-1" eventType="touchUpInside" id="gar-aJ-WBP"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="gRu-3o-AGK"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="gRu-3o-AGK" firstAttribute="bottom" secondItem="sGF-HG-sry" secondAttribute="bottom" id="5TV-Q3-kJk"/>
+                <constraint firstItem="UL5-em-LSO" firstAttribute="centerX" secondItem="gRu-3o-AGK" secondAttribute="centerX" id="Cro-hY-EiK"/>
+                <constraint firstItem="sGF-HG-sry" firstAttribute="leading" secondItem="gRu-3o-AGK" secondAttribute="leading" id="Fdz-82-VIN"/>
+                <constraint firstItem="yBL-n7-ms7" firstAttribute="leading" secondItem="gRu-3o-AGK" secondAttribute="leading" id="IcG-mQ-fTF"/>
+                <constraint firstItem="yBL-n7-ms7" firstAttribute="bottom" secondItem="gRu-3o-AGK" secondAttribute="bottom" id="Kc3-Oq-nrk"/>
+                <constraint firstItem="yBL-n7-ms7" firstAttribute="top" secondItem="C07-tM-Twj" secondAttribute="bottom" id="Kxo-75-MAe"/>
+                <constraint firstItem="UL5-em-LSO" firstAttribute="width" secondItem="Qnt-pB-DJc" secondAttribute="width" id="ObA-hR-nGd"/>
+                <constraint firstItem="C07-tM-Twj" firstAttribute="trailing" secondItem="gRu-3o-AGK" secondAttribute="trailing" id="TYd-n5-NOv"/>
+                <constraint firstItem="gRu-3o-AGK" firstAttribute="trailing" secondItem="sGF-HG-sry" secondAttribute="trailing" id="Ztk-qa-te1"/>
+                <constraint firstItem="jk6-8m-LX3" firstAttribute="top" secondItem="Qnt-pB-DJc" secondAttribute="top" id="aqW-jP-QCn"/>
+                <constraint firstItem="jk6-8m-LX3" firstAttribute="bottom" secondItem="C07-tM-Twj" secondAttribute="bottom" id="fjW-Ka-H22"/>
+                <constraint firstItem="jk6-8m-LX3" firstAttribute="leading" secondItem="Qnt-pB-DJc" secondAttribute="leading" id="iRk-JT-KA8"/>
+                <constraint firstItem="C07-tM-Twj" firstAttribute="leading" secondItem="gRu-3o-AGK" secondAttribute="leading" id="jro-xv-Upx"/>
+                <constraint firstItem="C07-tM-Twj" firstAttribute="top" secondItem="gRu-3o-AGK" secondAttribute="top" id="lj3-1x-PoH"/>
+                <constraint firstAttribute="trailing" secondItem="yBL-n7-ms7" secondAttribute="trailing" id="rUy-5p-24c"/>
+                <constraint firstItem="gRu-3o-AGK" firstAttribute="bottom" secondItem="UL5-em-LSO" secondAttribute="bottom" id="vJa-0k-zSw"/>
+            </constraints>
+            <point key="canvasLocation" x="-171" y="85"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back_arrow_icon" width="8" height="14"/>
+        <image name="blurBg" width="375" height="201"/>
+        <namedColor name="buttons_blue">
+            <color red="0.054000001400709152" green="0.16699999570846558" blue="0.2630000114440918" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="buttons_green">
+            <color red="0.32156862745098042" green="0.70196078431372544" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="separator">
+            <color red="0.4779999852180481" green="0.48199999332427979" blue="0.50999999046325684" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="title">
+            <color red="0.0" green="0.16862745098039217" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

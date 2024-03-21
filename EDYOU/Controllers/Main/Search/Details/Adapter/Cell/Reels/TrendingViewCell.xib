@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tfQ-tq-M6s" customClass="TrendingViewCell" customModule="EDYOU" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="394" height="292"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fh2-yj-A7L">
+                <rect key="frame" x="0.0" y="0.0" width="394" height="292"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTE-fk-GR7">
+                        <rect key="frame" x="2" y="2" width="390" height="288"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reelIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Wjq-ai-1C6">
+                        <rect key="frame" x="14" y="266" width="12" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="5Bw-YV-ppM"/>
+                            <constraint firstAttribute="width" constant="12" id="hxO-f1-jdH"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="XTE-fk-GR7" secondAttribute="trailing" constant="2" id="BAg-1D-Snv"/>
+                    <constraint firstAttribute="bottom" secondItem="XTE-fk-GR7" secondAttribute="bottom" constant="2" id="D6N-Pb-fLE"/>
+                    <constraint firstItem="XTE-fk-GR7" firstAttribute="top" secondItem="fh2-yj-A7L" secondAttribute="top" constant="2" id="IwH-fs-uFR"/>
+                    <constraint firstItem="Wjq-ai-1C6" firstAttribute="bottom" secondItem="XTE-fk-GR7" secondAttribute="bottom" constant="-12" id="J29-Al-08z"/>
+                    <constraint firstItem="XTE-fk-GR7" firstAttribute="leading" secondItem="fh2-yj-A7L" secondAttribute="leading" constant="2" id="T4U-XZ-Qgi"/>
+                    <constraint firstItem="Wjq-ai-1C6" firstAttribute="leading" secondItem="XTE-fk-GR7" secondAttribute="leading" constant="12" id="wvH-tp-BDo"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="394" height="292"/>
+            <connections>
+                <outlet property="playerView" destination="XTE-fk-GR7" id="JVU-cR-qKI"/>
+            </connections>
+            <point key="canvasLocation" x="132.30769230769229" y="86.729857819905206"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="reelIcon" width="13" height="12"/>
+    </resources>
+</document>

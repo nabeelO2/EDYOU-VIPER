@@ -1,0 +1,342 @@
+//
+// DBRosterStore.swift
+//
+// EdYou
+// Copyright (C) 2016 "O2Geeks." <admin@o2geeks.com>
+//
+ 
+//
+
+import Foundation
+import Martin
+import TigaseSQLite3
+
+extension Query {
+    static let rosterInsertItem = Query("INSERT INTO roster_items (account, jid, name, subscription, timestamp, ask, data) VALUES (:account, :jid, :name, :subscription, :timestamp, :ask, :data)");
+    static let rosterUpdateItem = Query("UPDATE roster_items SET name = :name, subscription = :subscription, timestamp = :timestamp, ask = :ask, data = :data WHERE id = :id");
+    static let rosterDeleteItem = Query("DELETE FROM roster_items WHERE id = :id");
+    static let rosterFindItemsForAccount = Query("SELECT id, jid, name, subscription, ask, data FROM roster_items WHERE account = :account");
+}
+
+class AccountRoster {
+    
+    private var roster = [JID: RosterItem]();
+    
+    private let queue = DispatchQueue(label: "accountRoster");
+    
+    init(items: [RosterItem]) {
+        for item in items {
+            roster[item.jid] = item;
+        }
+    }
+    
+    deinit {
+        print("deinitializing AccountRoster");
+    }
+    
+    public var items: [RosterItem] {
+        return queue.sync {
+            return self.roster.values.map({ $0 });
+        }
+    }
+    
+    public func item(for jid: JID) -> RosterItem? {
+        return queue.sync {
+            return roster[jid];
+        }
+    }
+    
+    public func update(item: RosterItem) {
+        queue.async(flags: .barrier) {
+            self.roster[item.jid] = item;
+        }
+    }
+    
+    public func remove(for jid: JID) {
+        queue.async(flags: .barrier) {
+            self.roster.removeValue(forKey: jid);
+        }
+    }
+    
+}
+
+open class DBRosterStore: RosterStore {
+    
+    static let instance: DBRosterStore = DBRosterStore.init();
+    
+    private let queue: DispatchQueue;
+    
+    private var accountRosters = [BareJID: AccountRoster]();
+  
+    @Published
+    public private(set) var items: Set<RosterItem> = [];
+    
+    private init() {
+        self.queue = DispatchQueue(label: "db_roster_store");
+    }
+    
+    public func clear(for account: BareJID) {
+        queue.sync {
+            let items = Set(self.accountRosters[account]?.items ?? []);
+            self.items = self.items.filter({ !items.contains($0) });
+            for item in items {
+                _remove(for: account, jid: item.jid);
+            }
+        }
+    }
+    
+    public func clear(for context: Context) {
+        self.clear(for: context.userBareJid);
+    }
+    
+    func items(for account: BareJID) -> [RosterItem] {
+        return queue.sync {
+            return self.accountRosters[account];
+        }?.items ?? [];
+    }
+    
+    public func items(for context: Context) -> [RosterItem] {
+        return items(for: context.userBareJid);
+    }
+    
+    func item(for account: BareJID, jid: JID) -> RosterItem? {
+        return queue.sync {
+            return self.accountRosters[account];
+        }?.item(for: jid);
+    }
+    
+    public func item(for context: Context, jid: JID) -> RosterItem? {
+        return item(for: context.userBareJid, jid: jid);
+    }
+    
+    public func addFrindToRoster(userID:String,userName:String) {
+        let jid = JID("\(userID)@ejabberd.edyou.io")
+        let name = userName
+        guard let client = XmppService.instance.connectedClients.first  else {return}
+        let presenceModule = client.module(.presence);
+        let rosterModule = client.module(.roster)
+        if let rosterItem = DBRosterStore.instance.item(for: client, jid: jid) {
+            rosterModule.updateItem(jid: jid, name: name, groups: rosterItem.groups, completionHandler: {_ in
+                self.updateSubscriptions(jid: jid, rosterItem: rosterItem, presenceModule: presenceModule)
+            })
+        } else {
+            rosterModule.addItem(jid: jid , name: name, groups: [], completionHandler: { result in
+                switch result {
+                    case .success(let iq):
+                        print(iq.description)
+                        if let rosterItem = DBRosterStore.instance.item(for: client, jid: jid) {
+                            self.updateSubscriptions(jid: jid, rosterItem: rosterItem, presenceModule: presenceModule)
+                        }
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                        if let rosterItem = DBRosterStore.instance.item(for: client, jid: jid) {
+                            self.updateSubscriptions(jid: jid, rosterItem: rosterItem, presenceModule: presenceModule)
+                        }
+                }
+            });
+        }
+    }
+
+    public func addFrindToRoster(client:XMPPClient,jid barJid:BareJID,userName:String) {
+        let jid = JID.init(barJid.stringValue)
+        let name = userName
+        guard let client = XmppService.instance.connectedClients.first  else {return}
+        let presenceModule = client.module(.presence);
+        let rosterModule = client.module(.roster)
+        if let rosterItem = DBRosterStore.instance.item(for: client, jid: jid) {
+            rosterModule.updateItem(jid: jid, name: name, groups: rosterItem.groups, completionHandler: {_ in
+                self.updateSubscriptions(jid: jid, rosterItem: rosterItem, presenceModule: presenceModule)
+            })
+        } else {
+            rosterModule.addItem(jid: jid , name: name, groups: [], completionHandler: { result in
+                switch result {
+                    case .success(let iq):
+                        print(iq.description)
+                        if let rosterItem = DBRosterStore.instance.item(for: client, jid: jid) {
+                            self.updateSubscriptions(jid: jid, rosterItem: rosterItem, presenceModule: presenceModule)
+                        }
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                        if let rosterItem = DBRosterStore.instance.item(for: client, jid: jid) {
+                            self.updateSubscriptions(jid: jid, rosterItem: rosterItem, presenceModule: presenceModule)
+                        }
+                }
+            });
+        }
+    }
+
+   fileprivate func updateSubscriptions(jid:JID,rosterItem:RosterItem,presenceModule:PresenceModule) {
+        DispatchQueue.main.async {
+            if !rosterItem.subscription.isTo {
+                presenceModule.subscribe(to: jid, preauth: nil);
+            }
+            if !rosterItem.subscription.isFrom {
+                presenceModule.subscribed(by: jid);
+            }
+        }
+    }
+
+
+
+    public func removeFrindToRoster(userID:String) {
+        let jid = JID("\(userID)@ejabberd.edyou.io")
+        guard let client = XmppService.instance.connectedClients.first else {
+            return;
+        }
+        client.module(.roster).removeItem(jid: jid, completionHandler: { result in
+            switch result {
+                case .success(let iq):
+                    guard let rosterItem = DBRosterStore.instance.item(for: client, jid: jid) else {
+                        return;
+                    }
+                    DBRosterStore.instance.remove(for: client.userBareJid, jid: jid)
+                    let presenceModule = client.module(.presence);
+                    DispatchQueue.main.async {
+                        presenceModule.unsubscribe(from: jid);
+                        presenceModule.unsubscribed(by: jid);
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
+
+        });
+    }
+
+    public func updateItem(for context: Context, jid: JID, name: String?, subscription: RosterItemSubscription, groups: [String], ask: Bool, annotations: [RosterItemAnnotation]) {
+        let account = context.userBareJid;
+        
+        let data = DBRosterData(groups: groups, annotations: annotations);
+        queue.sync {
+            guard let item = self.accountRosters[account]?.item(for: jid) else {
+                let params: [String: Any?] = ["account": account, "jid": jid, "name": name, "subscription": subscription.rawValue, "timestamp": Date(), "ask": ask, "data": data];
+                
+                let id = try! Database.main.writer({ database -> Int? in
+                    try database.insert(query: .rosterInsertItem, params: params);
+                    return database.lastInsertedRowId
+                })!;
+                let item = RosterItem(id: id, context: context, jid: jid, name: name, subscription: subscription, groups: groups, ask: ask, annotations: annotations);
+                self.accountRosters[account]?.update(item: item);
+                self.items.insert(item);
+                itemUpdated(item, context: context);
+                return;
+            }
+
+            let params: [String: Any?] = ["id": item.id, "name": name, "subscription": subscription.rawValue, "timestamp": Date(), "ask": ask, "data": data];
+            try! Database.main.writer({ database in
+                try database.update(query: .rosterUpdateItem, params: params);
+            })
+
+            let newItem = RosterItem(id: item.id, context: context, jid: jid, name: name, subscription: subscription, groups: groups, ask: ask, annotations: annotations);
+            self.accountRosters[account]?.update(item: newItem);
+            var newItems = self.items;
+            newItems.remove(item);
+            newItems.insert(newItem);
+            self.items = newItems;
+            itemUpdated(newItem, context: context);
+        }
+    }
+        
+    func remove(for account: BareJID, jid: JID) {
+        queue.sync {
+            _remove(for: account, jid: jid);
+        }
+    }
+    
+    private func _remove(for account: BareJID, jid: JID) {
+        guard let accountRoster = self.accountRosters[account] else {
+            return;
+        }
+        
+        if let item = accountRoster.item(for: jid) {
+            accountRoster.remove(for: jid);
+            try! Database.main.writer({ database in
+                try database.delete(query: .rosterDeleteItem, params: ["id": item.id]);
+            })
+            self.items.remove(item);
+        }
+    }
+    
+    func itemUpdated(_ newItem: RosterItem, context: Context) {
+        ContactManager.instance.update(name: newItem.name, for: .init(account: context.userBareJid, jid: newItem.jid.bareJid, type: .buddy))
+        DBChatStore.instance.refreshConversationsList();
+    }
+    
+    public func deleteItem(for context: Context, jid: JID) {
+        self.remove(for: context.userBareJid, jid: jid);
+        DBChatStore.instance.refreshConversationsList();
+    }
+    
+    public func version(for context: Context) -> String? {
+        return nil;
+    }
+    
+    public func set(version: String?, for context: Context) {
+        // not implemented
+    }
+    
+    public func initialize(context: Context) {
+        return queue.async {
+            guard self.accountRosters[context.userBareJid] == nil else {
+                return;
+            }
+            
+            let items = try! Database.main.reader({ database in
+                try database.select(query: .rosterFindItemsForAccount, params: ["account": context.userBareJid]).mapAll({ RosterItem.from(cursor: $0, context: context) })
+            });
+            
+            self.accountRosters[context.userBareJid] = AccountRoster(items: items);
+            self.items = Set(self.items + items);
+        }
+    }
+    
+    public func deinitialize(context: Context) {
+        queue.async {
+            guard let roster = self.accountRosters[context.userBareJid] else {
+                return;
+            }
+            self.accountRosters.removeValue(forKey: context.userBareJid);
+            let items = Set(roster.items);
+            self.items = self.items.filter({ !items.contains($0) });
+        }
+    }
+
+}
+
+struct DBRosterData: Codable, DatabaseConvertibleStringValue {
+    
+    let groups: [String];
+    let annotations: [RosterItemAnnotation];
+        
+}
+
+public class RosterItem: Martin.RosterItemBase, Identifiable, Hashable {
+    
+    public static func == (lhs: RosterItem, rhs: RosterItem) -> Bool {
+        return lhs.id == rhs.id;
+    }
+    
+    static func from(cursor: Cursor, context: Context) -> RosterItem? {
+        let itemId: Int = cursor.int(for: "id")!;
+        let jid: JID = cursor.jid(for: "jid")!;
+        let name: String? = cursor.string(for: "name");
+        let subscription = RosterItemSubscription(rawValue: cursor.string(for: "subscription")!)!;
+        let ask: Bool = cursor.bool(for: "ask");
+        let data: DBRosterData = cursor.object(for: "data") ?? DBRosterData(groups: [], annotations: []);
+        
+        return RosterItem(id: itemId, context: context, jid: jid, name: name, subscription: subscription, groups: data.groups, ask: ask, annotations: data.annotations);
+    }
+    
+    public let id: Int;
+    public private(set) weak var context: Context?;
+    
+    public init(id: Int, context: Context, jid: JID, name: String?, subscription: RosterItemSubscription, groups: [String], ask: Bool, annotations: [RosterItemAnnotation]) {
+        self.id = id;
+        self.context = context;
+        super.init(jid: jid, name: name, subscription: subscription, groups: groups, ask: ask, annotations: annotations);
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id);
+    }
+        
+}
