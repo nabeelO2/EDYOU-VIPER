@@ -25,8 +25,8 @@ class OnboardingViewController: BaseController {
     }
     
     @IBAction func signInButtonTouched(_ sender: Any) {
-        let controller = LoginController(nibName: "LoginController", bundle: nil)
-  
+//        let controller = LoginController(nibName: "LoginController", bundle: nil)
+        let controller = LoginRouter.createModule(navigationController: self.navigationController ?? UINavigationController())
         self.navigationController?.pushViewController(controller, animated: true)
         
     }

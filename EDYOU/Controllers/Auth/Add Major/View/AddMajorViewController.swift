@@ -23,7 +23,7 @@ class AddMajorViewController: BaseController {
     
     var startDate: Date?
     var endDate: Date?
-    
+    var presenter : MajorPresenterProtocol!
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -187,3 +187,47 @@ extension AddMajorViewController {
     }
 }
 
+
+extension AddMajorViewController : MajorPresenterProtocol{
+    func selectMajor() {
+        
+    }
+    
+    func validate() {
+        
+    }
+    
+    func textFieldDidChangeSelection(text: String) {
+        
+    }
+    
+    func textFieldDidEndEditing(text: String) {
+        
+    }
+    
+    
+}
+
+extension AddMajorViewController : MajorViewProtocol{
+    func prepareUI() {
+        
+    }
+    func shakeLoginButton(){
+        
+    }
+    func showHidePassword(){
+        
+    }
+    func passwordBtnVisibility(_ isHidden : Bool){
+        
+    }
+    func showErrorMessage(_ message : String){
+        
+    }
+    func startAnimating(){
+        
+    }
+    func stopAnimating(){
+        
+    }
+}

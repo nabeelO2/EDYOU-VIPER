@@ -81,7 +81,7 @@ class SignupViewController: BaseController, UITextFieldDelegate {
    
     
     
-    
+    var presenter: SignupPresenterProtocol!
     var adapter: PickerViewAdapter!
     var universities: [DataPickerItem<Institute>] = []
     var states: [DataPickerItem<String>] = []
@@ -520,4 +520,24 @@ extension SignupViewController
         
         updatePasswordStrengthViews(strength: validatePasswordStrength(password: passwordTextfield.textField.text ?? ""))
     }
+}
+
+extension SignupViewController : SignupViewProtocol{
+    func prepareUI() {
+        
+    }
+    
+    func shakeLoginButton() {
+        
+    }
+    
+    func showHidePassword() {
+        
+    }
+    
+    func passwordBtnVisibility(_ isHidden: Bool) {
+        
+    }
+    
+    
 }

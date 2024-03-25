@@ -18,7 +18,8 @@ class WelcomeController: UIViewController {
 // MARK: - Actions
 extension WelcomeController {
     @IBAction func didTapContinueWithEmailButton(_ sender: UIButton) {
-        let controller = LoginController()
+//        let controller = LoginController()
+        let controller = LoginRouter.createModule(navigationController: self.navigationController ?? UINavigationController())
         navigationController?.pushViewController(controller, animated: true)
     }
     @IBAction func didTapCreateAccountButton(_ sender: UIButton) {
