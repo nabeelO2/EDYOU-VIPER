@@ -12,13 +12,18 @@ protocol LoginRouterProtocol {
     func navigateToHome()
     func navigateToSignup()
     func navigateToAddMajor()
+    func navigateToForgotPassword()
 }
 
 class LoginRouter : LoginRouterProtocol {
     
+    func navigateToForgotPassword() {
+        let forgot = ForgotPasswordRouter.createModule(navigationController: navigationController ?? UINavigationController())
+        self.navigationController?.pushViewController(forgot, animated: true)
+    }
     func navigateToAddMajor() {
-        let signup = AddMajorRouter.createModule(navigationController: self.navigationController ?? UINavigationController())
-        self.navigationController?.pushViewController(signup, animated: true)
+        let major = AddMajorRouter.createModule(navigationController: self.navigationController ?? UINavigationController())
+        self.navigationController?.pushViewController(major, animated: true)
     }
     func navigateToSignup() {
         let signup = SignupRouter.createModule(navigationController: self.navigationController ?? UINavigationController())

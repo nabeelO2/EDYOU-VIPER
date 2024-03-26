@@ -17,18 +17,19 @@ protocol MajorRouterProtocol {
 class AddMajorRouter : MajorRouterProtocol {
     
     func navigateToSignup() {
-        
+        print("navigate to home")
     }
     
     
     func navigateToHome() {
-        
+        print("navigate to home")
     }
     
     var navigationController: UINavigationController?
     
     init(navigationController: UINavigationController?) {
         self.navigationController = navigationController
+        
     }
     
     static func createModule(navigationController: UINavigationController) -> AddMajorViewController {
@@ -40,7 +41,7 @@ class AddMajorRouter : MajorRouterProtocol {
         interactor.output = presenter
         view.presenter = presenter
         
-        view.title = ""
+        view.title = "Add Major"
         
         return view
     }

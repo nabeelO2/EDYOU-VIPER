@@ -71,10 +71,12 @@ extension Application {
             window?.rootViewController = navigationController
         }
         else if UserDefaults.standard.object(forKey: "isUserAddedMajor") != nil {
-            let controller = AddMajorViewController(nibName: "AddMajorViewController", bundle: nil)
-            let navigationController = UINavigationController(rootViewController: controller)
-            navigationController.isNavigationBarHidden = true
-            window?.rootViewController = navigationController
+//            let controller = AddMajorViewController(nibName: "AddMajorViewController", bundle: nil)
+//            let navigationController = UINavigationController(rootViewController: controller)
+//            navigationController.isNavigationBarHidden = true
+            let major = AddMajorRouter.createModule(navigationController: UINavigationController())
+//            self.navigationController?.pushViewController(major, animated: true)
+            window?.rootViewController = major
         } else {
             window?.rootViewController = navigationController
         }

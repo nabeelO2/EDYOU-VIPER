@@ -44,7 +44,7 @@ extension LoginPresenter: LoginPresenterProtocol {
     }
     
     func navigateToForgetPassword() {
-        
+        router.navigateToForgotPassword()
     }
     
     func showHidePassword() {

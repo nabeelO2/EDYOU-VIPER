@@ -12,19 +12,13 @@ class ForgotPasswordController: BaseController {
     
     // MARK: - Outlets
     @IBOutlet weak var txtEmail:  BorderedTextField!
-    {
-        didSet{
-            txtEmail.leftSeparatorView.isHidden = true
-            txtEmail.placeHolderLeadingConstraint.constant = 0
-        }
-    }
     @IBOutlet weak var btnResetPassword: TransitionButton!
     
-    
+    var presenter : ForgotPasswordPresenterProtocol!
     // MARK: - ViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        presenter.viewDidLoad()
     }
 
 }
@@ -36,7 +30,9 @@ extension ForgotPasswordController {
         navigationController?.popViewController(animated: true)
     }
     @IBAction func didTapResetPasswordButton(_ sender: Any) {
+        presenter.forgotPassword(with: txtEmail.text ?? "", validation: validate())
         view.endEditing(true)
+        
         let validated  = validate()
         if validated {
             btnResetPassword.startAnimation()
@@ -64,12 +60,26 @@ extension ForgotPasswordController {
 // MARK: - Utility Methods
 extension ForgotPasswordController {
     func setupUI() {
+        txtEmail.leftSeparatorView.isHidden = true
+        txtEmail.placeHolderLeadingConstraint.constant = 0
         txtEmail.textField.keyboardType = .emailAddress
         txtEmail.textField.autocorrectionType = .no
         txtEmail.validations = [.required, .email]
     }
-    func validate() -> Bool {
-        let emailValidated = txtEmail.validate()
-        return emailValidated
+    
+}
+
+extension ForgotPasswordController : ForgotPasswordViewProtocol{
+    func prepareUI() {
+        setupUI()
+    }
+    func showErrorMessage(_ message: String) {
+        
+    }
+    func startAnimating() {
+        
+    }
+    func stopAnimating() {
+        
     }
 }
