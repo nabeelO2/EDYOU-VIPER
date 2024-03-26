@@ -12,7 +12,7 @@ protocol ForgotPasswordInteractorProtocol: AnyObject {
 }
 
 protocol ForgotPasswordInteractorOutput: AnyObject {
-    func error(error message : String)
+    func errorMessage(error message : String)
     func successResponse()
    
 }
@@ -24,15 +24,16 @@ class ForgotPasswordInteractor {
 
 extension ForgotPasswordInteractor : ForgotPasswordInteractorProtocol{
     func forgotPassword(with email: String) {
-        APIManager.auth.forgotPassword(email: email) { token, response in
-            if response != nil{
+        
+        APIManager.auth.forgotPassword(email: email) { token, error in
+            if error == nil{
                 self.output?.successResponse()
             }
             else{
-                //                self.output?.error(error: errr!.message)
+                self.output?.errorMessage(error: error!.message)
             }
-            
         }
+
 
     }
     

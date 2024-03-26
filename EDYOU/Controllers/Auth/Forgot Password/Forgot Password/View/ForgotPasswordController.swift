@@ -53,13 +53,16 @@ extension ForgotPasswordController : ForgotPasswordViewProtocol{
         setupUI()
     }
     func showErrorMessage(_ message: String) {
-        
+        self.showErrorWith(message: message)
     }
     func startAnimating() {
-        
+        btnResetPassword.startAnimation()
     }
     func stopAnimating() {
         
+        btnResetPassword.stopAnimation(animationStyle: .normal, revertAfterDelay: 1.0) {
+            
+        }
     }
     func shakeBtn() {
         btnResetPassword.shake()
@@ -73,4 +76,5 @@ extension ForgotPasswordController : ForgotPasswordViewProtocol{
     func endEditing() {
         view.endEditing(true)
     }
+    
 }

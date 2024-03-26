@@ -17,7 +17,7 @@ class ForgotPasswordRouter : ForgotPasswordRouterProtocol {
     
     
     func navigateVerifyCodeController(_ email : String) {
-        let controller = VerifyCodeController(email: email)
+        let controller = VerifyCodeRouter.createModule(email: email, navigationController: navigationController ?? UINavigationController())
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
@@ -37,7 +37,7 @@ class ForgotPasswordRouter : ForgotPasswordRouterProtocol {
         interactor.output = presenter
         view.presenter = presenter
         
-        view.title = "Forgot Password"
+        view.title = "Forgot Password11"
         
         return view
     }

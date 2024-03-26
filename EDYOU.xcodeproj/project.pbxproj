@@ -757,6 +757,12 @@
 		59D22DEF2BB15B5000E07E97 /* ForgotPasswordEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D22DEE2BB15B5000E07E97 /* ForgotPasswordEntity.swift */; };
 		59D22DF12BB15B6000E07E97 /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D22DF02BB15B6000E07E97 /* ForgotPasswordPresenter.swift */; };
 		59D22DF32BB15B6B00E07E97 /* ForgotPasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D22DF22BB15B6B00E07E97 /* ForgotPasswordInteractor.swift */; };
+		59D22E122BB29B7500E07E97 /* VerifyCodeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D22E112BB29B7500E07E97 /* VerifyCodeInteractor.swift */; };
+		59D22E142BB29B8200E07E97 /* VerifyCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D22E132BB29B8200E07E97 /* VerifyCodePresenter.swift */; };
+		59D22E162BB29BA500E07E97 /* VerifyCodeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D22E152BB29BA500E07E97 /* VerifyCodeRouter.swift */; };
+		59D22E1D2BB2B7AC00E07E97 /* NewPasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D22E1C2BB2B7AC00E07E97 /* NewPasswordInteractor.swift */; };
+		59D22E1F2BB2B7B500E07E97 /* NewPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D22E1E2BB2B7B500E07E97 /* NewPasswordPresenter.swift */; };
+		59D22E212BB2B7C000E07E97 /* NewPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D22E202BB2B7C000E07E97 /* NewPasswordRouter.swift */; };
 		59F4642C2B8CBFCC0074AD8E /* MyFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F4642B2B8CBFCC0074AD8E /* MyFriends.swift */; };
 		6800A731290A87B5008CA6F2 /* SearchCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6800A730290A87B5008CA6F2 /* SearchCategoryCell.xib */; };
 		6800A733290A87E3008CA6F2 /* SearchCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6800A732290A87E3008CA6F2 /* SearchCategoryCell.swift */; };
@@ -2444,6 +2450,12 @@
 		59D22DEE2BB15B5000E07E97 /* ForgotPasswordEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordEntity.swift; sourceTree = "<group>"; };
 		59D22DF02BB15B6000E07E97 /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
 		59D22DF22BB15B6B00E07E97 /* ForgotPasswordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordInteractor.swift; sourceTree = "<group>"; };
+		59D22E112BB29B7500E07E97 /* VerifyCodeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeInteractor.swift; sourceTree = "<group>"; };
+		59D22E132BB29B8200E07E97 /* VerifyCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodePresenter.swift; sourceTree = "<group>"; };
+		59D22E152BB29BA500E07E97 /* VerifyCodeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeRouter.swift; sourceTree = "<group>"; };
+		59D22E1C2BB2B7AC00E07E97 /* NewPasswordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordInteractor.swift; sourceTree = "<group>"; };
+		59D22E1E2BB2B7B500E07E97 /* NewPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordPresenter.swift; sourceTree = "<group>"; };
+		59D22E202BB2B7C000E07E97 /* NewPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordRouter.swift; sourceTree = "<group>"; };
 		59F4642B2B8CBFCC0074AD8E /* MyFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriends.swift; sourceTree = "<group>"; };
 		6800A730290A87B5008CA6F2 /* SearchCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCategoryCell.xib; sourceTree = "<group>"; };
 		6800A732290A87E3008CA6F2 /* SearchCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategoryCell.swift; sourceTree = "<group>"; };
@@ -5446,6 +5458,86 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		59D22E0C2BB29B1B00E07E97 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				59D22E152BB29BA500E07E97 /* VerifyCodeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		59D22E0D2BB29B2200E07E97 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		59D22E0E2BB29B3700E07E97 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				59D22E132BB29B8200E07E97 /* VerifyCodePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		59D22E0F2BB29B4A00E07E97 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				59D22E112BB29B7500E07E97 /* VerifyCodeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		59D22E102BB29B5600E07E97 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9539052D28D990DA004C089A /* VerifyCodeController.swift */,
+				9539052E28D990DA004C089A /* VerifyCodeController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		59D22E172BB2B76200E07E97 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				59D22E202BB2B7C000E07E97 /* NewPasswordRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		59D22E182BB2B76900E07E97 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		59D22E192BB2B77000E07E97 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				59D22E1E2BB2B7B500E07E97 /* NewPasswordPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		59D22E1A2BB2B77A00E07E97 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				59D22E1C2BB2B7AC00E07E97 /* NewPasswordInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		59D22E1B2BB2B78500E07E97 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9539053028D990DA004C089A /* NewPasswordController.xib */,
+				9539053128D990DA004C089A /* NewPasswordController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6800A72F290A8744008CA6F2 /* SearchCategoryCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -5576,8 +5668,11 @@
 		9539052C28D990DA004C089A /* Verify Code */ = {
 			isa = PBXGroup;
 			children = (
-				9539052D28D990DA004C089A /* VerifyCodeController.swift */,
-				9539052E28D990DA004C089A /* VerifyCodeController.xib */,
+				59D22E102BB29B5600E07E97 /* View */,
+				59D22E0F2BB29B4A00E07E97 /* Interactor */,
+				59D22E0E2BB29B3700E07E97 /* Presenter */,
+				59D22E0D2BB29B2200E07E97 /* Entity */,
+				59D22E0C2BB29B1B00E07E97 /* Router */,
 			);
 			path = "Verify Code";
 			sourceTree = "<group>";
@@ -5585,8 +5680,11 @@
 		9539052F28D990DA004C089A /* New Password */ = {
 			isa = PBXGroup;
 			children = (
-				9539053028D990DA004C089A /* NewPasswordController.xib */,
-				9539053128D990DA004C089A /* NewPasswordController.swift */,
+				59D22E1B2BB2B78500E07E97 /* View */,
+				59D22E1A2BB2B77A00E07E97 /* Interactor */,
+				59D22E192BB2B77000E07E97 /* Presenter */,
+				59D22E182BB2B76900E07E97 /* Entity */,
+				59D22E172BB2B76200E07E97 /* Router */,
 			);
 			path = "New Password";
 			sourceTree = "<group>";
@@ -10299,6 +10397,7 @@
 				5931B5FB2A62ACB0008AF294 /* EditorStickerTextView.swift in Sources */,
 				5931B5212A62ACB0008AF294 /* PhotoManager+Language.swift in Sources */,
 				231BF6C9288BFD1B0091861B /* NotificationData.swift in Sources */,
+				59D22E1D2BB2B7AC00E07E97 /* NewPasswordInteractor.swift in Sources */,
 				95390D3828D990E2004C089A /* SkillTableCell.swift in Sources */,
 				37B710702B517C9D0012133D /* VCardManager.swift in Sources */,
 				95390C0928D990E1004C089A /* StoriesCell.swift in Sources */,
@@ -10306,6 +10405,7 @@
 				95390E1928D990E3004C089A /* Validations.swift in Sources */,
 				37D39B1A2B56DF950068C435 /* EDLoadingView.swift in Sources */,
 				95390E1B28D990E3004C089A /* StringExnts.swift in Sources */,
+				59D22E162BB29BA500E07E97 /* VerifyCodeRouter.swift in Sources */,
 				5931B5E22A62ACB0008AF294 /* EditorToolOptions.swift in Sources */,
 				5931B5902A62ACB0008AF294 /* PhotoPickerSwitchLayout.swift in Sources */,
 				3797CF992A388EA40063FD58 /* Invite.swift in Sources */,
@@ -10397,6 +10497,7 @@
 				95390CF328D990E2004C089A /* NewGroupCell.swift in Sources */,
 				95390D4C28D990E2004C089A /* PhotosSegmentTableCell.swift in Sources */,
 				231BF6F6288BFD1B0091861B /* Search.swift in Sources */,
+				59D22E142BB29B8200E07E97 /* VerifyCodePresenter.swift in Sources */,
 				95390CB528D990E2004C089A /* AudioVideoCallViewController.swift in Sources */,
 				95390AAC28D990E0004C089A /* ReusableOptionsFilterViewController.swift in Sources */,
 				5931B6102A62ACB0008AF294 /* EditorToolView.swift in Sources */,
@@ -10506,6 +10607,7 @@
 				5931B5732A62ACB0008AF294 /* PhotoPickerView+CollectionView.swift in Sources */,
 				5931B5DA2A62ACB0008AF294 /* PhotoEditorViewController+ToolView.swift in Sources */,
 				95390CA528D990E2004C089A /* SearchDetailsController.swift in Sources */,
+				59D22E212BB2B7C000E07E97 /* NewPasswordRouter.swift in Sources */,
 				5931B52C2A62ACB0008AF294 /* LivePhotoError.swift in Sources */,
 				95390DC828D990E3004C089A /* Enums.swift in Sources */,
 				5931B5E12A62ACB0008AF294 /* PhotoEditorCropToolModel.swift in Sources */,
@@ -10716,6 +10818,7 @@
 				95390D0428D990E2004C089A /* GroupMembersAdapter.swift in Sources */,
 				5931B5472A62ACB0008AF294 /* ArrowViewConfiguration.swift in Sources */,
 				231BF6F1288BFD1B0091861B /* Events.swift in Sources */,
+				59D22E122BB29B7500E07E97 /* VerifyCodeInteractor.swift in Sources */,
 				95390E1D28D990E3004C089A /* ColorExnts.swift in Sources */,
 				59D22DEF2BB15B5000E07E97 /* ForgotPasswordEntity.swift in Sources */,
 				5931B5642A62ACB0008AF294 /* PhotoPreviewViewController+NavigationController.swift in Sources */,
@@ -10766,6 +10869,7 @@
 				95390C4428D990E1004C089A /* MediaFilesCollectionViewCell.swift in Sources */,
 				5931B5E02A62ACB0008AF294 /* EditorChartlet.swift in Sources */,
 				59556B572AC1B02F00683856 /* MyStoriesCell.swift in Sources */,
+				59D22E1F2BB2B7B500E07E97 /* NewPasswordPresenter.swift in Sources */,
 				95390AAE28D990E0004C089A /* FilterReusableShowResultsTableViewCell.swift in Sources */,
 				37B710352B517C9C0012133D /* DBChatHistoryStore.swift in Sources */,
 				37B710762B517C9D0012133D /* DownloadManager.swift in Sources */,
