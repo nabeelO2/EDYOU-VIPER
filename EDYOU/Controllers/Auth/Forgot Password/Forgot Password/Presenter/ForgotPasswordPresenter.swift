@@ -34,12 +34,12 @@ extension ForgotPasswordPresenter: ForgotPasswordPresenterProtocol {
         view?.prepareUI()
     }
     func forgotPassword(with email: String, validation : Bool) {
-        view.endEditing(true)
+        view?.endEditing()
         view?.startAnimating()
         if validation{
             view?.startAnimating()
             interactor.forgotPassword(with: email)
-            view.isUserInteractionEnabled = false
+            view?.userInteraction(false)
         }
         else{
             view?.shakeBtn()
@@ -58,9 +58,8 @@ extension ForgotPasswordPresenter : ForgotPasswordInteractorOutput{
     
     func successResponse() {
         view?.stopAnimating()
-        view?.isUserInteractionEnabled = true
-        
-        router.navigateVerifyCodeController(vie)
+        view?.userInteraction(true)
+        router.navigateVerifyCodeController(view?.getEmail() ?? "")
 //        UserDefaults.standard.set(true, forKey: "loggedIn")
         //get user detail
     }
@@ -74,6 +73,9 @@ protocol ForgotPasswordViewProtocol: AnyObject {
     func startAnimating()
     func stopAnimating()
     func shakeBtn()
+    func getEmail()->String
+    func userInteraction(_ isTrue : Bool) 
+    func endEditing()
 }
 
 

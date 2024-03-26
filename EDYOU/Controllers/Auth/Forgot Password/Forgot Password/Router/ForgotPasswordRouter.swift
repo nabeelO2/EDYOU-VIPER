@@ -10,15 +10,14 @@ import UIKit
 
 
 protocol ForgotPasswordRouterProtocol {
-    func navigateVerifyCodeController()
+    func navigateVerifyCodeController(_ email : String)
 }
 
 class ForgotPasswordRouter : ForgotPasswordRouterProtocol {
     
-   
     
     func navigateVerifyCodeController(_ email : String) {
-        let controller = VerifyCodeController(email: self.txtEmail.text ?? "")
+        let controller = VerifyCodeController(email: email)
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
