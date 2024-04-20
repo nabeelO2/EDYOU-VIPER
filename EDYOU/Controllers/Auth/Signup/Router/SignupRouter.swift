@@ -10,14 +10,32 @@ import UIKit
 
 
 protocol SignupRouterProtocol {
-//    func navigateToHome()
+    func navigateToHome()
+    func navigateToSignup()
+    func navigateToAddMajor()
+    func navigateToForgotPassword()
 }
 
 class SignupRouter : SignupRouterProtocol {
     
-//    func navigateToHome() {
-//        
-//    }
+    func navigateToForgotPassword() {
+        let forgot = ForgotPasswordRouter.createModule(navigationController: navigationController ?? UINavigationController())
+        self.navigationController?.pushViewController(forgot, animated: true)
+    }
+    func navigateToAddMajor() {
+        let major = AddMajorRouter.createModule(navigationController: self.navigationController ?? UINavigationController())
+        self.navigationController?.pushViewController(major, animated: true)
+    }
+    func navigateToSignup() {
+        let signup = SignupRouter.createModule(navigationController: self.navigationController ?? UINavigationController())
+        
+        self.navigationController?.pushViewController(signup, animated: true)
+    }
+    
+    
+    func navigateToHome() {
+        
+    }
     
     var navigationController: UINavigationController?
     
@@ -27,11 +45,11 @@ class SignupRouter : SignupRouterProtocol {
     
     static func createModule(navigationController: UINavigationController) -> SignupViewController {
         
-        let view = SignupViewController(nibName: "SignupController", bundle: nil)
+        let view = SignupViewController(nibName: "SignupViewController", bundle: nil)
         let interactor = SignupInteractor()
         let router = SignupRouter(navigationController: navigationController)
-        let presenter = SignupPresenter.init(view: view,router: router)
-//        interactor.output = presenter
+        let presenter = SignupPresenter.init(view: view,router: router,interactor : interactor)
+        interactor.output = presenter
         view.presenter = presenter
         
         view.title = ""
@@ -40,6 +58,7 @@ class SignupRouter : SignupRouterProtocol {
     }
     
 }
+
 
 
 

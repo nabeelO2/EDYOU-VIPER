@@ -11,67 +11,16 @@ import TransitionButton
 class SignupViewController: BaseController, UITextFieldDelegate {
 
     //MARK: -  Textfields Outlets
-    @IBOutlet weak var firstNameTextfield: BorderedTextField!{
-        didSet
-        {
-            firstNameTextfield.leftSeparatorView.isHidden = true
-            firstNameTextfield.placeHolderLeadingConstraint.constant = 0
-            
-        }
-    }
     
-    @IBOutlet weak var lastNameTextfield: BorderedTextField!{
-        didSet
-        {
-            lastNameTextfield.leftSeparatorView.isHidden = true
-            lastNameTextfield.placeHolderLeadingConstraint.constant = 0
-        }
-    }
-    
-    @IBOutlet weak var universityTextfield: BorderedTextField!{
-        didSet
-        {
-            universityTextfield.leftSeparatorView.isHidden = true
-      
-            universityTextfield.placeHolderLeadingConstraint.constant = 0
-        }
-    }
-
-    @IBOutlet weak var statesTextField: BorderedTextField! {
-        didSet {
-            statesTextField.leftSeparatorView.isHidden = true
-            statesTextField.placeHolderLeadingConstraint.constant = 0
-        }
-    }
-    
-    @IBOutlet weak var emailTextfield: BorderedTextField!{
-        didSet
-        {
-            emailTextfield.leftSeparatorView.isHidden = true
-            emailTextfield.placeHolderLeadingConstraint.constant = 0
-            emailTextfield.textField.keyboardType = .emailAddress
-        }
-    }
-
-    
-    @IBOutlet weak var passwordTextfield: BorderedTextField!{
-        didSet
-        {
-            passwordTextfield.leftSeparatorView.isHidden = true
-            passwordTextfield.leftIconLeftPadding = 12
-            passwordTextfield.placeHolderLeadingConstraint.constant = 0
-            passwordTextfield.textField.isSecureTextEntry = true
-        }
-    }
-
-    
-    @IBOutlet weak var genderTextfield: BorderedTextField!{
-        didSet
-        {
-            genderTextfield.leftSeparatorView.isHidden = true
-            genderTextfield.placeHolderLeadingConstraint.constant = 0
-        }
-    }
+    @IBOutlet weak var firstNameTextfield: BorderedTextField!
+       
+    @IBOutlet weak var lastNameTextfield: BorderedTextField!
+    @IBOutlet weak var universityTextfield: BorderedTextField!
+    @IBOutlet weak var statesTextField: BorderedTextField!
+    @IBOutlet weak var emailTextfield: BorderedTextField!
+    @IBOutlet weak var passwordTextfield: BorderedTextField!
+    @IBOutlet weak var genderTextfield: BorderedTextField!
+       
     
     
     @IBOutlet weak var showPasswordButton: UIButton!
@@ -93,9 +42,10 @@ class SignupViewController: BaseController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
-//        getInstitutes()
-        getStates()
+        presenter.viewDidLoad()
+//        setupUI()
+////        getInstitutes()
+//        getStates()
      
         // Do any additional setup after loading the view.
     }
@@ -106,8 +56,23 @@ class SignupViewController: BaseController, UITextFieldDelegate {
     func setupUI()
     {
         emailTextfield.isHidden = true
-        
-        
+        genderTextfield.leftSeparatorView.isHidden = true
+        genderTextfield.placeHolderLeadingConstraint.constant = 0
+        passwordTextfield.leftSeparatorView.isHidden = true
+        passwordTextfield.leftIconLeftPadding = 12
+        passwordTextfield.placeHolderLeadingConstraint.constant = 0
+        passwordTextfield.textField.isSecureTextEntry = true
+        emailTextfield.leftSeparatorView.isHidden = true
+        emailTextfield.placeHolderLeadingConstraint.constant = 0
+        emailTextfield.textField.keyboardType = .emailAddress
+        statesTextField.leftSeparatorView.isHidden = true
+        statesTextField.placeHolderLeadingConstraint.constant = 0
+        universityTextfield.leftSeparatorView.isHidden = true
+        universityTextfield.placeHolderLeadingConstraint.constant = 0
+        firstNameTextfield.leftSeparatorView.isHidden = true
+        firstNameTextfield.placeHolderLeadingConstraint.constant = 0
+        lastNameTextfield.leftSeparatorView.isHidden = true
+        lastNameTextfield.placeHolderLeadingConstraint.constant = 0
         firstNameTextfield.validations = [.required]
         lastNameTextfield.validations = [.required]
         universityTextfield.validations = [.required]
@@ -452,20 +417,7 @@ extension SignupViewController {
     }
     
     func getStates() {
-        states = Cache.shared.states.stringToDatePickerItem()
-        if states.count == 0 {
-            statesTextField.startLoading()
-            statesTextField.isUserInteractionEnabled = false
-        }
-        APIManager.auth.getStates { stateList , error in
-            self.statesTextField.stopLoading()
-            self.statesTextField.isUserInteractionEnabled = false
-            if let e = error {
-                self.showErrorWith(message: e.message)
-            } else {
-                self.states = (stateList ?? []).stringToDatePickerItem()
-            }
-        }
+        
     }
 }
 
@@ -523,8 +475,36 @@ extension SignupViewController
 }
 
 extension SignupViewController : SignupViewProtocol{
-    func prepareUI() {
+    func setStates(_ statesList: [DataPickerItem<String>]) {
+        self.se
+    }
+    func setStatesUserInteraction(_ result: Bool) {
+        statesTextField.isUserInteractionEnabled = result
+    }
+    func stopStatesLoading() {
+        statesTextField.stopLoading()
+    }
+    func startStatesLoading() {
+        statesTextField.startLoading()
+    }
+    func shakeSignupButton() {
         
+    }
+    
+    func showErrorMessage(_ message: String) {
+        
+    }
+    
+    func startAnimating() {
+        
+    }
+    
+    func stopAnimating() {
+        
+    }
+    
+    func prepareUI() {
+        setupUI()
     }
     
     func shakeLoginButton() {
