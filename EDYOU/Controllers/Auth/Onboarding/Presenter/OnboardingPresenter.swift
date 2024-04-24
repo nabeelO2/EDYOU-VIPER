@@ -9,6 +9,9 @@ import Foundation
 protocol OnboardingPresenterProtocol: AnyObject {//Input
     func viewDidLoad()
     func setupUI()
+    func navigateToSignIn()
+    func navigateToSignup()
+    func navigateToPrivacy()
 }
 
 class OnboardingPresenter {
@@ -36,7 +39,15 @@ extension OnboardingPresenter: OnboardingPresenterProtocol {
     func viewDidLoad() {
         view?.prepareUI()
     }
-    
+    func navigateToSignIn() {
+        router.navigateToLogin()
+    }
+    func navigateToSignup() {
+        router.navigateToSignup()
+    }
+    func navigateToPrivacy() {
+        router.navigateToLogin()
+    }
     
 }
 

@@ -20,23 +20,14 @@ class OnboardingViewController: BaseController {
     }
     
     @IBAction func signInButtonTouched(_ sender: Any) {
-//        let controller = LoginController(nibName: "LoginController", bundle: nil)
-        let controller = LoginRouter.createModule(navigationController: self.navigationController ?? UINavigationController())
-        self.navigationController?.pushViewController(controller, animated: true)
-        
+       presenter.navigateToSignIn()
     }
     @IBAction func signupButtonTouched(_ sender: Any) {
-        let controller = SignupRouter.createModule(navigationController: self.navigationController ?? UINavigationController())
-        self.navigationController?.pushViewController(controller, animated: true)
+        presenter.navigateToSignup()
         
     }
     @IBAction func privacyPolicyButtonTouched(_ sender: Any) {
-        let controller = PrivacyPolicyController(completion: {isAccept in
-          
-        })
-        controller.modalPresentationStyle = .fullScreen
-        self.present(controller, animated: true, completion: nil)
-        
+        presenter.navigateToPrivacy()
     }
     
     

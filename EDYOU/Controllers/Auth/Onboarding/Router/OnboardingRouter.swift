@@ -12,17 +12,29 @@ import UIKit
 protocol OnboardingRouterProtocol {
     func navigateToLogin()
     func navigateToSignup()
+    func navigateToPrivacy()
 }
 
 class OnboardingRouter : OnboardingRouterProtocol {
     
     func navigateToSignup() {
         print("navigate to signup")
+        let controller = SignupRouter.createModule(navigationController: self.navigationController ?? UINavigationController())
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     
     func navigateToLogin() {
-        print("navigate to home")
+        print("navigate to login")
+        let controller = LoginRouter.createModule(navigationController: self.navigationController ?? UINavigationController())
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func navigateToPrivacy(){
+        let controller = PrivacyPolicyController(nibName: PrivacyPolicyController.name, bundle: nil)
+        controller.modalPresentationStyle = .fullScreen
+        self.present(controller, animated: true, completion: nil)
+        
     }
     
     var navigationController: UINavigationController?
