@@ -763,6 +763,9 @@
 		59D22E1D2BB2B7AC00E07E97 /* NewPasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D22E1C2BB2B7AC00E07E97 /* NewPasswordInteractor.swift */; };
 		59D22E1F2BB2B7B500E07E97 /* NewPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D22E1E2BB2B7B500E07E97 /* NewPasswordPresenter.swift */; };
 		59D22E212BB2B7C000E07E97 /* NewPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D22E202BB2B7C000E07E97 /* NewPasswordRouter.swift */; };
+		59ED2B742BD933DF00A553D2 /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ED2B732BD933DF00A553D2 /* OnboardingPresenter.swift */; };
+		59ED2B762BD933F200A553D2 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ED2B752BD933F100A553D2 /* OnboardingRouter.swift */; };
+		59ED2B782BD933FF00A553D2 /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ED2B772BD933FF00A553D2 /* OnboardingInteractor.swift */; };
 		59F4642C2B8CBFCC0074AD8E /* MyFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F4642B2B8CBFCC0074AD8E /* MyFriends.swift */; };
 		6800A731290A87B5008CA6F2 /* SearchCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6800A730290A87B5008CA6F2 /* SearchCategoryCell.xib */; };
 		6800A733290A87E3008CA6F2 /* SearchCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6800A732290A87E3008CA6F2 /* SearchCategoryCell.swift */; };
@@ -2456,6 +2459,9 @@
 		59D22E1C2BB2B7AC00E07E97 /* NewPasswordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordInteractor.swift; sourceTree = "<group>"; };
 		59D22E1E2BB2B7B500E07E97 /* NewPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordPresenter.swift; sourceTree = "<group>"; };
 		59D22E202BB2B7C000E07E97 /* NewPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordRouter.swift; sourceTree = "<group>"; };
+		59ED2B732BD933DF00A553D2 /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
+		59ED2B752BD933F100A553D2 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
+		59ED2B772BD933FF00A553D2 /* OnboardingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInteractor.swift; sourceTree = "<group>"; };
 		59F4642B2B8CBFCC0074AD8E /* MyFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriends.swift; sourceTree = "<group>"; };
 		6800A730290A87B5008CA6F2 /* SearchCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCategoryCell.xib; sourceTree = "<group>"; };
 		6800A732290A87E3008CA6F2 /* SearchCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategoryCell.swift; sourceTree = "<group>"; };
@@ -5581,6 +5587,8 @@
 		59ED2B152BD9289100A553D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				684503BA28FF1C42005EB9FD /* OnboardingViewController.xib */,
+				684503BC28FF1C8D005EB9FD /* OnboardingViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -5588,6 +5596,7 @@
 		59ED2B162BD9289A00A553D2 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				59ED2B772BD933FF00A553D2 /* OnboardingInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -5595,6 +5604,7 @@
 		59ED2B172BD928A100A553D2 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				59ED2B752BD933F100A553D2 /* OnboardingRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -5602,6 +5612,7 @@
 		59ED2B182BD928A900A553D2 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				59ED2B732BD933DF00A553D2 /* OnboardingPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -6303,8 +6314,6 @@
 				59ED2B172BD928A100A553D2 /* Router */,
 				59ED2B162BD9289A00A553D2 /* Interactor */,
 				59ED2B152BD9289100A553D2 /* View */,
-				684503BA28FF1C42005EB9FD /* OnboardingViewController.xib */,
-				684503BC28FF1C8D005EB9FD /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -10720,6 +10729,7 @@
 				5931B53D2A62ACB0008AF294 /* Picker+PhotoTools.swift in Sources */,
 				95390CF728D990E2004C089A /* GroupsController.swift in Sources */,
 				47DC8B2C28DF459E0058F332 /* LocationAndFeelingsAdapter.swift in Sources */,
+				59ED2B782BD933FF00A553D2 /* OnboardingInteractor.swift in Sources */,
 				5931B6022A62ACB0008AF294 /* PhotoEditorMosaicView.swift in Sources */,
 				5931B58B2A62ACB0008AF294 /* PhotoPickerViewCell.swift in Sources */,
 				5931B5EF2A62ACB0008AF294 /* VideoEditorCropView.swift in Sources */,
@@ -11100,6 +11110,7 @@
 				95390CB828D990E2004C089A /* remoteParticipantGroupCollectionViewCell.swift in Sources */,
 				5931B6002A62ACB0008AF294 /* PhotoEditorFilterParameterView.swift in Sources */,
 				37B710402B517C9C0012133D /* DBCapabilitiesCache.swift in Sources */,
+				59ED2B762BD933F200A553D2 /* OnboardingRouter.swift in Sources */,
 				95390C0D28D990E1004C089A /* TextPostCell.swift in Sources */,
 				5931B5842A62ACB0008AF294 /* PhotoPickerBaseViewCell.swift in Sources */,
 				95390E2028D990E3004C089A /* URLExtns.swift in Sources */,
@@ -11352,6 +11363,7 @@
 				5931B29B2A626547008AF294 /* HX_GradientView.swift in Sources */,
 				95390E2628D990E3004C089A /* ImagePicker.swift in Sources */,
 				231BF6D4288BFD1B0091861B /* LocationModel.swift in Sources */,
+				59ED2B742BD933DF00A553D2 /* OnboardingPresenter.swift in Sources */,
 				37B710B12B517C9D0012133D /* VCardEditEmailTableViewCell.swift in Sources */,
 				5931B5F52A62ACB0008AF294 /* EditorStickerView+ItemView.swift in Sources */,
 				37B7104C2B517C9C0012133D /* ConversationEntryState.swift in Sources */,

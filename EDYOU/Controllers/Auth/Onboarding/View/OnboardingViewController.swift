@@ -9,18 +9,13 @@ import UIKit
 
 class OnboardingViewController: BaseController {
     @IBOutlet weak var signupButton: UIButton!
-    {
-        didSet
-        {
-            //TODO: Add in Color Asset
-            signupButton.layer.borderColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 1).cgColor
-            signupButton.layer.borderWidth = 1
-        }
-    }
+    
+    var presenter : OnboardingPresenterProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        presenter.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
@@ -47,3 +42,12 @@ class OnboardingViewController: BaseController {
     
 
 }
+
+extension OnboardingViewController : OnboardingViewProtocol{
+    func prepareUI() {
+        signupButton.layer.borderColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 1).cgColor
+        signupButton.layer.borderWidth = 1
+    }
+    
+}
+
