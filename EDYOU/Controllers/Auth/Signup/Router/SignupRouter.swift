@@ -45,15 +45,13 @@ class SignupRouter : SignupRouterProtocol {
     
     static func createModule(navigationController: UINavigationController) -> SignupViewController {
         
-        let view = SignupViewController(nibName: "SignupViewController", bundle: nil)
+        let view = SignupViewController(nibName: "SignupController", bundle: nil)
         let interactor = SignupInteractor()
         let router = SignupRouter(navigationController: navigationController)
         let presenter = SignupPresenter.init(view: view,router: router,interactor : interactor)
         interactor.output = presenter
         view.presenter = presenter
-        
         view.title = ""
-        
         return view
     }
     

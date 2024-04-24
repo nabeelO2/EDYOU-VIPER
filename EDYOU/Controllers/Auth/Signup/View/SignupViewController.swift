@@ -476,7 +476,7 @@ extension SignupViewController
 
 extension SignupViewController : SignupViewProtocol{
     func setStates(_ statesList: [DataPickerItem<String>]) {
-        self.se
+//        self.se
     }
     func setStatesUserInteraction(_ result: Bool) {
         statesTextField.isUserInteractionEnabled = result

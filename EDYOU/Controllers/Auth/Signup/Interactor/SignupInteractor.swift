@@ -42,11 +42,11 @@ extension SignupInteractor : SignupInteractorProtocol{
         }
     }
     func getStatesList()->[String]?{
-        
-        APIManager.auth.getStates { [weak self] stateList , error in
-            self?.output?.statesList(states: stateList)
-            
-        }
+        return nil
+//        APIManager.auth.getStates { [weak self] stateList , error in
+//            self?.output?.statesList(states: stateList)
+//
+//        }
     }
 }
 

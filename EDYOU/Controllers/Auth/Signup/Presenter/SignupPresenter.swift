@@ -9,12 +9,10 @@ import Foundation
 
 protocol SignupPresenterProtocol: AnyObject {
     func viewDidLoad()
-    func navigateToHome()
-    func navigateToSignup()
-    func navigateToForgetPassword()
-    func showHidePassword()
-    func register(email : String?, password : String?,isValidation : Bool)
-    func textFieldDidChange(text: String)
+    func navigateToPrivacy()
+    func navigateToSignIn()
+    func navigateToVerifyEmail()
+    func register(fName : String, lName : String,password : String,gender:String,email:String)
 }
 
 class SignupPresenter {
@@ -32,40 +30,23 @@ class SignupPresenter {
 }
 
 
-extension SignupPresenter: SignupPresenterProtocol {
+extension SignupPresenter : SignupPresenterProtocol {
     
-    func navigateToSignup() {
+    func navigateToSignIn() {
         router.navigateToSignup()
     }
     
-    func textFieldDidChange(text: String) {
-        let isHidden = text.count == 0
-        view?.passwordBtnVisibility(isHidden)
+    func navigateToPrivacy() {
+        
     }
-    
-    func navigateToForgetPassword() {
-        router.navigateToForgotPassword()
-    }
-    
-    func showHidePassword() {
-        view?.showHidePassword()
+    func navigateToVerifyEmail() {
+        
     }
     
     
     
-    func register(email: String?, password: String?, isValidation: Bool) {
-        if isValidation{
-            //hit api
-            view?.startAnimating()
-            interactor.register(with: email!, password: password!)
-        }else{
-            view?.stopAnimating()
-            view?.shakeSignupButton()
-        }
-    }
-    
-    
-    func navigateToHome() {
+    func register(fName: String, lName: String, password: String, gender: String, email: String) {
+        
     }
     
     func viewDidLoad() {
@@ -99,7 +80,7 @@ extension SignupPresenter : SignupInteractorOutput{
     func successResponse() {
         UserDefaults.standard.set(true, forKey: "loggedIn")
         //get user detail
-        interactor.getUserDetail()
+//        interactor.getUserDetail()
     }
     func userInformation(response user: User) {
         view?.stopAnimating()
