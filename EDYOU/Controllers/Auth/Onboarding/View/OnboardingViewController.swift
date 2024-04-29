@@ -20,14 +20,14 @@ class OnboardingViewController: BaseController {
     }
     
     @IBAction func signInButtonTouched(_ sender: Any) {
-       presenter.navigateToSignIn()
+        presenter.navigateToSignIn(self.navigationController!)
     }
     @IBAction func signupButtonTouched(_ sender: Any) {
-        presenter.navigateToSignup()
+        presenter.navigateToSignup(self.navigationController!)
         
     }
     @IBAction func privacyPolicyButtonTouched(_ sender: Any) {
-        presenter.navigateToPrivacy()
+        presenter.navigateToPrivacy(self.navigationController!)
     }
     
     

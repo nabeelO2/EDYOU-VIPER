@@ -178,7 +178,16 @@ extension AddMajorViewController {
 
             if error == nil {
                 let controller = InviteFriendViewController()
-                self.navigationController?.pushViewController(controller, animated: true)
+                if navigationController == nil {
+                    let nav = UINavigationController(rootViewController: controller)
+                    nav.setNavigationBarHidden(true, animated: false)
+                    self.present(nav, presentationStyle: .fullScreen)
+                }
+                else{
+                    navigationController?.pushViewController(controller, animated: true)
+                }
+                let nav = navigationController == nil ? UINavigationController() : navigationController
+                
             } else {
                 self.showErrorWith(message: error?.message ?? "Invalid response")
             }

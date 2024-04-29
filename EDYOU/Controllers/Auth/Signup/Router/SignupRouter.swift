@@ -10,8 +10,8 @@ import UIKit
 
 
 protocol SignupRouterProtocol {
-    func navigateToHome()
-    func navigateToSignup()
+    func navigateToVerifyEmail(_ email : String?)
+    func navigateToSignIn()
     func navigateToAddMajor()
     func navigateToForgotPassword()
 }
@@ -26,15 +26,16 @@ class SignupRouter : SignupRouterProtocol {
         let major = AddMajorRouter.createModule(navigationController: self.navigationController ?? UINavigationController())
         self.navigationController?.pushViewController(major, animated: true)
     }
-    func navigateToSignup() {
-        let signup = SignupRouter.createModule(navigationController: self.navigationController ?? UINavigationController())
+    func navigateToSignIn() {
+        let signup = LoginRouter.createModule(navigationController: self.navigationController ?? UINavigationController())
         
         self.navigationController?.pushViewController(signup, animated: true)
     }
     
     
-    func navigateToHome() {
-        
+    func navigateToVerifyEmail(_ email : String?) {
+        let controller = VerifyEmailController(email: email ?? "")
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     var navigationController: UINavigationController?

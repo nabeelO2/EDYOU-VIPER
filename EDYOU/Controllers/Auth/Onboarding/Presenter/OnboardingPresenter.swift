@@ -5,13 +5,14 @@
 //  Created by imac3 on 24/04/2024.
 //
 import Foundation
+import UIKit
 
 protocol OnboardingPresenterProtocol: AnyObject {//Input
     func viewDidLoad()
     func setupUI()
-    func navigateToSignIn()
-    func navigateToSignup()
-    func navigateToPrivacy()
+    func navigateToSignIn(_ navigationController:UINavigationController)
+    func navigateToSignup(_ navigationController:UINavigationController)
+    func navigateToPrivacy(_ navigationController:UINavigationController)
 }
 
 class OnboardingPresenter {
@@ -30,6 +31,19 @@ class OnboardingPresenter {
 
 
 extension OnboardingPresenter: OnboardingPresenterProtocol {
+   
+    func navigateToSignIn(_ navigationController: UINavigationController) {
+        router.navigateToLogin(navigationController)
+    }
+    
+    func navigateToSignup(_ navigationController: UINavigationController) {
+        router.navigateToSignup(navigationController)
+    }
+    
+    func navigateToPrivacy(_ navigationController: UINavigationController) {
+        router.navigateToPrivacy(navigationController)
+    }
+    
         
     func setupUI() {
         
@@ -39,15 +53,7 @@ extension OnboardingPresenter: OnboardingPresenterProtocol {
     func viewDidLoad() {
         view?.prepareUI()
     }
-    func navigateToSignIn() {
-        router.navigateToLogin()
-    }
-    func navigateToSignup() {
-        router.navigateToSignup()
-    }
-    func navigateToPrivacy() {
-        router.navigateToLogin()
-    }
+    
     
 }
 

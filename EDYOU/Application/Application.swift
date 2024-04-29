@@ -31,25 +31,21 @@ extension Application {
     
     func switchToLogin() {
         window = UIWindow()
-        let initialViewController: UIViewController = OnboardingViewController()
         
-        let navigationController = UINavigationController(rootViewController: initialViewController)
-        navigationController.isNavigationBarHidden = true
+        let onBoarding = OnboardingRouter.createModule()
+        let navigationController = UINavigationController()
+        navigationController.setNavigationBarHidden(true, animated: false)
+        navigationController.viewControllers = [onBoarding]
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
     }
     
     func switchToSignup(){
-        let controller = SignupViewController(nibName: "SignupController", bundle: nil)
-       
-        
+
         window = UIWindow()
-        let initialViewController: UIViewController = controller
-        
-        let navigationController = UINavigationController(rootViewController: initialViewController)
-        navigationController.isNavigationBarHidden = true
-        window?.rootViewController = navigationController
+        let controller = SignupRouter.createModule(navigationController: UINavigationController())
+        window?.rootViewController = UINavigationController(rootViewController: controller)
         window?.makeKeyAndVisible()
     }
     

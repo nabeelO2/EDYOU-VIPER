@@ -9,8 +9,9 @@
 import Foundation
 
 protocol SignupInteractorProtocol: AnyObject {
-    func register(with email: String, password : String)
-    func getStatesList()->[String]?
+    func getStatesList()
+    func getSchoolList(of state : String)
+    func register(_ params : [String: Any])
 }
 
 protocol SignupInteractorOutput: AnyObject {
@@ -18,6 +19,7 @@ protocol SignupInteractorOutput: AnyObject {
     func successResponse()
     func userInformation(response user : User)
     func statesList( states list : [String])
+    func schoolList(schools list : [School])
 }
 
 //Handle Api integration
@@ -26,27 +28,38 @@ class SignupInteractor {
 }
 
 extension SignupInteractor : SignupInteractorProtocol{
-    func register(with email: String, password: String) {
-        
-    }
     
-    func getUserDetail() {
+    func register(_ params : [String: Any]) {
         
-        APIManager.social.getUserInfo { [weak self] user, error in
-            if error != nil {
+        APIManager.auth.signup(parameters: params) { [weak self] oneTimeToken, error in
+            if error != nil{
                 self?.output?.error(error: error!.message)
+            }else{
+                self?.output?.successResponse()
             }
-            else{
-                self?.output?.userInformation(response: user!)
+            
+        }
+
+    }
+    func getStatesList(){
+        
+        APIManager.auth.getStates { [weak self] stateList , error in
+            if error == nil{
+                self?.output?.statesList(states: stateList ?? [])
             }
+            
         }
     }
-    func getStatesList()->[String]?{
-        return nil
-//        APIManager.auth.getStates { [weak self] stateList , error in
-//            self?.output?.statesList(states: stateList)
-//
-//        }
+    func getSchoolList(of state : String){
+        
+        APIManager.auth.getSchools(state: state) { schools, error in
+            if error == nil{
+                self.output?.schoolList(schools: (schools ?? []))
+            }
+            else{
+                self.output?.error(error: error!.message)
+            }
+        }
     }
 }
 

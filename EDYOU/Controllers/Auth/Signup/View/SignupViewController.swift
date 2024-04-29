@@ -10,19 +10,15 @@ import TransitionButton
 
 class SignupViewController: BaseController, UITextFieldDelegate {
 
-    //MARK: -  Textfields Outlets
+    //MARK: -  Outlets
     
     @IBOutlet weak var firstNameTextfield: BorderedTextField!
-       
     @IBOutlet weak var lastNameTextfield: BorderedTextField!
     @IBOutlet weak var universityTextfield: BorderedTextField!
     @IBOutlet weak var statesTextField: BorderedTextField!
     @IBOutlet weak var emailTextfield: BorderedTextField!
     @IBOutlet weak var passwordTextfield: BorderedTextField!
     @IBOutlet weak var genderTextfield: BorderedTextField!
-       
-    
-    
     @IBOutlet weak var showPasswordButton: UIButton!
     @IBOutlet weak var signupButton: TransitionButton!
     @IBOutlet weak var policyButton: UIButton!
@@ -31,23 +27,19 @@ class SignupViewController: BaseController, UITextFieldDelegate {
     
     
     var presenter: SignupPresenterProtocol!
-    var adapter: PickerViewAdapter!
+//    var adapter: PickerViewAdapter!
     var universities: [DataPickerItem<Institute>] = []
-    var states: [DataPickerItem<String>] = []
-    var schools: [DataPickerItem<School>] = []
-    var selectedSchool : School?
-    var selectedState : String = ""
-    var selectedGender : String = ""
-    var isPolicySelected : Bool = false
+    
+    
+//    var selectedSchool : School?
+//    var selectedState : String = ""
+//    var selectedGender : String = ""
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
-//        setupUI()
-////        getInstitutes()
-//        getStates()
-     
-        // Do any additional setup after loading the view.
+
     }
     
     
@@ -112,314 +104,56 @@ class SignupViewController: BaseController, UITextFieldDelegate {
         }
        
     }
-
-    
-    // MARK: -  Others
-    func getGender() -> String
-    {
-        if genderTextfield.text == "Another gender identity"
-        {
-            return "another_gender_identity"
-        }
-        else
-        if genderTextfield.text == "Prefer not to say"
-        {
-            return "prefer_not_to_say"
-        }
-        else
-        {
-            return genderTextfield.text?.lowercased() ?? "male"
-        }
-    }
-    func validate() -> Bool {
-        
-        let emailValidated = emailTextfield.validate()
-        let genderValidated = genderTextfield.validate()
-        let nameValidated = firstNameTextfield.validate()
-        let lastNameValidated = lastNameTextfield.validate()
-        let universityValidated = universityTextfield.validate()
-        let statesValidated = statesTextField.validate()
-    
-        
-        if emailValidated && validateEmail() && genderValidated && nameValidated && lastNameValidated && universityValidated
-        {
-            let regex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{8,}"
-            let isMatched = NSPredicate(format:"SELF MATCHES %@", regex).evaluate(with: passwordTextfield.text)
-            if(isMatched  == true) {
-               
-                if isPolicySelected == false
-                {
-                    showErrorWith(message: "Please accept our Terms and Condition and Privacy Policy")
-                    return false
-                }
-               else
-                {
-                   return true
-                }
-             
-            }  else {
-                showErrorWith(message: "Your password must be at least 8 characters long, a special character, contain at least one number and have a mixture of uppercase and lowercase letters.")
-                return false
-            }
-            
-        }
-        else
-        {
-            if nameValidated == false
-            {
-                firstNameTextfield.setError("Please enter valid first name")
-
-            }
-            else  if lastNameValidated == false
-            {
-                lastNameTextfield.setError("Please enter valid last name")
-
-            }
-            else
-            if universityValidated == false
-            {
-                //showErrorWith(message: "Please select your university")
-            }
-            else
-            if emailValidated == false
-            {
-               // showErrorWith(message: "Please enter a valid Email Address")
-            }
-            else
-            if validateEmail()  == false
-            {
-                
-            }
-            else
-            if genderValidated == false
-            {
-               // showErrorWith(message: "Please select your gender")
-            }
-            else
-            if statesValidated == false
-            {
-               // showErrorWith(message: "Please select your gender")
-            }
-          
-            return false
-        }
-       
-    }
-    
-   
-    func validateEmail() -> Bool {
-        let emailValidated = emailTextfield.validate()
-        guard let emailSuffix = selectedSchool?.emailSuffix else {
-            emailTextfield.setError("School not selected")
-            return false
-        }
-        let suffix = emailTextfield.text?.components(separatedBy: "@").last ?? ""
-        if suffix.contains("yopmail.com") {
-            emailTextfield.setError("Invalid institute email")
-            return false
-        }
-//        aamu.edu
-        if (emailValidated && !suffix.contains(emailSuffix)) {
-            emailTextfield.setError("Invalid institute email")
-            return false
-        }
-        
-        return emailValidated
-    }
-    
-    func validateCompleteName() -> Bool {
-         let completeName = firstNameTextfield.text ?? ""
-        let trimmedCompleteName = completeName.trimmingCharacters(in: .whitespacesAndNewlines)
-
-        if trimmedCompleteName.containsWhitespace {
-            return true
-        }
-        
-        return false
-    }
     
     //MARK: -  Selector Methods
 
     @IBAction func selectStates(_ sender: UIButton) {
-        let controller = DataPickerController(title: "Choose States", data: states, singleSelection: true) { [weak self] selectedItems in
-            guard let selectedItem = selectedItems.first, let self = self else { return }
-            self.selectedState = selectedItem.title
-            self.statesTextField.text = selectedItem.title
-            self.selectedSchool = nil
-            self.universityTextfield.text = ""
-            self.getSchools()
-        }
-        controller.showFullScreen = true
-        self.present(controller, animated: true, completion: nil)
+        
+        presenter.selectState()
     }
     
     @IBAction func selectUniversityButtonTouched(_ sender: Any) {
-        if self.selectedState.isEmpty {
-            self.showErrorWith(message: "Please select state first")
-            return
-        }
-        if self.schools.count == 0 {
-            return
-        }
-        
-        let controller = DataPickerController(title: "Schools in \(self.selectedState)", data: schools, singleSelection: true) { [weak self] selectedItems in
-            guard let selectedItem = selectedItems.first, let self = self else { return }
-            self.selectedSchool = selectedItem.data
-            self.universityTextfield.text = selectedItem.title
-            UserDefaults.standard.set(self.universityTextfield.text, forKey: "SelectedUni")
-            UserDefaults.standard.synchronize()
-            self.emailTextfield.isHidden = false
-            self.emailTextfield.textField.becomeFirstResponder()
-        }
-        controller.showFullScreen = true
-        self.present(controller, animated: true, completion: nil)
+        presenter.selectUniviersity()
     }
     
     @IBAction func selectGenderButtonTouched(_ sender: Any)
     {
-        let genderPicker = ReusbaleOptionSelectionController(options:  ["Male", "Female", "Another gender identity", "Prefer not to say"], previouslySelectedOption: self.selectedGender, screenName: "Select Gender", completion: { selected in
-            
-            self.selectedGender = selected
-            self.genderTextfield.text = selected
-            
-        })
-        
-        self.presentPanModal(genderPicker)
+        presenter.selectGender()
     }
     @IBAction func signInButtonTouched(_ sender: Any)
     {
-        self.navigationController?.popViewController(animated: true)
+        presenter.navigateToSignIn()
     }
     
     @IBAction func showPasswordButtonTouched(_ sender: Any)
     {
-        passwordTextfield.textField.isSecureTextEntry = !passwordTextfield.textField.isSecureTextEntry
-        
-        showPasswordButton.setImage(passwordTextfield.textField.isSecureTextEntry ? UIImage(named: "showPasswordOff") : UIImage(named: "showPasswordOff"), for: .normal)
+        presenter.changePasswordVisibility(passwordTextfield.textField.isSecureTextEntry)
       
     }
     @IBAction func signupButtonTouched(_ sender: Any)
     {
-        
-        if validate()
-        {
-            signUp()
-        }
-        else
-        {
-            signupButton.shake()
-        }
+        presenter.register()
+
     }
     
     @IBAction func policyCheckButtonTouched(_ sender: Any) {
-     
-        let controller = PrivacyPolicyController(completion: {isAccept in
-            self.isPolicySelected = isAccept
-            self.policyButton.setImage(self.isPolicySelected ? UIImage(named: "selectedCheck") : UIImage(named: "unselectedCheck"), for: .normal)
-        })
-        controller.modalPresentationStyle = .fullScreen
-        self.present(controller, animated: true, completion: nil)
-    
+        presenter.navigateToPrivacy()
     }
     
     
     @IBAction func privacyPolicyButtonTouched(_ sender: Any) {
-        
-        let controller = PrivacyPolicyController(completion: {isAccept in
-            self.isPolicySelected = isAccept
-            self.policyButton.setImage(self.isPolicySelected ? UIImage(named: "selectedCheck") : UIImage(named: "unselectedCheck"), for: .normal)
-        })
-        controller.modalPresentationStyle = .fullScreen
-        self.present(controller, animated: true, completion: nil)
+        presenter.navigateToPrivacy()
         
     }
     
     @IBAction func termsAndConditionsButtonTouched(_ sender: Any) {
-        let controller = PrivacyPolicyController(completion: {isAccept in
-            self.isPolicySelected = isAccept
-            self.policyButton.setImage(self.isPolicySelected ? UIImage(named: "selectedCheck") : UIImage(named: "unselectedCheck"), for: .normal)
-        })
-        controller.modalPresentationStyle = .fullScreen
-        self.present(controller, animated: true, completion: nil)
+        presenter.navigateToPrivacy()
     }
     
-    func getInviteCode()->String?{
-        if let code = UserDefaults.standard.string(forKey: "invitationCode"), code.count > 6{
-            return code
-        }
-        return nil
-    }
+    
 }
 
 
-//MARK: - API Methods
-
-extension SignupViewController {
-    func signUp()
-    {
-        signupButton.startAnimation()
-        
-        var params : [String : Any] = [:]
-        
-        if let code = getInviteCode(){
-            params = [
-               "email": String(format:"%@",emailTextfield.text!),
-               "password": String(format:"%@",passwordTextfield.text!),
-               "first_name": String(format:"%@",firstNameTextfield.text!),
-               "last_name": String(format:"%@",lastNameTextfield.text!),
-               "gender": String(format:"%@",getGender()),
-               "is_dev" : true,
-               "invite_code" : code
-   //            "school_id": String(format:"%@",selectedUniversityID),
-   //            "state": String(format:"%@",selectedState)
-           ] as [String : Any]
-        }
-        else{
-            params = [
-               "email": String(format:"%@",emailTextfield.text!),
-               "password": String(format:"%@",passwordTextfield.text!),
-               "first_name": String(format:"%@",firstNameTextfield.text!),
-               "last_name": String(format:"%@",lastNameTextfield.text!),
-               "gender": String(format:"%@",getGender()),
-               "is_dev" : true
-   //            "school_id": String(format:"%@",selectedUniversityID),
-   //            "state": String(format:"%@",selectedState)
-           ]
-        }
-        
-         
-        APIManager.auth.signup(parameters: params) { [weak self] oneTimeToken, error in
-            guard let self = self else { return }
-            self.signupButton.stopAnimation()
-            
-            if error == nil {
-                let controller = VerifyEmailController(email: self.emailTextfield.text ?? "")
-                self.navigationController?.pushViewController(controller, animated: true)
-            } else {
-                self.showErrorWith(message: error?.message ?? "Invalid response")
-            }
-            
-        }
-    }
-    
-    func getSchools() {
-        universityTextfield.startLoading()
-        universityTextfield.isUserInteractionEnabled = false
-        APIManager.auth.getSchools(state: self.selectedState) { schools, error in
-            self.universityTextfield.stopLoading()
-            self.universityTextfield.isUserInteractionEnabled = false
-            if let e = error {
-                self.showErrorWith(message: e.message)
-            } else {
-                self.schools = (schools ?? []).dataPickerItems()
-            }
-        }
-    }
-    
-    func getStates() {
-        
-    }
-}
 
 //MARK: -  Textfield Delegates
 extension SignupViewController
@@ -475,9 +209,7 @@ extension SignupViewController
 }
 
 extension SignupViewController : SignupViewProtocol{
-    func setStates(_ statesList: [DataPickerItem<String>]) {
-//        self.se
-    }
+    
     func setStatesUserInteraction(_ result: Bool) {
         statesTextField.isUserInteractionEnabled = result
     }
@@ -488,36 +220,110 @@ extension SignupViewController : SignupViewProtocol{
         statesTextField.startLoading()
     }
     func shakeSignupButton() {
-        
+        signupButton.shake()
     }
     
     func showErrorMessage(_ message: String) {
-        
+        self.showErrorWith(message: message)
     }
     
     func startAnimating() {
-        
+        signupButton.startAnimation()
     }
     
     func stopAnimating() {
-        
+        signupButton.stopAnimation()
     }
     
     func prepareUI() {
         setupUI()
     }
     
-    func shakeLoginButton() {
-        
+    
+    func passwordBtnVisibility(_ isSecured: Bool) {
+        passwordTextfield.textField.isSecureTextEntry = isSecured
     }
     
-    func showHidePassword() {
+    func setGender(_ gender: String) {
+        self.genderTextfield.text = gender
+    }
+    func presentPicker(_ option: ReusbaleOptionSelectionController) {
+        self.presentPanModal(option)
+    }
+    func setUniversity(_ university: String) {
+        self.universityTextfield.text = university
+    }
+    func emailVisibility(_ isHidden: Bool) {
+        self.emailTextfield.isHidden = isHidden
+        if !isHidden{
+            self.emailTextfield.textField.becomeFirstResponder()
+        }
         
     }
-    
-    func passwordBtnVisibility(_ isHidden: Bool) {
-        
+    func setState(_ state: String) {
+        self.statesTextField.text = state
+    }
+    func startUniversityLoading() {
+        self.universityTextfield.startLoading()
+    }
+    func stopUniversityLoading() {
+        self.universityTextfield.stopLoading()
+    }
+    func setUniveristyInteraction(_ result: Bool) {
+        self.universityTextfield.isUserInteractionEnabled = result
+    }
+    func presentScreen(_ controller : Any, _ withAnimation: Bool) {
+            
+        self.present(controller as! UIViewController, presentationStyle: .overCurrentContext)
+  
+    }
+    func emailValidated() -> Bool {
+        return emailTextfield.validate()
+    }
+    func genderValidated()->Bool{
+        return genderTextfield.validate()
+    }
+    func nameValidated()->Bool{
+        return firstNameTextfield.validate()
+    }
+    func lastNameValidated()->Bool{
+        return lastNameTextfield.validate()
+    }
+    func universityValidated()->Bool{
+        return universityTextfield.validate()
+    }
+    func statesValidated()->Bool{
+        return statesTextField.validate()
+    }
+    func getPassword() -> String {
+        return passwordTextfield.text ?? ""
+    }
+    func getEmail() -> String {
+        return emailTextfield.text ?? ""
+    }
+    func getFName() -> String {
+        return firstNameTextfield.text ?? ""
     }
     
-    
+    func setErrorToLname(_ error: String) {
+        lastNameTextfield.setError(error)
+    }
+    func setErrorToFname(_ error: String) {
+        firstNameTextfield.setError(error)
+    }
+    func getGenderText() -> String {
+        return genderTextfield.text ?? ""
+    }
+    func setErrorToEmail(_ error: String) {
+        emailTextfield.setError(error)
+    }
+    func changePrivacyButtonImage(with name: String) {
+        self.policyButton.setImage( UIImage(named: name) , for: .normal)
+        
+    }
+    func changeShowPasswordBtnImage(with name: String) {
+        showPasswordButton.setImage(UIImage(named: name), for: .normal)
+    }
 }
+
+

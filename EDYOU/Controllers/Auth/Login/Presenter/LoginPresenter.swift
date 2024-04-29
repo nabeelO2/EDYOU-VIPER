@@ -106,7 +106,7 @@ extension LoginPresenter : LoginInteractorOutput{
         
         let university = user.education.first ?? Education.nilProperties
         if user.name?.firstName?.isEmpty == false || user.name?.lastName?.isEmpty == false {
-//            Application.shared.switchToHome()
+            Application.shared.switchToHome()
 //            move to home Screen
         } else {
 //            move to name controller
