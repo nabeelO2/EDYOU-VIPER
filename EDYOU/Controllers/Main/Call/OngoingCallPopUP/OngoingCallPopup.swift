@@ -11,8 +11,6 @@ import LiveKit
 
 class OngoingCallPopup: UIView, UIGestureRecognizerDelegate,RoomDelegate, CallManagerDelegate
 {
-   
-    
     
     let audioQueue = DispatchQueue(label: "audio")
    

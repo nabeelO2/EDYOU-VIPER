@@ -1706,7 +1706,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "437"
             endingLineNumber = "437"
-            landmarkName = "roomDisconnected()"
+            landmarkName = "updateVideoButton()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -8849,54 +8849,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2D6149FF-3527-40FF-901E-1D0526BF8984"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EDYOU/Supporting Files/CallManager/CallKit/ProviderDelegate.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "provider(_:didActivate:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2D6149FF-3527-40FF-901E-1D0526BF8984 - 5776b9d5abe89d43"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EDYOU.ProviderDelegate.provider(_: __C.CXProvider, didActivate: __C.AVAudioSession) -&gt; ()"
-                  moduleName = "EDYOU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/imac3/Documents/edyouapp-ios/EDYOU/Supporting%20Files/CallManager/CallKit/ProviderDelegate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "2D6149FF-3527-40FF-901E-1D0526BF8984 - 5776b9d5abe89d43"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EDYOU.ProviderDelegate.provider(_: __C.CXProvider, didActivate: __C.AVAudioSession) -&gt; ()"
-                  moduleName = "EDYOU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/imac3/Documents/edyouapp-ios/EDYOU/Supporting%20Files/CallManager/CallKit/ProviderDelegate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "36">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "FB900F64-A8FB-464B-AC03-9A84DF6052EF"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -8904,8 +8856,8 @@
             filePath = "EDYOU/Supporting Files/CallManager/CallManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "477"
-            endingLineNumber = "477"
+            startingLineNumber = "473"
+            endingLineNumber = "473"
             landmarkName = "showCallPopup(data:)"
             landmarkType = "7">
             <Locations>
@@ -9486,8 +9438,8 @@
             filePath = "EDYOU/Supporting Files/CallManager/CallManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "594"
-            endingLineNumber = "594"
+            startingLineNumber = "590"
+            endingLineNumber = "590"
             landmarkName = "startCall(room:callType:token:)"
             landmarkType = "7">
             <Locations>
@@ -9654,8 +9606,8 @@
             filePath = "EDYOU/Supporting Files/CallManager/CallManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "490"
-            endingLineNumber = "490"
+            startingLineNumber = "486"
+            endingLineNumber = "486"
             landmarkName = "showCallPopup(data:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -9670,8 +9622,8 @@
             filePath = "EDYOU/Supporting Files/CallManager/CallManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "552"
-            endingLineNumber = "552"
+            startingLineNumber = "548"
+            endingLineNumber = "548"
             landmarkName = "viewTapped(gestureRecognizer:)"
             landmarkType = "7">
             <Locations>
@@ -13450,6 +13402,21 @@
                   endingLineNumber = "98"
                   offsetFromSymbolStart = "36">
                </Location>
+               <Location
+                  uuid = "5DD6CA81-4AF9-4B23-942F-A474A44627DD - d226751759e33266"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EDYOU.Application.topViewController.getter : Swift.Optional&lt;__C.UIViewController&gt;"
+                  moduleName = "EDYOU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Application/Application.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "50">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -13603,6 +13570,66 @@
                   endingLineNumber = "106"
                   offsetFromSymbolStart = "576">
                </Location>
+               <Location
+                  uuid = "F486C3CB-6B1A-4A22-A47E-72731ED64586 - 49d6d1ad159d138b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EDYOU.Application.getTopViewController(base: Swift.Optional&lt;__C.UIViewController&gt;) -&gt; Swift.Optional&lt;__C.UIViewController&gt;"
+                  moduleName = "EDYOU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Application/Application.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "376">
+               </Location>
+               <Location
+                  uuid = "F486C3CB-6B1A-4A22-A47E-72731ED64586 - 49d6d1ad159d138b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EDYOU.Application.getTopViewController(base: Swift.Optional&lt;__C.UIViewController&gt;) -&gt; Swift.Optional&lt;__C.UIViewController&gt;"
+                  moduleName = "EDYOU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Application/Application.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "549">
+               </Location>
+               <Location
+                  uuid = "F486C3CB-6B1A-4A22-A47E-72731ED64586 - 49d6d1ad159d138b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EDYOU.Application.getTopViewController(base: Swift.Optional&lt;__C.UIViewController&gt;) -&gt; Swift.Optional&lt;__C.UIViewController&gt;"
+                  moduleName = "EDYOU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Application/Application.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "628">
+               </Location>
+               <Location
+                  uuid = "F486C3CB-6B1A-4A22-A47E-72731ED64586 - 49d6d1ad159d138b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EDYOU.Application.getTopViewController(base: Swift.Optional&lt;__C.UIViewController&gt;) -&gt; Swift.Optional&lt;__C.UIViewController&gt;"
+                  moduleName = "EDYOU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Application/Application.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "524">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -13666,6 +13693,21 @@
                   endingLineNumber = "124"
                   offsetFromSymbolStart = "1864">
                </Location>
+               <Location
+                  uuid = "8F37E1B1-98B7-4055-85C4-6FF8E3A299CE - 6624b806845571d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in EDYOU.Application.dismissToRoot() -&gt; ()"
+                  moduleName = "EDYOU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Application/Application.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "2117">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -13728,6 +13770,21 @@
                   startingLineNumber = "150"
                   endingLineNumber = "150"
                   offsetFromSymbolStart = "1520">
+               </Location>
+               <Location
+                  uuid = "364CA3A9-0D0D-44C0-97D4-211FAAE4CBDB - 612bb33c9964908e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EDYOU.Application.openProfile(userId: Swift.String) -&gt; ()"
+                  moduleName = "EDYOU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Application/Application.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "150"
+                  endingLineNumber = "150"
+                  offsetFromSymbolStart = "2088">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -13837,6 +13894,36 @@
                   endingLineNumber = "162"
                   offsetFromSymbolStart = "1616">
                </Location>
+               <Location
+                  uuid = "443FDB73-DBA0-4B8A-B2DD-E5C0F14782F4 - 6aef8a6171adfa69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EDYOU.Application.openPostDetails(postId: Swift.String, actionType: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "EDYOU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Application/Application.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
+                  offsetFromSymbolStart = "1524">
+               </Location>
+               <Location
+                  uuid = "443FDB73-DBA0-4B8A-B2DD-E5C0F14782F4 - 6aef8a6171adfa69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EDYOU.Application.openPostDetails(postId: Swift.String, actionType: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "EDYOU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Application/Application.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
+                  offsetFromSymbolStart = "2005">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -13899,6 +13986,21 @@
                   startingLineNumber = "192"
                   endingLineNumber = "192"
                   offsetFromSymbolStart = "2572">
+               </Location>
+               <Location
+                  uuid = "C9FA3FD3-25C2-4CA2-BA8E-464EC472764E - c1b446bbd23c86a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EDYOU.Application.openGroupDetails(groupId: Swift.String, shouldCallInvite: Swift.Bool) -&gt; ()"
+                  moduleName = "EDYOU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Application/Application.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "192"
+                  endingLineNumber = "192"
+                  offsetFromSymbolStart = "3239">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -20807,84 +20909,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1E0C0418-1EB9-4B51-B276-C647F91D907E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EDYOU/Controllers/Main/Tab Bar/MainTabBarController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
-            landmarkName = "createPost()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1E0C0418-1EB9-4B51-B276-C647F91D907E - 2a0c0b9017b95187"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EDYOU.MainTabBarController.createPost() -&gt; ()"
-                  moduleName = "EDYOU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/imac3/Documents/edyouapp-ios-chat/EDYOU/Controllers/Main/Tab%20Bar/MainTabBarController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "162"
-                  endingLineNumber = "162"
-                  offsetFromSymbolStart = "42">
-               </Location>
-               <Location
-                  uuid = "1E0C0418-1EB9-4B51-B276-C647F91D907E - 2a0c0b9017b95187"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EDYOU.MainTabBarController.createPost() -&gt; ()"
-                  moduleName = "EDYOU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/imac3/Documents/edyouapp-ios-chat/EDYOU/Controllers/Main/Tab%20Bar/MainTabBarController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "162"
-                  endingLineNumber = "162"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "1E0C0418-1EB9-4B51-B276-C647F91D907E - 490e702669cdada6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EDYOU.MainTabBarController.createPost() -&gt; ()"
-                  moduleName = "EDYOU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Controllers/Main/Tab%20Bar/MainTabBarController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "162"
-                  endingLineNumber = "162"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "1E0C0418-1EB9-4B51-B276-C647F91D907E - 490e702669cdada6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EDYOU.MainTabBarController.createPost() -&gt; ()"
-                  moduleName = "EDYOU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Controllers/Main/Tab%20Bar/MainTabBarController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "162"
-                  endingLineNumber = "162"
-                  offsetFromSymbolStart = "42">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "8948EE6F-4372-42AA-A871-7BCDF114CB71"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -21193,161 +21217,6 @@
                   startingLineNumber = "154"
                   endingLineNumber = "154"
                   offsetFromSymbolStart = "876">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EA4D9E23-2013-4328-A0D0-91C0E63B6E7C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EDYOU/Controllers/Main/Home/Home/HomeController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "431"
-            endingLineNumber = "431"
-            landmarkName = "getPosts(limit:reload:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9698440E-905F-422A-A9C3-D3DB948ED4B2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EDYOU/Controllers/Main/Home/Home/HomeController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "437"
-            endingLineNumber = "437"
-            landmarkName = "getPosts(limit:reload:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2099E15A-0540-4F82-BB7D-4FF0FC5C26CA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EDYOU/Controllers/Main/Home/Home/HomeController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "uploadNewPost(_:_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2099E15A-0540-4F82-BB7D-4FF0FC5C26CA - aa0832873537eae6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EDYOU.HomeController.uploadNewPost(Swift.Dictionary&lt;Swift.String, Any&gt;, Swift.Array&lt;EDYOU.Media&gt;) -&gt; ()"
-                  moduleName = "EDYOU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/imac3/Documents/edyouapp-ios-chat/EDYOU/Controllers/Main/Home/Home/HomeController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "131"
-                  endingLineNumber = "131"
-                  offsetFromSymbolStart = "1878">
-               </Location>
-               <Location
-                  uuid = "2099E15A-0540-4F82-BB7D-4FF0FC5C26CA - aa0832873537e91b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EDYOU.HomeController.uploadNewPost(Swift.Dictionary&lt;Swift.String, Any&gt;, Swift.Array&lt;EDYOU.Media&gt;) -&gt; ()"
-                  moduleName = "EDYOU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/imac3/Documents/edyouapp-ios-chat/EDYOU/Controllers/Main/Home/Home/HomeController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
-                  offsetFromSymbolStart = "1241">
-               </Location>
-               <Location
-                  uuid = "2099E15A-0540-4F82-BB7D-4FF0FC5C26CA - aa0832873537e91b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EDYOU.HomeController.uploadNewPost(Swift.Dictionary&lt;Swift.String, Any&gt;, Swift.Array&lt;EDYOU.Media&gt;) -&gt; ()"
-                  moduleName = "EDYOU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/imac3/Documents/edyouapp-ios-chat/EDYOU/Controllers/Main/Home/Home/HomeController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
-                  offsetFromSymbolStart = "1580">
-               </Location>
-               <Location
-                  uuid = "2099E15A-0540-4F82-BB7D-4FF0FC5C26CA - aa0832873537e91b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EDYOU.HomeController.uploadNewPost(Swift.Dictionary&lt;Swift.String, Any&gt;, Swift.Array&lt;EDYOU.Media&gt;) -&gt; ()"
-                  moduleName = "EDYOU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/imac3/Documents/edyouapp-ios-chat/EDYOU/Controllers/Main/Home/Home/HomeController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
-                  offsetFromSymbolStart = "1588">
-               </Location>
-               <Location
-                  uuid = "2099E15A-0540-4F82-BB7D-4FF0FC5C26CA - 9ab1833b14834a99"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EDYOU.HomeController.uploadNewPost(Swift.Dictionary&lt;Swift.String, Any&gt;, Swift.Array&lt;EDYOU.Media&gt;) -&gt; ()"
-                  moduleName = "EDYOU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Controllers/Main/Home/Home/HomeController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
-                  offsetFromSymbolStart = "1580">
-               </Location>
-               <Location
-                  uuid = "2099E15A-0540-4F82-BB7D-4FF0FC5C26CA - 9ab1833b14834a99"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EDYOU.HomeController.uploadNewPost(Swift.Dictionary&lt;Swift.String, Any&gt;, Swift.Array&lt;EDYOU.Media&gt;) -&gt; ()"
-                  moduleName = "EDYOU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Controllers/Main/Home/Home/HomeController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
-                  offsetFromSymbolStart = "1241">
-               </Location>
-               <Location
-                  uuid = "2099E15A-0540-4F82-BB7D-4FF0FC5C26CA - 9ab1833b14834a99"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EDYOU.HomeController.uploadNewPost(Swift.Dictionary&lt;Swift.String, Any&gt;, Swift.Array&lt;EDYOU.Media&gt;) -&gt; ()"
-                  moduleName = "EDYOU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Controllers/Main/Home/Home/HomeController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
-                  offsetFromSymbolStart = "1588">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -25042,6 +24911,36 @@
                   endingLineNumber = "174"
                   offsetFromSymbolStart = "164">
                </Location>
+               <Location
+                  uuid = "410B7AB6-99B6-4EDA-9499-1789D3819F65 - 7a1105501bd172aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;EDYOU.GeneralResponse&gt;, Swift.Optional&lt;EDYOU.ErrorResponse&gt;) -&gt; () in EDYOU.AddMajorViewController.saveGraduateInfo() -&gt; ()"
+                  moduleName = "EDYOU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Controllers/Auth/Add%20Major/View/AddMajorViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "174"
+                  endingLineNumber = "174"
+                  offsetFromSymbolStart = "253">
+               </Location>
+               <Location
+                  uuid = "410B7AB6-99B6-4EDA-9499-1789D3819F65 - 7a1105501bd172aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;EDYOU.GeneralResponse&gt;, Swift.Optional&lt;EDYOU.ErrorResponse&gt;) -&gt; () in EDYOU.AddMajorViewController.saveGraduateInfo() -&gt; ()"
+                  moduleName = "EDYOU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Controllers/Auth/Add%20Major/View/AddMajorViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "174"
+                  endingLineNumber = "174"
+                  offsetFromSymbolStart = "224">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -25138,7 +25037,116 @@
                   endingLineNumber = "179"
                   offsetFromSymbolStart = "664">
                </Location>
+               <Location
+                  uuid = "7F739E5A-3EFA-46B0-BA30-F5531B1032AE - 7a1105501bd1720f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;EDYOU.GeneralResponse&gt;, Swift.Optional&lt;EDYOU.ErrorResponse&gt;) -&gt; () in EDYOU.AddMajorViewController.saveGraduateInfo() -&gt; ()"
+                  moduleName = "EDYOU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Controllers/Auth/Add%20Major/View/AddMajorViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "179"
+                  endingLineNumber = "179"
+                  offsetFromSymbolStart = "799">
+               </Location>
+               <Location
+                  uuid = "7F739E5A-3EFA-46B0-BA30-F5531B1032AE - 7a1105501bd1720f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;EDYOU.GeneralResponse&gt;, Swift.Optional&lt;EDYOU.ErrorResponse&gt;) -&gt; () in EDYOU.AddMajorViewController.saveGraduateInfo() -&gt; ()"
+                  moduleName = "EDYOU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Controllers/Auth/Add%20Major/View/AddMajorViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "179"
+                  endingLineNumber = "179"
+                  offsetFromSymbolStart = "636">
+               </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "22BFD8D2-7F0B-4D44-84ED-E746FEEA435C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EDYOU/Controllers/Main/Call/CallVC/AudioVideoCallViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "setupUI()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "22BFD8D2-7F0B-4D44-84ED-E746FEEA435C - e118fa77f8910d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in EDYOU.AudioVideoCallViewController.setupUI() -&gt; ()"
+                  moduleName = "EDYOU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Controllers/Main/Call/CallVC/AudioVideoCallViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "2119">
+               </Location>
+               <Location
+                  uuid = "22BFD8D2-7F0B-4D44-84ED-E746FEEA435C - e118fa77f8910d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in EDYOU.AudioVideoCallViewController.setupUI() -&gt; ()"
+                  moduleName = "EDYOU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Controllers/Main/Call/CallVC/AudioVideoCallViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "2407">
+               </Location>
+               <Location
+                  uuid = "22BFD8D2-7F0B-4D44-84ED-E746FEEA435C - e118fa77f8910d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in EDYOU.AudioVideoCallViewController.setupUI() -&gt; ()"
+                  moduleName = "EDYOU"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac3/Documents/EDYOU/edyou-viper/EDYOU/Controllers/Main/Call/CallVC/AudioVideoCallViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "1984">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EEE2221D-6BEF-40C5-B10E-17FE2EE7F74A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EDYOU/Supporting Files/CallManager/CallManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "385"
+            endingLineNumber = "385"
+            landmarkName = "minimzedCallPopup()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

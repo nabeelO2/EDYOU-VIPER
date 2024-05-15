@@ -61,16 +61,16 @@ extension Application {
         if UserDefaults.standard.object(forKey: "invitationCode") == nil && UserDefaults.standard.bool(forKey: "isEmailVerified"){
             let controller = InviteCodeController(nibName: "InviteCodeController", bundle: nil)
             controller.hideBackButton = true
-            let navigationController = UINavigationController(rootViewController: controller)
+            let navigationController = EZNavigationController(rootViewController: controller)
             navigationController.isNavigationBarHidden = true
             
             window?.rootViewController = navigationController
         }
         else if UserDefaults.standard.object(forKey: "isUserAddedMajor") != nil {
 //            let controller = AddMajorViewController(nibName: "AddMajorViewController", bundle: nil)
-//            let navigationController = UINavigationController(rootViewController: controller)
+            let navigationController = EZNavigationController()
 //            navigationController.isNavigationBarHidden = true
-            let major = AddMajorRouter.createModule(navigationController: UINavigationController())
+            let major = AddMajorRouter.createModule(navigationController: navigationController)
 //            self.navigationController?.pushViewController(major, animated: true)
             window?.rootViewController = major
         } else {

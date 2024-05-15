@@ -35,7 +35,7 @@ class HomeController: BaseController {
     
     var selectedPostType: PostType = .public
     var eventsIAmInvited: [Event] = []
-    
+    var presenter : HomePresenterProtocol!
     var leaderResult : LeaderFilter?{
         didSet{
             filterLeader()
@@ -51,23 +51,22 @@ class HomeController: BaseController {
     var typeFilter : LeaderBoardTypeFilter = .national
     
     var topHeaderV : TopHeaderV!
-//    var stackHeight : CGFloat = 180
-//    var storyTblVHeight : CGFloat = 120
     // MARK: - ViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
        // addLogo()
-        navigationController?.navigationBar.backgroundColor = R.color.navigationColor() ?? .green
-        navigationController?.setNavigationBarHidden(true, animated: false)
-        navigationController?.hidesBarsOnSwipe = false
+        presenter.viewDidLoad()
+//        navigationController?.navigationBar.backgroundColor = R.color.navigationColor() ?? .green
+//        navigationController?.setNavigationBarHidden(true, animated: false)
+//        navigationController?.hidesBarsOnSwipe = false
         
         adapter = HomeAdapter(tableView: tableView)
-        getMyEvents()
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(self.appEnteredFromBackground),
-                                               name: UIApplication.willEnterForegroundNotification, object: nil)
+//        getMyEvents()
+//        NotificationCenter.default.addObserver(self,
+//                                               selector: #selector(self.appEnteredFromBackground),
+//                                               name: UIApplication.willEnterForegroundNotification, object: nil)
         
-        XMPPAppDelegateManager.shared.registerForPushNotifications()
+        
         if let param = UserDefaults.standard.dictionary(forKey: "pendingPostParam"){
             let attachments = loadMediaFromFile()
             uploadNewPost(param, attachments)
@@ -83,6 +82,12 @@ class HomeController: BaseController {
 //        FriendManager.shared.fetchChatRoomsFromRealm { friends in
 //            print(friends)
 //        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.viewWillAppear()
+       
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -101,20 +106,11 @@ class HomeController: BaseController {
         }
     }
 
-    private func setProfileImage(){
-        imgProfile.setImage(url: Cache.shared.user?.profileImage, placeholder: R.image.profile_image_dummy())
-    }
     private func addStoryHeaderView() {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: false)
-        setProfileImage()
-        getNotifications()
-        getEvents()
-    }
+   
     
     func uploadNewPost(_ parameters : [String : Any], _ media : [Media]){
         print(parameters)
@@ -314,7 +310,7 @@ extension HomeController {
         }
         else if sender.tag == 3 {
             adapter.type = .event
-            getEvents()
+//            getEvents()
         }
         else {
             adapter.isLoading = true
@@ -532,52 +528,52 @@ extension HomeController {
         
     }
     
+
     
+//    func getNotifications(){
+//        APIManager.social.getNotifications { [weak self] notifications, error in
+//            guard let self = self else { return }
+//            if error == nil {
+//                let unreadCount = notifications.unreadCount()
+//                if unreadCount > 99 {
+//                    lblBadgeNotifications.text = "99+"
+//                } else {
+//                    lblBadgeNotifications.text = "\(unreadCount)"
+//                }
+//                viewBadgeNotifications.isHidden = unreadCount == 0
+//                
+//            } else {
+//                self.showErrorWith(message: error!.message)
+//            }
+//        }
+//    }
     
-    func getNotifications(){
-        APIManager.social.getNotifications { [weak self] notifications, error in
-            guard let self = self else { return }
-            if error == nil {
-                let unreadCount = notifications.unreadCount()
-                if unreadCount > 99 {
-                    lblBadgeNotifications.text = "99+"
-                } else {
-                    lblBadgeNotifications.text = "\(unreadCount)"
-                }
-                viewBadgeNotifications.isHidden = unreadCount == 0
-                
-            } else {
-                self.showErrorWith(message: error!.message)
-            }
-        }
-    }
+//    func getEvents() {
+//        APIManager.social.getEvents(query: .public) { [weak self] events, error in
+//            guard let self = self else { return }
+//            self.adapter.isLoading = false
+//            if error == nil {
+//                self.adapter.events = events ?? []
+//            } else {
+//                self.showErrorWith(message: error!.message)
+//            }
+//        }
+//    }
     
-    func getEvents() {
-        APIManager.social.getEvents(query: .public) { [weak self] events, error in
-            guard let self = self else { return }
-            self.adapter.isLoading = false
-            if error == nil {
-                self.adapter.events = events ?? []
-            } else {
-                self.showErrorWith(message: error!.message)
-            }
-        }
-    }
-    
-    func getMyEvents() {
-        APIManager.social.getMyEvents(query: .me) { [weak self] eventsIAmGoing, eventsICreated, eventsIAmNotGoing, eventsIAmInvited, eventsIAmInterested, error  in
-            guard let self = self else { return }
-            
-            if error == nil {
-                self.eventsIAmInvited = eventsIAmInvited ?? []
-                if (self.eventsIAmInvited.count > 0) {
-                    let controller = EventInviteController()
-                    controller.allInvitedEvents = self.eventsIAmInvited
-                    self.presentPanModal(controller)
-                }
-            }
-        }
-    }
+//    func getMyEvents() {
+//        APIManager.social.getMyEvents(query: .me) { [weak self] eventsIAmGoing, eventsICreated, eventsIAmNotGoing, eventsIAmInvited, eventsIAmInterested, error  in
+//            guard let self = self else { return }
+//            
+//            if error == nil {
+//                self.eventsIAmInvited = eventsIAmInvited ?? []
+//                if (self.eventsIAmInvited.count > 0) {
+//                    let controller = EventInviteController()
+//                    controller.allInvitedEvents = self.eventsIAmInvited
+//                    self.presentPanModal(controller)
+//                }
+//            }
+//        }
+//    }
     
     func reloadTableViewWithDelay() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
@@ -590,3 +586,17 @@ extension HomeController {
     }
 }
 
+extension HomeController : HomeViewProtocol{
+    func prepareUI() {
+        
+    }
+    func setProfileImage(){
+        imgProfile.setImage(url: Cache.shared.user?.profileImage, placeholder: R.image.profile_image_dummy())
+    }
+    func updateNotificationBadge(_ text: String) {
+        lblBadgeNotifications.text = text
+    }
+    func hideNotificationBadge(_ isHidden: Bool) {
+        viewBadgeNotifications.isHidden = isHidden
+    }
+}

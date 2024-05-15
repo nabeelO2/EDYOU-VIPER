@@ -18,8 +18,6 @@ import Martin
 import Combine
 
 protocol CallManagerDelegate: class {
-
-
     func updateUIForLocal(views: VideoTrack?)
     func updateUIForLocal(views: AudioTrack?)
     func updateUIForRemote(views: VideoTrack?)
@@ -29,8 +27,6 @@ protocol CallManagerDelegate: class {
     func participantLeftCall()
     func roomDisconnected()
     func noAnswerDisconnection()
-
-
 }
 
 
@@ -496,7 +492,7 @@ extension CallManager:  UIGestureRecognizerDelegate
             }
         }
     }
-    //new voip
+    //MARK: new voip
     func showCallPopupFromVoip(data: PKPushPayload, completion: @escaping () -> Void) {
             //TODO: - Feed dictionary to Call Object and write method inside model Class
             // Extract Data From Dictionary
